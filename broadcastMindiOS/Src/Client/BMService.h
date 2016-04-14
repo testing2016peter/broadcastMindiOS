@@ -12,4 +12,5 @@
 @interface BMService : NSObject
 
 + (instancetype )sharedInstance;
+
 @end
