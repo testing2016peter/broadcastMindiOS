@@ -20,6 +20,7 @@
 		F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D2DD1CC15C29006CE8D4 /* BMArticleListViewController.xib */; };
 		F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E01CC15C29006CE8D4 /* BMClient.m */; };
 		F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E21CC15C29006CE8D4 /* BMService.m */; };
+		F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		F793D2E01CC15C29006CE8D4 /* BMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMClient.m; sourceTree = "<group>"; };
 		F793D2E11CC15C29006CE8D4 /* BMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMService.h; sourceTree = "<group>"; };
 		F793D2E21CC15C29006CE8D4 /* BMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMService.m; sourceTree = "<group>"; };
+		F793D2ED1CC15D2F006CE8D4 /* UIColor+BMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BMColor.h"; sourceTree = "<group>"; };
+		F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BMColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F793D2EC1CC15D2F006CE8D4 /* Categories */,
 				F793D2DA1CC15C29006CE8D4 /* ArticleList */,
 				F793D2DE1CC15C29006CE8D4 /* Client */,
 				F793D2AA1CC15AC0006CE8D4 /* AppDelegate.h */,
@@ -198,6 +202,16 @@
 			);
 			name = Client;
 			path = Src/Client;
+			sourceTree = "<group>";
+		};
+		F793D2EC1CC15D2F006CE8D4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F793D2ED1CC15D2F006CE8D4 /* UIColor+BMColor.h */,
+				F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */,
+			);
+			name = Categories;
+			path = Src/Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +398,7 @@
 			files = (
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
+				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */,
