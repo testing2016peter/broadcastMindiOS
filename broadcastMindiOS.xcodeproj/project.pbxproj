@@ -20,10 +20,18 @@
 		F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E01CC15C29006CE8D4 /* BMClient.m */; };
 		F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E21CC15C29006CE8D4 /* BMService.m */; };
 		F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */; };
+		F793D2F71CC2AA33006CE8D4 /* broadcastMindiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2F61CC2AA33006CE8D4 /* broadcastMindiOSUITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F793D2BE1CC15AC0006CE8D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F793D29C1CC15AC0006CE8D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F793D2A31CC15AC0006CE8D4;
+			remoteInfo = broadcastMindiOS;
+		};
+		F793D2F91CC2AA33006CE8D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F793D29C1CC15AC0006CE8D4 /* Project object */;
 			proxyType = 1;
@@ -60,6 +68,9 @@
 		F793D2E21CC15C29006CE8D4 /* BMService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMService.m; sourceTree = "<group>"; };
 		F793D2ED1CC15D2F006CE8D4 /* UIColor+BMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BMColor.h"; sourceTree = "<group>"; };
 		F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BMColor.m"; sourceTree = "<group>"; };
+		F793D2F41CC2AA33006CE8D4 /* broadcastMindiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = broadcastMindiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F793D2F61CC2AA33006CE8D4 /* broadcastMindiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broadcastMindiOSUITests.m; sourceTree = "<group>"; };
+		F793D2F81CC2AA33006CE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +83,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F793D2BA1CC15AC0006CE8D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F793D2F11CC2AA33006CE8D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,6 +122,7 @@
 				F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */,
 				F793D2C01CC15AC0006CE8D4 /* broadcastMindiOSTests */,
 				F793D2CB1CC15AC0006CE8D4 /* broadcastMindiOSUITests */,
+				F793D2F51CC2AA33006CE8D4 /* broadcastMindiOSUITests */,
 				F793D2A51CC15AC0006CE8D4 /* Products */,
 				B78A240985E8795BFBBE2220 /* Pods */,
 				A270C75BD97913D1D3814570 /* Frameworks */,
@@ -115,6 +134,7 @@
 			children = (
 				F793D2A41CC15AC0006CE8D4 /* broadcastMindiOS.app */,
 				F793D2BD1CC15AC0006CE8D4 /* broadcastMindiOSTests.xctest */,
+				F793D2F41CC2AA33006CE8D4 /* broadcastMindiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +217,15 @@
 			path = Src/Categories;
 			sourceTree = "<group>";
 		};
+		F793D2F51CC2AA33006CE8D4 /* broadcastMindiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F793D2F61CC2AA33006CE8D4 /* broadcastMindiOSUITests.m */,
+				F793D2F81CC2AA33006CE8D4 /* Info.plist */,
+			);
+			path = broadcastMindiOSUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +267,24 @@
 			productReference = F793D2BD1CC15AC0006CE8D4 /* broadcastMindiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F793D2F31CC2AA33006CE8D4 /* broadcastMindiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F793D2FB1CC2AA34006CE8D4 /* Build configuration list for PBXNativeTarget "broadcastMindiOSUITests" */;
+			buildPhases = (
+				F793D2F01CC2AA33006CE8D4 /* Sources */,
+				F793D2F11CC2AA33006CE8D4 /* Frameworks */,
+				F793D2F21CC2AA33006CE8D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F793D2FA1CC2AA33006CE8D4 /* PBXTargetDependency */,
+			);
+			name = broadcastMindiOSUITests;
+			productName = broadcastMindiOSUITests;
+			productReference = F793D2F41CC2AA33006CE8D4 /* broadcastMindiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,6 +298,10 @@
 						CreatedOnToolsVersion = 7.3;
 					};
 					F793D2BC1CC15AC0006CE8D4 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = F793D2A31CC15AC0006CE8D4;
+					};
+					F793D2F31CC2AA33006CE8D4 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = F793D2A31CC15AC0006CE8D4;
 					};
@@ -271,6 +322,7 @@
 			targets = (
 				F793D2A31CC15AC0006CE8D4 /* broadcastMindiOS */,
 				F793D2BC1CC15AC0006CE8D4 /* broadcastMindiOSTests */,
+				F793D2F31CC2AA33006CE8D4 /* broadcastMindiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,6 +340,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F793D2BB1CC15AC0006CE8D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F793D2F21CC2AA33006CE8D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,6 +426,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F793D2F01CC2AA33006CE8D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F793D2F71CC2AA33006CE8D4 /* broadcastMindiOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -374,6 +441,11 @@
 			isa = PBXTargetDependency;
 			target = F793D2A31CC15AC0006CE8D4 /* broadcastMindiOS */;
 			targetProxy = F793D2BE1CC15AC0006CE8D4 /* PBXContainerItemProxy */;
+		};
+		F793D2FA1CC2AA33006CE8D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F793D2A31CC15AC0006CE8D4 /* broadcastMindiOS */;
+			targetProxy = F793D2F91CC2AA33006CE8D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,6 +599,30 @@
 			};
 			name = Release;
 		};
+		F793D2FC1CC2AA34006CE8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = broadcastMindiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/broadcastMindiOS.app/broadcastMindiOS";
+			};
+			name = Debug;
+		};
+		F793D2FD1CC2AA34006CE8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = broadcastMindiOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/broadcastMindiOS.app/broadcastMindiOS";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,6 +652,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F793D2FB1CC2AA34006CE8D4 /* Build configuration list for PBXNativeTarget "broadcastMindiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F793D2FC1CC2AA34006CE8D4 /* Debug */,
+				F793D2FD1CC2AA34006CE8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
