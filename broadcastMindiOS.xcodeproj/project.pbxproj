@@ -15,7 +15,6 @@
 		F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F793D2B31CC15AC0006CE8D4 /* Assets.xcassets */; };
 		F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F793D2B51CC15AC0006CE8D4 /* LaunchScreen.storyboard */; };
 		F793D2C21CC15AC0006CE8D4 /* broadcastMindiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2C11CC15AC0006CE8D4 /* broadcastMindiOSTests.m */; };
-		F793D2CD1CC15AC0006CE8D4 /* broadcastMindiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2CC1CC15AC0006CE8D4 /* broadcastMindiOSUITests.m */; };
 		F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2DC1CC15C29006CE8D4 /* BMArticleListViewController.m */; };
 		F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D2DD1CC15C29006CE8D4 /* BMArticleListViewController.xib */; };
 		F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E01CC15C29006CE8D4 /* BMClient.m */; };
@@ -25,13 +24,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		F793D2BE1CC15AC0006CE8D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F793D29C1CC15AC0006CE8D4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F793D2A31CC15AC0006CE8D4;
-			remoteInfo = broadcastMindiOS;
-		};
-		F793D2C91CC15AC0006CE8D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F793D29C1CC15AC0006CE8D4 /* Project object */;
 			proxyType = 1;
@@ -57,7 +49,6 @@
 		F793D2BD1CC15AC0006CE8D4 /* broadcastMindiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = broadcastMindiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793D2C11CC15AC0006CE8D4 /* broadcastMindiOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broadcastMindiOSTests.m; sourceTree = "<group>"; };
 		F793D2C31CC15AC0006CE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F793D2C81CC15AC0006CE8D4 /* broadcastMindiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = broadcastMindiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793D2CC1CC15AC0006CE8D4 /* broadcastMindiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broadcastMindiOSUITests.m; sourceTree = "<group>"; };
 		F793D2CE1CC15AC0006CE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F793D2DB1CC15C29006CE8D4 /* BMArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListViewController.h; sourceTree = "<group>"; };
@@ -81,13 +72,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F793D2BA1CC15AC0006CE8D4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F793D2C51CC15AC0006CE8D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +115,6 @@
 			children = (
 				F793D2A41CC15AC0006CE8D4 /* broadcastMindiOS.app */,
 				F793D2BD1CC15AC0006CE8D4 /* broadcastMindiOSTests.xctest */,
-				F793D2C81CC15AC0006CE8D4 /* broadcastMindiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,24 +238,6 @@
 			productReference = F793D2BD1CC15AC0006CE8D4 /* broadcastMindiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F793D2C71CC15AC0006CE8D4 /* broadcastMindiOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F793D2D71CC15AC0006CE8D4 /* Build configuration list for PBXNativeTarget "broadcastMindiOSUITests" */;
-			buildPhases = (
-				F793D2C41CC15AC0006CE8D4 /* Sources */,
-				F793D2C51CC15AC0006CE8D4 /* Frameworks */,
-				F793D2C61CC15AC0006CE8D4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F793D2CA1CC15AC0006CE8D4 /* PBXTargetDependency */,
-			);
-			name = broadcastMindiOSUITests;
-			productName = broadcastMindiOSUITests;
-			productReference = F793D2C81CC15AC0006CE8D4 /* broadcastMindiOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -286,10 +251,6 @@
 						CreatedOnToolsVersion = 7.3;
 					};
 					F793D2BC1CC15AC0006CE8D4 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = F793D2A31CC15AC0006CE8D4;
-					};
-					F793D2C71CC15AC0006CE8D4 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = F793D2A31CC15AC0006CE8D4;
 					};
@@ -310,7 +271,6 @@
 			targets = (
 				F793D2A31CC15AC0006CE8D4 /* broadcastMindiOS */,
 				F793D2BC1CC15AC0006CE8D4 /* broadcastMindiOSTests */,
-				F793D2C71CC15AC0006CE8D4 /* broadcastMindiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -328,13 +288,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F793D2BB1CC15AC0006CE8D4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F793D2C61CC15AC0006CE8D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,14 +367,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F793D2C41CC15AC0006CE8D4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F793D2CD1CC15AC0006CE8D4 /* broadcastMindiOSUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -429,11 +374,6 @@
 			isa = PBXTargetDependency;
 			target = F793D2A31CC15AC0006CE8D4 /* broadcastMindiOS */;
 			targetProxy = F793D2BE1CC15AC0006CE8D4 /* PBXContainerItemProxy */;
-		};
-		F793D2CA1CC15AC0006CE8D4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F793D2A31CC15AC0006CE8D4 /* broadcastMindiOS */;
-			targetProxy = F793D2C91CC15AC0006CE8D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -587,28 +527,6 @@
 			};
 			name = Release;
 		};
-		F793D2D81CC15AC0006CE8D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = broadcastMindiOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = broadcastMindiOS;
-			};
-			name = Debug;
-		};
-		F793D2D91CC15AC0006CE8D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = broadcastMindiOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = broadcastMindiOS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,15 +553,6 @@
 			buildConfigurations = (
 				F793D2D51CC15AC0006CE8D4 /* Debug */,
 				F793D2D61CC15AC0006CE8D4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F793D2D71CC15AC0006CE8D4 /* Build configuration list for PBXNativeTarget "broadcastMindiOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F793D2D81CC15AC0006CE8D4 /* Debug */,
-				F793D2D91CC15AC0006CE8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
