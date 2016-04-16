@@ -16,9 +16,9 @@ after_success:
 env:
   matrix:
     - SDK=iphonesimulator8.1
-    - SDK=iphonesimulator8.2
-    - SDK=iphonesimulator8.3
-    - SDK=iphonesimulator8.4
-    - SDK=iphonesimulator9.0
-    - SDK=iphonesimulator9.1
+#    - SDK=iphonesimulator8.2
+#    - SDK=iphonesimulator8.3
+#    - SDK=iphonesimulator8.4
+#    - SDK=iphonesimulator9.0
+#    - SDK=iphonesimulator9.1
     - SDK=iphonesimulator9.2
