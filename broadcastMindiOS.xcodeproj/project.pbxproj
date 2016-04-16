@@ -21,6 +21,13 @@
 		F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E21CC15C29006CE8D4 /* BMService.m */; };
 		F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */; };
 		F793D2F71CC2AA33006CE8D4 /* broadcastMindiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2F61CC2AA33006CE8D4 /* broadcastMindiOSUITests.m */; };
+		F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3011CC2ACD3006CE8D4 /* BMBaseViewController.m */; };
+		F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3051CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m */; };
+		F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */; };
+		F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */; };
+		F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */; };
+		F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */; };
+		F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +78,18 @@
 		F793D2F41CC2AA33006CE8D4 /* broadcastMindiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = broadcastMindiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793D2F61CC2AA33006CE8D4 /* broadcastMindiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broadcastMindiOSUITests.m; sourceTree = "<group>"; };
 		F793D2F81CC2AA33006CE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F793D3001CC2ACD3006CE8D4 /* BMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseViewController.h; sourceTree = "<group>"; };
+		F793D3011CC2ACD3006CE8D4 /* BMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseViewController.m; sourceTree = "<group>"; };
+		F793D3041CC2AE37006CE8D4 /* BMBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		F793D3051CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		F793D3071CC2AE55006CE8D4 /* BMInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInputTextView.h; sourceTree = "<group>"; };
+		F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInputTextView.m; sourceTree = "<group>"; };
+		F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInputTextView.xib; sourceTree = "<group>"; };
+		F793D30F1CC2AF5C006CE8D4 /* BMPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPlaceholderTextView.h; sourceTree = "<group>"; };
+		F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPlaceholderTextView.m; sourceTree = "<group>"; };
+		F793D3131CC2B834006CE8D4 /* BMArticleListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListCollectionViewCell.h; sourceTree = "<group>"; };
+		F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListCollectionViewCell.m; sourceTree = "<group>"; };
+		F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +161,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F793D2FE1CC2ACBD006CE8D4 /* Util */,
 				F793D2EC1CC15D2F006CE8D4 /* Categories */,
 				F793D2DA1CC15C29006CE8D4 /* ArticleList */,
 				F793D2DE1CC15C29006CE8D4 /* Client */,
@@ -187,6 +207,7 @@
 		F793D2DA1CC15C29006CE8D4 /* ArticleList */ = {
 			isa = PBXGroup;
 			children = (
+				F793D3121CC2B819006CE8D4 /* Cell */,
 				F793D2DB1CC15C29006CE8D4 /* BMArticleListViewController.h */,
 				F793D2DC1CC15C29006CE8D4 /* BMArticleListViewController.m */,
 				F793D2DD1CC15C29006CE8D4 /* BMArticleListViewController.xib */,
@@ -224,6 +245,49 @@
 				F793D2F81CC2AA33006CE8D4 /* Info.plist */,
 			);
 			path = broadcastMindiOSUITests;
+			sourceTree = "<group>";
+		};
+		F793D2FE1CC2ACBD006CE8D4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F793D3031CC2AE1F006CE8D4 /* Views */,
+				F793D2FF1CC2ACBD006CE8D4 /* ViewControllers */,
+			);
+			name = Util;
+			path = Src/Util;
+			sourceTree = "<group>";
+		};
+		F793D2FF1CC2ACBD006CE8D4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F793D3001CC2ACD3006CE8D4 /* BMBaseViewController.h */,
+				F793D3011CC2ACD3006CE8D4 /* BMBaseViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F793D3031CC2AE1F006CE8D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F793D30F1CC2AF5C006CE8D4 /* BMPlaceholderTextView.h */,
+				F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */,
+				F793D3041CC2AE37006CE8D4 /* BMBaseCollectionViewCell.h */,
+				F793D3051CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m */,
+				F793D3071CC2AE55006CE8D4 /* BMInputTextView.h */,
+				F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */,
+				F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F793D3121CC2B819006CE8D4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F793D3131CC2B834006CE8D4 /* BMArticleListCollectionViewCell.h */,
+				F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */,
+				F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +400,8 @@
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
 				F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
+				F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */,
+				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,9 +475,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
+				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
+				F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
+				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
+				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
+				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */,
 				F793D2A91CC15AC0006CE8D4 /* main.m in Sources */,

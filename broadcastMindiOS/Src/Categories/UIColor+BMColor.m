@@ -12,7 +12,12 @@
 
 + (UIColor *)BMBackgroundColor
 {
-    return RGBX(0xF3F3F3);
+ //   return RGBX(0xF3F3F3);
+    return RGBX(0x8e44ad);
+}
 
++ (UIColor *)BMActionColor
+{
+    return RGBX(0x9b59b6);
 }
 @end

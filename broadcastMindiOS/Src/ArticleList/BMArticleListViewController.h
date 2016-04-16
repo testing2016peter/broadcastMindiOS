@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface BMArticleListViewController : UIViewController
+#import "BMBaseViewController.h"
+@interface BMArticleListViewController : BMBaseViewController
 
 @end

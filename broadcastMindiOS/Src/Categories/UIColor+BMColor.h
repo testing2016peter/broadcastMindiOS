@@ -10,5 +10,6 @@
 
 @interface UIColor (BMColor)
 + (UIColor *)BMBackgroundColor;
++ (UIColor *)BMActionColor;
 
 @end
