@@ -8,13 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
+#import "BMAppConstant.h"
 
-typedef void(^APClientSuccessBlock)(NSURLSessionTask *operation, id response);
-typedef void(^APClientFailureBlock)(NSURLSessionTask *operation, NSError *err);
+typedef void(^BMClientSuccessBlock)(AFHTTPRequestOperation *operation, id response);
+typedef void(^BMClientFailureBlock)(AFHTTPRequestOperation *operation, NSError *err);
 
 @interface BMClient : NSObject
 
 + (instancetype )sharedInstance;
-
+- (void)signUpUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
+- (void)loginUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
+- (void)insertArticleWithText:(NSString *)text success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
+- (void)getArticleListWithSuccess:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
 
 @end

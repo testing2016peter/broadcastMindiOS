@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "APNibSizeCalculator.h"
-
+#import "BMAppConstant.h"
+#import "BMService.h"
 @interface BMBaseViewController : UIViewController
 - (void)setupView;
 @end
