@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BMClient.h"
-
+#import "BMObjects.h"
 @interface BMService : NSObject
 
 + (instancetype )sharedInstance;

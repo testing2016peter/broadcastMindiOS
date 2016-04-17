@@ -11,8 +11,8 @@
 static NSString * const BMArticleListCollectionViewCellIdentified = @"BMArticleListCollectionViewCell";
 
 @interface BMArticleListCollectionViewCell : BMBaseCollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;

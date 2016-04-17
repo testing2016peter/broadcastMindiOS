@@ -11,9 +11,10 @@
 #import "BMArticleListCollectionViewCell.h"
 #import "BMCommonViewUtil.h"
 #import "BMPostArticleViewController.h"
-
+#import "BMArticleListDataStore.h"
 @interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
-
+@property (strong, nonatomic) BMArticleListDataStore *dataStore;
+@property (strong, nonatomic) NSMutableArray *bmArticles;
 @end
 
 @implementation BMArticleListViewController
@@ -27,7 +28,18 @@
 
 - (void)setupView
 {
+
+    self.bmArticles = [NSMutableArray array];
+    self.dataStore = [[BMArticleListDataStore alloc] init];
     [self setupCollectionView];
+    [self.dataStore beginWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"respons:%@" ,response);
+        self.bmArticles = [self.dataStore.data copy];
+        [self.collectionView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        NSLog(@"respons:%@" ,err);
+    }];
+
 
 }
 
@@ -49,17 +61,23 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return self.bmArticles.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     BMArticleListCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified forIndexPath:indexPath];
+    if (indexPath.item < self.bmArticles.count) {
+        BMArticle *article = self.bmArticles[indexPath.item];
+        cell.contentTextView.text = article.text;
+        cell.userNameLabel.text = @"匿名";//Translate
+        cell.dateLabel.text = article.updatedAt;
+
+
+    }
     return cell;
 }
-
-
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
@@ -85,11 +103,12 @@
     [self addChildViewController:vc];
 
 }
+
 -(void)tapPostArticleViewController:(BMPostArticleViewController *)vc cancelButton:(id)cancelButton
 {
-
     [vc.view removeFromSuperview];
 }
+
 -(void)tapPostArticleViewController:(BMPostArticleViewController *)vc sendButton:(id)sendButton
 {
     [[BMService sharedInstance] insertArticleWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {

@@ -67,7 +67,15 @@
 {
     [self.client getArticleListWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"success:%@", response);
-        success(operation, response);
+        NSArray *array = response;
+        NSDictionary *dic = @{
+                              @"totalCount": @(array.count),
+                              @"articles": response
+                              };
+        NSError *err;
+        BMArticleList *bmArticleList = [[BMArticleList alloc] initWithDictionary:dic error:&err];
+        NSLog(@"bmArticleList:%@", bmArticleList);
+        success(operation, bmArticleList);
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         NSLog(@"err:%@", err);
         failure(operation, err);
