@@ -9,8 +9,7 @@
 #import "BMArticleFunctionView.h"
 
 @interface  BMArticleFunctionView ()
-@property (weak, nonatomic) IBOutlet UIButton *addEmotionButton;
-@property (weak, nonatomic) IBOutlet UIButton *replyButton;
+
 
 @property (strong, nonatomic) IBOutlet UIView *topLevelSubview;
 @end

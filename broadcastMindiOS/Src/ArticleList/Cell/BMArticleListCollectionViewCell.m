@@ -12,11 +12,15 @@
 
 - (void)setupView
 {
+    [self prepareForReuse];
 }
 
 - (void)prepareForReuse
 {
-    
+
+    self.contentTextView.text = @"";
+    self.backgroundUIView.layer.cornerRadius = 5;
+    self.backgroundUIView.layer.masksToBounds = YES;
 }
 
 @end
