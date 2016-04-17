@@ -28,6 +28,9 @@
 		F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */; };
 		F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */; };
 		F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */; };
+		F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */; };
+		F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */; };
+		F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D31E1CC33F69006CE8D4 /* BMBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,11 @@
 		F793D3131CC2B834006CE8D4 /* BMArticleListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListCollectionViewCell.h; sourceTree = "<group>"; };
 		F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListCollectionViewCell.m; sourceTree = "<group>"; };
 		F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListCollectionViewCell.xib; sourceTree = "<group>"; };
+		F793D3181CC33EB7006CE8D4 /* BMArticleFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleFunctionView.h; sourceTree = "<group>"; };
+		F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleFunctionView.m; sourceTree = "<group>"; };
+		F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleFunctionView.xib; sourceTree = "<group>"; };
+		F793D31D1CC33F69006CE8D4 /* BMBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseView.h; sourceTree = "<group>"; };
+		F793D31E1CC33F69006CE8D4 /* BMBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +284,11 @@
 				F793D3071CC2AE55006CE8D4 /* BMInputTextView.h */,
 				F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */,
 				F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */,
+				F793D3181CC33EB7006CE8D4 /* BMArticleFunctionView.h */,
+				F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */,
+				F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */,
+				F793D31D1CC33F69006CE8D4 /* BMBaseView.h */,
+				F793D31E1CC33F69006CE8D4 /* BMBaseView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -398,6 +411,7 @@
 			files = (
 				F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */,
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
+				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
 				F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
 				F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */,
@@ -474,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
 				F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */,
@@ -481,6 +496,7 @@
 				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
+				F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,

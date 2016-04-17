@@ -10,10 +10,13 @@
 
 @implementation BMArticleListCollectionViewCell
 
-- (void)awakeFromNib
+- (void)setupView
 {
-    [super awakeFromNib];
-    // Initialization code
+}
+
+- (void)prepareForReuse
+{
+    
 }
 
 @end

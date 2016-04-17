@@ -1,5 +1,5 @@
 //
-//  BMBaseCollectionViewCell.h
+//  BMBaseView.h
 //  broadcastMindiOS
 //
 //  Created by Anson Ng on 4/17/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BMBaseCollectionViewCell : UICollectionViewCell
-- (void)setupView;
+@interface BMBaseView : UIView
+- (void)afterLoadFromNibWithRect:(CGRect)rect;
 @end
