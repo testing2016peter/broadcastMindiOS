@@ -44,6 +44,10 @@
 		F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3461CC3BC2F006CE8D4 /* BMBaseJSONModel.m */; };
 		F793D34A1CC3BC5B006CE8D4 /* BMArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3491CC3BC5B006CE8D4 /* BMArticle.m */; };
 		F793D34D1CC3BCD6006CE8D4 /* BMArticleList.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D34C1CC3BCD6006CE8D4 /* BMArticleList.m */; };
+		F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D3541CC3C1D5006CE8D4 /* BMMainFilterView.xib */; };
+		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
+		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
+		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +141,12 @@
 		F793D34B1CC3BCD6006CE8D4 /* BMArticleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleList.h; sourceTree = "<group>"; };
 		F793D34C1CC3BCD6006CE8D4 /* BMArticleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleList.m; sourceTree = "<group>"; };
 		F793D34E1CC3BD83006CE8D4 /* BMObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMObjects.h; sourceTree = "<group>"; };
+		F793D3541CC3C1D5006CE8D4 /* BMMainFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterView.xib; sourceTree = "<group>"; };
+		F793D3561CC3C1E1006CE8D4 /* BMMainFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterView.h; sourceTree = "<group>"; };
+		F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterView.m; sourceTree = "<group>"; };
+		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
+		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
+		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +347,12 @@
 				F793D31E1CC33F69006CE8D4 /* BMBaseView.m */,
 				F793D3311CC38780006CE8D4 /* BMCommonViewUtil.h */,
 				F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */,
+				F793D3541CC3C1D5006CE8D4 /* BMMainFilterView.xib */,
+				F793D3561CC3C1E1006CE8D4 /* BMMainFilterView.h */,
+				F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */,
+				F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */,
+				F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */,
+				F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -517,10 +533,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */,
 				F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */,
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
 				F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */,
+				F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
 				F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
@@ -608,8 +626,10 @@
 				F793D3281CC37BFD006CE8D4 /* APNibCacheManager.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
 				F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */,
+				F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
 				F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */,
+				F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */,
 				F793D34D1CC3BCD6006CE8D4 /* BMArticleList.m in Sources */,
 				F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */,
 				F793D3401CC3B7ED006CE8D4 /* BMArticleListDataStore.m in Sources */,

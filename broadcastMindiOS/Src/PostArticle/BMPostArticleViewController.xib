@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-X8-img">
-                    <rect key="frame" x="16" y="50" width="568" height="250"/>
+                    <rect key="frame" x="16" y="100" width="568" height="250"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img-No-User" translatesAutoresizingMaskIntoConstraints="NO" id="Bm0-aN-am9">
                             <rect key="frame" x="10" y="56" width="50" height="50"/>
@@ -80,7 +80,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Ta4-X8-img" secondAttribute="trailing" constant="16" id="JCv-Co-SDD"/>
-                <constraint firstItem="Ta4-X8-img" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="SqE-Vz-CLe"/>
+                <constraint firstItem="Ta4-X8-img" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="SqE-Vz-CLe"/>
                 <constraint firstAttribute="bottom" secondItem="Ta4-X8-img" secondAttribute="bottom" constant="20" symbolic="YES" id="e31-Wl-2oD"/>
                 <constraint firstItem="Ta4-X8-img" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="qvV-Oy-6KU"/>
             </constraints>

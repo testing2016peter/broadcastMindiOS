@@ -12,9 +12,13 @@
 #import "BMCommonViewUtil.h"
 #import "BMPostArticleViewController.h"
 #import "BMArticleListDataStore.h"
+#import "BMMainFilterCollectionReusableView.h"
+
+#import <TLYShyNavBarManager.h>
 @interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMArticleListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
+@property (strong, nonatomic) TLYShyNavBarManager *shyManage;
 @end
 
 @implementation BMArticleListViewController
@@ -28,6 +32,11 @@
 
 - (void)setupView
 {
+
+
+    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
+    self.shyNavBarManager = shyManager;
+    self.shyNavBarManager.scrollView = self.collectionView;
 
     self.bmArticles = [NSMutableArray array];
     self.dataStore = [[BMArticleListDataStore alloc] init];
@@ -51,6 +60,7 @@
         NSLog(@"err:%@,", err);
     }];
     [self.collectionView registerNib: [UINib nibWithNibName:BMArticleListCollectionViewCellIdentified bundle:nil]forCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified];
+    [self.collectionView registerNib: [UINib nibWithNibName:BMMainFilterCollectionReusableViewIdentified bundle:nil]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:BMMainFilterCollectionReusableViewIdentified];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -73,8 +83,6 @@
         cell.contentTextView.text = article.text;
         cell.userNameLabel.text = @"匿名";//Translate
         cell.dateLabel.text = article.updatedAt;
-
-
     }
     return cell;
 }

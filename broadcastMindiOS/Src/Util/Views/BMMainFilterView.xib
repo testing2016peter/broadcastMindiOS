@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMMainFilterView">
+            <connections>
+                <outlet property="articleHostestButton" destination="szg-6h-DAU" id="gtq-6K-wQ3"/>
+                <outlet property="articleNewButton" destination="lHi-Ha-Z8y" id="Ewi-Lr-cPs"/>
+                <outlet property="meButton" destination="Dze-Lz-vON" id="dkO-ao-R5h"/>
+                <outlet property="topLevelSubview" destination="iN0-l3-epB" id="SM5-GN-rF3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szg-6h-DAU">
+                    <rect key="frame" x="182" y="0.0" width="147" height="50"/>
+                    <state key="normal" title="HOTEST"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dze-Lz-vON">
+                    <rect key="frame" x="0.0" y="0.0" width="148" height="50"/>
+                    <state key="normal" title="ME"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHi-Ha-Z8y">
+                    <rect key="frame" x="148" y="0.0" width="34" height="50"/>
+                    <state key="normal" title="NEW"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CE-qm-2bY">
+                    <rect key="frame" x="181" y="5" width="1" height="40"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="vCv-FS-ehI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ym-Y2-NCO">
+                    <rect key="frame" x="148" y="5" width="1" height="40"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="8vW-GM-1Yk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="lHi-Ha-Z8y" secondAttribute="bottom" id="1aT-AI-aou"/>
+                <constraint firstItem="szg-6h-DAU" firstAttribute="leading" secondItem="lHi-Ha-Z8y" secondAttribute="trailing" id="A2v-ll-Ke6"/>
+                <constraint firstItem="Dze-Lz-vON" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FAf-FX-Y4M"/>
+                <constraint firstItem="lHi-Ha-Z8y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Hdr-mv-kZp"/>
+                <constraint firstAttribute="bottom" secondItem="5Ym-Y2-NCO" secondAttribute="bottom" constant="5" id="Odg-hf-YoV"/>
+                <constraint firstAttribute="bottom" secondItem="szg-6h-DAU" secondAttribute="bottom" id="Pgw-lf-abj"/>
+                <constraint firstItem="Dze-Lz-vON" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QWi-bS-hlP"/>
+                <constraint firstItem="2CE-qm-2bY" firstAttribute="trailing" secondItem="lHi-Ha-Z8y" secondAttribute="trailing" id="Ygs-25-9bj"/>
+                <constraint firstItem="2CE-qm-2bY" firstAttribute="top" secondItem="5Ym-Y2-NCO" secondAttribute="top" id="aIW-HW-fDx"/>
+                <constraint firstAttribute="bottom" secondItem="Dze-Lz-vON" secondAttribute="bottom" id="c92-Ku-RJk"/>
+                <constraint firstItem="5Ym-Y2-NCO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="hYQ-5U-RlJ"/>
+                <constraint firstItem="lHi-Ha-Z8y" firstAttribute="leading" secondItem="5Ym-Y2-NCO" secondAttribute="leading" id="iNh-CC-Fob"/>
+                <constraint firstItem="2CE-qm-2bY" firstAttribute="bottom" secondItem="5Ym-Y2-NCO" secondAttribute="bottom" id="peA-Ac-q7Z"/>
+                <constraint firstItem="szg-6h-DAU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pf3-p8-uhO"/>
+                <constraint firstAttribute="trailing" secondItem="szg-6h-DAU" secondAttribute="trailing" id="qcL-4i-XqP"/>
+                <constraint firstItem="lHi-Ha-Z8y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tUy-As-BRE"/>
+                <constraint firstItem="lHi-Ha-Z8y" firstAttribute="leading" secondItem="Dze-Lz-vON" secondAttribute="trailing" id="zoQ-72-lYn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="194.5" y="-158"/>
+        </view>
+    </objects>
+</document>
