@@ -6,16 +6,18 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import "PostArticleViewController.h"
+#import "BMPostArticleViewController.h"
 
-@interface PostArticleViewController ()
+@interface BMPostArticleViewController ()
 
 @end
 
-@implementation PostArticleViewController
+@implementation BMPostArticleViewController
 
 - (void)setupView
 {
+    self.containerView.layer.cornerRadius = 5;
+    self.containerView.layer.masksToBounds = YES;
     self.view.backgroundColor = [UIColor clearColor];
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
         self.view.backgroundColor = [UIColor clearColor];

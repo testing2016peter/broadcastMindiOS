@@ -10,19 +10,21 @@
 #import "BMInputTextView.h"
 #import "BMArticleListCollectionViewCell.h"
 #import "BMCommonViewUtil.h"
-#import "PostArticleViewController.h"
+#import "BMPostArticleViewController.h"
 
-@interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, PostArticleViewControllerDelegate>
+@interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 
 @end
 
 @implementation BMArticleListViewController
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
     [self.view addSubview:button];
 }
+
 - (void)setupView
 {
     [self setupCollectionView];
@@ -76,19 +78,19 @@
 }
 - (void)tapPostButton:(UIButton *)button
 {
-    PostArticleViewController *vc = [[PostArticleViewController alloc] init];
+    BMPostArticleViewController *vc = [[BMPostArticleViewController alloc] init];
     vc.view.frame = self.view.bounds;
     vc.postArticleViewControllerDelegate = self;
     [self.view addSubview:vc.view];
     [self addChildViewController:vc];
 
 }
--(void)tapPostArticleViewController:(PostArticleViewController *)vc cancelButton:(id)cancelButton
+-(void)tapPostArticleViewController:(BMPostArticleViewController *)vc cancelButton:(id)cancelButton
 {
 
     [vc.view removeFromSuperview];
 }
--(void)tapPostArticleViewController:(PostArticleViewController *)vc sendButton:(id)sendButton
+-(void)tapPostArticleViewController:(BMPostArticleViewController *)vc sendButton:(id)sendButton
 {
     [[BMService sharedInstance] insertArticleWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"response:%@" ,response);

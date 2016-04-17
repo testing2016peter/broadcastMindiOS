@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostArticleViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMPostArticleViewController">
             <connections>
                 <outlet property="cancelButton" destination="sH4-4e-760" id="wrf-og-Tmc"/>
                 <outlet property="containerView" destination="Ta4-X8-img" id="nwr-fl-uzp"/>
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-X8-img">
-                    <rect key="frame" x="50" y="50" width="500" height="500"/>
+                    <rect key="frame" x="16" y="50" width="568" height="250"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img-No-User" translatesAutoresizingMaskIntoConstraints="NO" id="Bm0-aN-am9">
                             <rect key="frame" x="10" y="56" width="50" height="50"/>
@@ -31,7 +31,7 @@
                             </constraints>
                         </imageView>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="asdfasdf" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4wZ-XC-0gQ">
-                            <rect key="frame" x="76" y="56" width="408" height="428"/>
+                            <rect key="frame" x="76" y="56" width="476" height="178"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -44,14 +44,14 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaQ-XX-UcD">
-                            <rect key="frame" x="456" y="10" width="34" height="30"/>
+                            <rect key="frame" x="524" y="10" width="34" height="30"/>
                             <state key="normal" title="send"/>
                             <connections>
                                 <action selector="tapSendButton:" destination="-1" eventType="touchUpInside" id="q4w-R9-2ON"/>
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5UH-Rd-2eX">
-                            <rect key="frame" x="5" y="45" width="490" height="1"/>
+                            <rect key="frame" x="5" y="45" width="558" height="1"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="mkm-qN-xWi"/>
@@ -70,6 +70,7 @@
                         <constraint firstAttribute="trailing" secondItem="4wZ-XC-0gQ" secondAttribute="trailing" constant="16" id="aNu-gw-TTT"/>
                         <constraint firstItem="sH4-4e-760" firstAttribute="leading" secondItem="Ta4-X8-img" secondAttribute="leading" constant="10" id="gRu-gQ-eeS"/>
                         <constraint firstItem="5UH-Rd-2eX" firstAttribute="leading" secondItem="Ta4-X8-img" secondAttribute="leading" constant="5" id="qcD-Pd-QL3"/>
+                        <constraint firstAttribute="height" constant="250" id="t8Q-g7-s4J"/>
                         <constraint firstItem="sH4-4e-760" firstAttribute="top" secondItem="Ta4-X8-img" secondAttribute="top" constant="10" id="tka-re-7bF"/>
                         <constraint firstItem="qaQ-XX-UcD" firstAttribute="top" secondItem="sH4-4e-760" secondAttribute="top" id="tyZ-em-CI8"/>
                         <constraint firstAttribute="trailing" secondItem="qaQ-XX-UcD" secondAttribute="trailing" constant="10" id="yyL-8o-5D8"/>
@@ -78,11 +79,16 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Ta4-X8-img" secondAttribute="trailing" constant="50" id="JCv-Co-SDD"/>
+                <constraint firstAttribute="trailing" secondItem="Ta4-X8-img" secondAttribute="trailing" constant="16" id="JCv-Co-SDD"/>
                 <constraint firstItem="Ta4-X8-img" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="SqE-Vz-CLe"/>
-                <constraint firstAttribute="bottom" secondItem="Ta4-X8-img" secondAttribute="bottom" constant="50" id="e31-Wl-2oD"/>
-                <constraint firstItem="Ta4-X8-img" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="qvV-Oy-6KU"/>
+                <constraint firstAttribute="bottom" secondItem="Ta4-X8-img" secondAttribute="bottom" constant="20" symbolic="YES" id="e31-Wl-2oD"/>
+                <constraint firstItem="Ta4-X8-img" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="qvV-Oy-6KU"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="e31-Wl-2oD"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="150" y="297"/>
         </view>
     </objects>
