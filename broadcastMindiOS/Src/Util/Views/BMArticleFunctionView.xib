@@ -7,9 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMArticleFunctionView">
             <connections>
-                <outlet property="addEmotionButton" destination="u60-7o-vTB" id="bM8-tG-ncb"/>
-                <outlet property="replyButton" destination="nco-4a-wcR" id="35W-Fa-0Ss"/>
+                <outlet property="likeButton" destination="u60-7o-vTB" id="urE-Ib-l6h"/>
+                <outlet property="replyButton" destination="nco-4a-wcR" id="IfQ-wv-1o9"/>
                 <outlet property="topLevelSubview" destination="iN0-l3-epB" id="PyU-aL-X9g"/>
+                <outlet property="viewNumberLabel" destination="oIp-f4-RhH" id="618-Mk-Y8X"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -31,17 +32,26 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIp-f4-RhH">
+                    <rect key="frame" x="124" y="0.0" width="8" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="oIp-f4-RhH" firstAttribute="leading" secondItem="LRO-tk-fEn" secondAttribute="trailing" id="3xz-sV-Tka"/>
                 <constraint firstAttribute="bottom" secondItem="LRO-tk-fEn" secondAttribute="bottom" id="4Ao-xW-cyV"/>
                 <constraint firstItem="nco-4a-wcR" firstAttribute="leading" secondItem="u60-7o-vTB" secondAttribute="trailing" constant="10" id="4iS-Ou-Agh"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LRO-tk-fEn" secondAttribute="trailing" constant="10" id="Ac0-27-7GP"/>
+                <constraint firstAttribute="bottom" secondItem="oIp-f4-RhH" secondAttribute="bottom" id="AT4-Yo-QPF"/>
                 <constraint firstItem="LRO-tk-fEn" firstAttribute="leading" secondItem="nco-4a-wcR" secondAttribute="trailing" constant="10" id="EvK-3Y-Eck"/>
                 <constraint firstItem="nco-4a-wcR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NP6-x0-E3P"/>
                 <constraint firstItem="LRO-tk-fEn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W7r-Ba-eAe"/>
                 <constraint firstAttribute="bottom" secondItem="u60-7o-vTB" secondAttribute="bottom" id="ab7-b4-7VT"/>
+                <constraint firstItem="oIp-f4-RhH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cip-Im-Kqh"/>
                 <constraint firstItem="u60-7o-vTB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eDn-1h-A43"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oIp-f4-RhH" secondAttribute="trailing" constant="16" id="nUK-z3-GUy"/>
                 <constraint firstItem="u60-7o-vTB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tJO-wy-9YH"/>
                 <constraint firstAttribute="bottom" secondItem="nco-4a-wcR" secondAttribute="bottom" id="zsX-wQ-XTJ"/>
             </constraints>

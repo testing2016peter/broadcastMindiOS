@@ -31,6 +31,14 @@
 		F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */; };
 		F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */; };
 		F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D31E1CC33F69006CE8D4 /* BMBaseView.m */; };
+		F793D3271CC37BFD006CE8D4 /* APCalculatorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3221CC37BFD006CE8D4 /* APCalculatorHelper.m */; };
+		F793D3281CC37BFD006CE8D4 /* APNibCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3241CC37BFD006CE8D4 /* APNibCacheManager.m */; };
+		F793D3291CC37BFD006CE8D4 /* APNibSizeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3261CC37BFD006CE8D4 /* APNibSizeCalculator.m */; };
+		F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */; };
+		F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */; };
+		F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */; };
+		F793D33B1CC38C72006CE8D4 /* BMPostArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */; };
+		F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +106,21 @@
 		F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleFunctionView.xib; sourceTree = "<group>"; };
 		F793D31D1CC33F69006CE8D4 /* BMBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseView.h; sourceTree = "<group>"; };
 		F793D31E1CC33F69006CE8D4 /* BMBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseView.m; sourceTree = "<group>"; };
+		F793D3211CC37BFD006CE8D4 /* APCalculatorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCalculatorHelper.h; sourceTree = "<group>"; };
+		F793D3221CC37BFD006CE8D4 /* APCalculatorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCalculatorHelper.m; sourceTree = "<group>"; };
+		F793D3231CC37BFD006CE8D4 /* APNibCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNibCacheManager.h; sourceTree = "<group>"; };
+		F793D3241CC37BFD006CE8D4 /* APNibCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APNibCacheManager.m; sourceTree = "<group>"; };
+		F793D3251CC37BFD006CE8D4 /* APNibSizeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNibSizeCalculator.h; sourceTree = "<group>"; };
+		F793D3261CC37BFD006CE8D4 /* APNibSizeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APNibSizeCalculator.m; sourceTree = "<group>"; };
+		F793D32B1CC37EF0006CE8D4 /* BMAppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMAppConstant.h; path = Src/BMAppConstant.h; sourceTree = "<group>"; };
+		F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMAppConstant.m; path = Src/BMAppConstant.m; sourceTree = "<group>"; };
+		F793D32E1CC37FCA006CE8D4 /* BMEnvConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMEnvConfig.h; sourceTree = "<group>"; };
+		F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMEnvConfig.m; sourceTree = "<group>"; };
+		F793D3311CC38780006CE8D4 /* BMCommonViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCommonViewUtil.h; sourceTree = "<group>"; };
+		F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCommonViewUtil.m; sourceTree = "<group>"; };
+		F793D3381CC38C72006CE8D4 /* BMPostArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostArticleViewController.h; sourceTree = "<group>"; };
+		F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostArticleViewController.m; sourceTree = "<group>"; };
+		F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostArticleViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +192,9 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F793D3341CC38C4C006CE8D4 /* PostArticle */,
+				F793D32B1CC37EF0006CE8D4 /* BMAppConstant.h */,
+				F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */,
 				F793D2FE1CC2ACBD006CE8D4 /* Util */,
 				F793D2EC1CC15D2F006CE8D4 /* Categories */,
 				F793D2DA1CC15C29006CE8D4 /* ArticleList */,
@@ -258,6 +284,8 @@
 		F793D2FE1CC2ACBD006CE8D4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F793D32A1CC37E85006CE8D4 /* Config */,
+				F793D3201CC37BFD006CE8D4 /* Layout */,
 				F793D3031CC2AE1F006CE8D4 /* Views */,
 				F793D2FF1CC2ACBD006CE8D4 /* ViewControllers */,
 			);
@@ -289,6 +317,8 @@
 				F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */,
 				F793D31D1CC33F69006CE8D4 /* BMBaseView.h */,
 				F793D31E1CC33F69006CE8D4 /* BMBaseView.m */,
+				F793D3311CC38780006CE8D4 /* BMCommonViewUtil.h */,
+				F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +331,39 @@
 				F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		F793D3201CC37BFD006CE8D4 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				F793D3211CC37BFD006CE8D4 /* APCalculatorHelper.h */,
+				F793D3221CC37BFD006CE8D4 /* APCalculatorHelper.m */,
+				F793D3231CC37BFD006CE8D4 /* APNibCacheManager.h */,
+				F793D3241CC37BFD006CE8D4 /* APNibCacheManager.m */,
+				F793D3251CC37BFD006CE8D4 /* APNibSizeCalculator.h */,
+				F793D3261CC37BFD006CE8D4 /* APNibSizeCalculator.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		F793D32A1CC37E85006CE8D4 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F793D32E1CC37FCA006CE8D4 /* BMEnvConfig.h */,
+				F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F793D3341CC38C4C006CE8D4 /* PostArticle */ = {
+			isa = PBXGroup;
+			children = (
+				F793D3381CC38C72006CE8D4 /* BMPostArticleViewController.h */,
+				F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */,
+				F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */,
+			);
+			name = PostArticle;
+			path = Src/PostArticle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +479,7 @@
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
 				F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
+				F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,19 +552,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F793D3271CC37BFD006CE8D4 /* APCalculatorHelper.m in Sources */,
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
 				F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
 				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
+				F793D33B1CC38C72006CE8D4 /* BMPostArticleViewController.m in Sources */,
+				F793D3281CC37BFD006CE8D4 /* APNibCacheManager.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
+				F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */,
 				F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
+				F793D3291CC37BFD006CE8D4 /* APNibSizeCalculator.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
+				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,
 				F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */,
+				F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */,
 				F793D2A91CC15AC0006CE8D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

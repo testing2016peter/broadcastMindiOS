@@ -8,5 +8,8 @@
 #import "BMBaseView.h"
 IB_DESIGNABLE
 @interface BMArticleFunctionView : BMBaseView
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UIButton *replyButton;
+@property (weak, nonatomic) IBOutlet UILabel *viewNumberLabel;
 
 @end

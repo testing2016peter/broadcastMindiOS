@@ -14,7 +14,11 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="397" height="123"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img-test-user" translatesAutoresizingMaskIntoConstraints="NO" id="nMJ-6e-I04">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aq-m7-Q3R">
+                        <rect key="frame" x="0.0" y="0.0" width="397" height="123"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img-No-User" translatesAutoresizingMaskIntoConstraints="NO" id="nMJ-6e-I04">
                         <rect key="frame" x="16" y="8" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="NAA-yl-Xdb"/>
@@ -50,45 +54,44 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytQ-C9-X9X">
-                        <rect key="frame" x="73" y="64" width="305" height="13"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="13" id="PYd-Sm-4s2"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="nMJ-6e-I04" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="1uU-ne-SeJ"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="3TS-uX-Hbd"/>
                 <constraint firstItem="nMJ-6e-I04" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="7jV-xw-I5Y"/>
-                <constraint firstItem="ytQ-C9-X9X" firstAttribute="leading" secondItem="dZB-ET-FRu" secondAttribute="leading" id="95d-go-py7"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="78" id="CMG-t0-rjQ"/>
                 <constraint firstItem="dZB-ET-FRu" firstAttribute="leading" secondItem="nMJ-6e-I04" secondAttribute="trailing" constant="7" id="DZp-nA-f0X"/>
+                <constraint firstAttribute="trailing" secondItem="3aq-m7-Q3R" secondAttribute="trailing" id="Gh1-yL-dZ2"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hG5-vp-3Bt" secondAttribute="trailing" constant="16" id="ISM-rw-IlW"/>
                 <constraint firstItem="hG5-vp-3Bt" firstAttribute="top" secondItem="mqK-cu-yvb" secondAttribute="top" id="MXV-Sm-Nrq"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="top" secondItem="dZB-ET-FRu" secondAttribute="bottom" constant="13" id="VEN-Oj-Yxo"/>
+                <constraint firstItem="3aq-m7-Q3R" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="g8Z-SS-G1N"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" id="isB-n1-zQa"/>
+                <constraint firstItem="3aq-m7-Q3R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kKR-u9-q1N"/>
+                <constraint firstAttribute="bottom" secondItem="3aq-m7-Q3R" secondAttribute="bottom" id="kcC-Oa-YfI"/>
                 <constraint firstItem="hG5-vp-3Bt" firstAttribute="leading" secondItem="mqK-cu-yvb" secondAttribute="trailing" constant="10" id="nIV-Bn-wmB"/>
                 <constraint firstItem="dZB-ET-FRu" firstAttribute="top" secondItem="hG5-vp-3Bt" secondAttribute="bottom" constant="4" id="oR1-Fk-6Lq"/>
-                <constraint firstItem="ytQ-C9-X9X" firstAttribute="trailing" secondItem="dZB-ET-FRu" secondAttribute="trailing" id="pfa-Ds-Tff"/>
                 <constraint firstItem="mqK-cu-yvb" firstAttribute="top" secondItem="nMJ-6e-I04" secondAttribute="top" id="qbT-n1-SgB"/>
                 <constraint firstAttribute="trailing" secondItem="dZB-ET-FRu" secondAttribute="trailing" constant="19" id="r1p-ez-88Q"/>
-                <constraint firstItem="ytQ-C9-X9X" firstAttribute="bottom" secondItem="dZB-ET-FRu" secondAttribute="bottom" id="sGa-oZ-fz9"/>
                 <constraint firstItem="mqK-cu-yvb" firstAttribute="leading" secondItem="nMJ-6e-I04" secondAttribute="trailing" constant="10" id="vsu-fN-3Jq"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="90" id="vyJ-Ph-cD3"/>
             </constraints>
             <size key="customSize" width="397" height="123"/>
             <connections>
+                <outlet property="backgroundUIView" destination="3aq-m7-Q3R" id="NXa-Xn-7qy"/>
+                <outlet property="bmArticleFunctionView" destination="9hQ-Dj-kky" id="OeW-JF-Buf"/>
                 <outlet property="contentTextView" destination="dZB-ET-FRu" id="sdr-4y-2RI"/>
+                <outlet property="dateLabel" destination="hG5-vp-3Bt" id="QxA-Zm-3Bn"/>
                 <outlet property="userImageView" destination="nMJ-6e-I04" id="JpY-vS-8PS"/>
+                <outlet property="userNameLabel" destination="mqK-cu-yvb" id="ezP-0x-UiX"/>
             </connections>
             <point key="canvasLocation" x="264.5" y="334.5"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Img-test-user" width="934" height="937"/>
+        <image name="Img-No-User" width="96" height="96"/>
     </resources>
 </document>

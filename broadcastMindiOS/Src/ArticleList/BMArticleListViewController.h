@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BMBaseViewController.h"
 @interface BMArticleListViewController : BMBaseViewController
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
