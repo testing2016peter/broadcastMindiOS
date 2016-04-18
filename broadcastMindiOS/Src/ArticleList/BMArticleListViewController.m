@@ -36,7 +36,7 @@
     self.bmMainFilterView = [[BMMainFilterView alloc] initWithFrame:rect];
     [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
     /* Make navbar stick to the top */
-    [self.shyNavBarManager setStickyNavigationBar:YES];
+    [self.shyNavBarManager setStickyNavigationBar:NO];
     /* Make the extension view stick to the top */
     [self.shyNavBarManager setStickyExtensionView:NO];
 
