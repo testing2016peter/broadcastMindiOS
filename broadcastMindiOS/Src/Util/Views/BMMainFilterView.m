@@ -12,9 +12,31 @@
 
 - (void)afterLoadFromNibWithRect:(CGRect)rect
 {
-    CGRect frame =   self.articleNewButton.frame;
-    frame.size.width = rect.size.width / 3;
-    self.articleNewButton.frame = frame;
+//    self.topLevelSubview.frame = rect;
+//    [self addSubview:self.topLevelSubview];
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    self.articleNewButtonWidthContraint.constant = screenBounds.size.width / 3.0f;
+}
+
+- (IBAction)tapMeButton:(id)sender
+{
+    if ([self.bmMainFilterViewDelegate respondsToSelector:@selector(tapBMMainFilterView:meButton:)]) {
+        [self.bmMainFilterViewDelegate  tapBMMainFilterView:self meButton:sender];
+    }
+}
+
+- (IBAction)tapNewButton:(id)sender
+{
+    if ([self.bmMainFilterViewDelegate respondsToSelector:@selector(tapBMMainFilterView:newButton:)]) {
+        [self.bmMainFilterViewDelegate  tapBMMainFilterView:self newButton:sender];
+    }
+}
+
+- (IBAction)tapHotestButton:(id)sender
+{
+    if ([self.bmMainFilterViewDelegate respondsToSelector:@selector(tapBMMainFilterView:hotestButton:)]) {
+        [self.bmMainFilterViewDelegate  tapBMMainFilterView:self hotestButton:sender];
+    }
 }
 
 @end

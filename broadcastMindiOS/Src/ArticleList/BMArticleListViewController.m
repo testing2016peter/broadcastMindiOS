@@ -6,6 +6,7 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
+#import <TLYShyNavBarManager.h>
 #import "BMArticleListViewController.h"
 #import "BMInputTextView.h"
 #import "BMArticleListCollectionViewCell.h"
@@ -13,12 +14,14 @@
 #import "BMPostArticleViewController.h"
 #import "BMArticleListDataStore.h"
 #import "BMMainFilterCollectionReusableView.h"
-
-#import <TLYShyNavBarManager.h>
+#import "BMMainFilterView.h"
+#import "UIColor+BMColor.h"
 @interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMArticleListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
 @property (strong, nonatomic) TLYShyNavBarManager *shyManage;
+@property (strong, nonatomic) BMMainFilterView *bmMainFilterView;
+
 @end
 
 @implementation BMArticleListViewController
@@ -28,11 +31,27 @@
     [super viewDidAppear:animated];
     UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
     [self.view addSubview:button];
+    CGRect rect = self.view.bounds;
+    rect.size.height = 30.0f;
+    self.bmMainFilterView = [[BMMainFilterView alloc] initWithFrame:rect];
+    [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
+    /* Make navbar stick to the top */
+    [self.shyNavBarManager setStickyNavigationBar:YES];
+    /* Make the extension view stick to the top */
+    [self.shyNavBarManager setStickyExtensionView:NO];
+
+
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
+    searchBar.barTintColor = [UIColor BMBackgroundColor];
+    searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    searchBar.backgroundColor = [UIColor clearColor];
+    self.navigationItem.titleView = searchBar;
+
 }
+
 
 - (void)setupView
 {
-
 
     TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
     self.shyNavBarManager = shyManager;
