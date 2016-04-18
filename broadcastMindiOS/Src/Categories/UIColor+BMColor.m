@@ -10,10 +10,15 @@
 #import <MNColorKit/RGBX.h>
 @implementation UIColor (BMColor)
 
++ (UIColor *)BMNavBackgroundColor
+{
+    //   return RGBX(0xF3F3F3);
+    return RGBX(0x282323);
+}
 + (UIColor *)BMBackgroundColor
 {
  //   return RGBX(0xF3F3F3);
-    return RGBX(0x8e44ad);
+    return RGBX(0xb8b8b8);
 }
 
 + (UIColor *)BMActionColor

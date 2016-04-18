@@ -12,11 +12,13 @@
 
 - (void)afterLoadFromNibWithRect:(CGRect)rect
 {
-//    self.topLevelSubview.frame = rect;
-//    [self addSubview:self.topLevelSubview];
+
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.articleNewButtonWidthContraint.constant = screenBounds.size.width / 3.0f;
+
 }
+
+
 
 - (IBAction)tapMeButton:(id)sender
 {

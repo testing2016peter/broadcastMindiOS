@@ -16,29 +16,38 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="329" height="30"/>
+            <rect key="frame" x="0.0" y="0.0" width="402" height="41"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dze-Lz-vON">
-                    <rect key="frame" x="45" y="0.0" width="80" height="30"/>
-                    <state key="normal" title="ME"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dze-Lz-vON">
+                    <rect key="frame" x="51" y="0.0" width="100" height="41"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Me" image="Icon-user">
+                        <color key="titleColor" red="0.14901961386203766" green="0.50980395078659058" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="tapMeButton:" destination="-1" eventType="touchUpInside" id="FUS-5y-gGn"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHi-Ha-Z8y">
-                    <rect key="frame" x="125" y="0.0" width="80" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHi-Ha-Z8y">
+                    <rect key="frame" x="151" y="0.0" width="100" height="41"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="qfC-8p-dqO"/>
+                        <constraint firstAttribute="width" constant="100" id="qfC-8p-dqO"/>
                     </constraints>
-                    <state key="normal" title="NEW"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="New" image="Icon-News">
+                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="tapNewButton:" destination="-1" eventType="touchUpInside" id="rxn-3j-6Kp"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szg-6h-DAU">
-                    <rect key="frame" x="205" y="0.0" width="80" height="30"/>
-                    <state key="normal" title="HOTEST"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="szg-6h-DAU">
+                    <rect key="frame" x="251" y="0.0" width="100" height="41"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <state key="normal" title="Hot" image="Icon-Hot">
+                        <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="tapHotestButton:" destination="-1" eventType="touchUpInside" id="ogZ-5d-GUk"/>
                     </connections>
@@ -47,19 +56,25 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="lHi-Ha-Z8y" firstAttribute="leading" secondItem="Dze-Lz-vON" secondAttribute="trailing" id="1Uv-ey-dGF"/>
-                <constraint firstItem="lHi-Ha-Z8y" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AKb-sI-6Hw"/>
                 <constraint firstItem="lHi-Ha-Z8y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CL8-jS-rtn"/>
                 <constraint firstItem="lHi-Ha-Z8y" firstAttribute="width" secondItem="Dze-Lz-vON" secondAttribute="width" id="GEz-ej-ISG"/>
                 <constraint firstItem="szg-6h-DAU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R1o-4d-T5I"/>
                 <constraint firstItem="Dze-Lz-vON" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RDb-2z-84d"/>
+                <constraint firstAttribute="bottom" secondItem="lHi-Ha-Z8y" secondAttribute="bottom" id="bSs-fr-Fq3"/>
                 <constraint firstItem="szg-6h-DAU" firstAttribute="leading" secondItem="lHi-Ha-Z8y" secondAttribute="trailing" id="bYK-lB-Nrx"/>
                 <constraint firstItem="szg-6h-DAU" firstAttribute="width" secondItem="Dze-Lz-vON" secondAttribute="width" id="hBa-zK-zfs"/>
                 <constraint firstAttribute="bottom" secondItem="Dze-Lz-vON" secondAttribute="bottom" id="nsc-g5-DvO"/>
+                <constraint firstItem="lHi-Ha-Z8y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pVx-Sr-HGx"/>
                 <constraint firstAttribute="bottom" secondItem="szg-6h-DAU" secondAttribute="bottom" id="tBb-kq-RC7"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="194.5" y="-165.5"/>
+            <point key="canvasLocation" x="231" y="-160.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Icon-Hot" width="50" height="50"/>
+        <image name="Icon-News" width="50" height="50"/>
+        <image name="Icon-user" width="50" height="50"/>
+    </resources>
 </document>
