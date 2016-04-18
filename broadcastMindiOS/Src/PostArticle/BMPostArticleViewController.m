@@ -33,10 +33,12 @@
     else {
         self.view.backgroundColor = [UIColor blackColor];
     }
+    [self.contentTextView becomeFirstResponder];
 
 }
 - (IBAction)tapCancelButton:(id)sender
 {
+        [self.contentTextView resignFirstResponder];
     if ([self.postArticleViewControllerDelegate respondsToSelector:@selector(tapPostArticleViewController:cancelButton:)]) {
         [self.postArticleViewControllerDelegate tapPostArticleViewController:self cancelButton:self.cancelButton];
 
@@ -45,6 +47,7 @@
 
 - (IBAction)tapSendButton:(id)sender
 {
+    [self.contentTextView resignFirstResponder];
     if ([self.postArticleViewControllerDelegate respondsToSelector:@selector(tapPostArticleViewController:sendButton:)]) {
         [self.postArticleViewControllerDelegate tapPostArticleViewController:self sendButton:self.sendButton];
 

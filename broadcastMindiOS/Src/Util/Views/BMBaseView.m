@@ -40,11 +40,11 @@
 
 - (void)loadFromNibWithRect:(CGRect)rect
 {
-
      self.topLevelSubview = [[[NSBundle bundleForClass:[self class]] loadNibNamed:NSStringFromClass(self.class) owner:self options:nil] firstObject];;
 
     self.topLevelSubview.frame = rect;
     [self addSubview:self.topLevelSubview];
+    [self afterLoadFromNibWithRect:rect];
 
 }
 

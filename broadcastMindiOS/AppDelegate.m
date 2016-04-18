@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BMArticleListViewController.h"
+#import "UIColor+BMColor.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     BMArticleListViewController *vc = [[BMArticleListViewController alloc] init];
-    self.window.rootViewController = vc;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    navigationController.navigationBar.barTintColor = [UIColor BMBackgroundColor];
+
+
+
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
