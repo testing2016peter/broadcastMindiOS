@@ -16,6 +16,8 @@
 #import "BMMainFilterCollectionReusableView.h"
 #import "BMMainFilterView.h"
 #import "UIColor+BMColor.h"
+#import <UIScrollView+SVPullToRefresh.h>
+#import <UIScrollView+SVInfiniteScrolling.h>
 @interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMArticleListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
@@ -80,6 +82,23 @@
     }];
     [self.collectionView registerNib: [UINib nibWithNibName:BMArticleListCollectionViewCellIdentified bundle:nil]forCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified];
     [self.collectionView registerNib: [UINib nibWithNibName:BMMainFilterCollectionReusableViewIdentified bundle:nil]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:BMMainFilterCollectionReusableViewIdentified];
+
+    [self.collectionView addPullToRefreshWithActionHandler:^{
+        [self.collectionView.pullToRefreshView stopAnimating];
+
+    }];
+    [self.collectionView addInfiniteScrollingWithActionHandler:^{
+        [self.dataStore loadNextBunchWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+            [self.collectionView.infiniteScrollingView stopAnimating];
+                    self.bmArticles = [self.dataStore.data copy];
+            [self.collectionView reloadData];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+            NSLog(@"erorr:%@", err);
+        }];
+        [self.collectionView.infiniteScrollingView stopAnimating];
+        
+
+    }];
 }
 
 #pragma mark - UICollectionViewDataSource
