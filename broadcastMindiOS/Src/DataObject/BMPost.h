@@ -8,11 +8,11 @@
 
 #import "BMBaseJSONModel.h"
 
-@protocol BMArticle
+@protocol BMPost
 
 @end
 
-@interface BMArticle : BMBaseJSONModel
+@interface BMPost : BMBaseJSONModel
 
 @property (strong, nonatomic) NSString <Optional> *text;
 @property (strong, nonatomic) NSString <Optional> *createdAt;

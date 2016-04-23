@@ -80,4 +80,18 @@
     queryParameter[@"limit"] = @(range.length);
     [manager GET:urlString parameters:[queryParameter copy] success:success failure:failure];
 }
+
+- (void)getMyArticleListWithParameter:(NSDictionary *)parameter range:(NSRange)range success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSString *host = self.config.apiHostString;
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host,@"/v1/users/me/posts"];
+    NSMutableDictionary *queryParameter = [[NSMutableDictionary alloc] initWithDictionary:parameter];
+    queryParameter[@"offset"] = @(range.location);
+    queryParameter[@"limit"] = @(range.length);
+    [manager GET:urlString parameters:[queryParameter copy] success:success failure:failure];
+}
+
+
 @end

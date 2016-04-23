@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BMBaseDataStore.h"
-@interface BMArticleListDataStore : BMBaseDataStore
+@interface BMPostListDataStore : BMBaseDataStore
+@property (assign, nonatomic) NSInteger total;
 
 @end

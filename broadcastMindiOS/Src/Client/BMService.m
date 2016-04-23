@@ -59,22 +59,15 @@
 - (void)getArticleListWithParameter:(NSDictionary *)parameter range:(NSRange)range success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     [self.client getArticleListWithParameter:parameter range:range success:^(AFHTTPRequestOperation *operation, id response) {
-
-        NSArray *array = response;
-        NSDictionary *dic = @{
-                              @"totalCount": @(array.count),
-                              @"articles": response
-                              };
         NSError *err;
-        BMArticleList *bmArticleList = [[BMArticleList alloc] initWithDictionary:dic error:&err];
-
-        success(operation, bmArticleList);
-
+        BMPostList *bmArticleList = [[BMPostList alloc] initWithDictionary:response error:&err];
+        if (success) {
+            success(operation, bmArticleList);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-
-        failure(operation, err);
+        if (failure) {
+            failure(operation, err);
+        }
     }];
-    
 }
-
 @end

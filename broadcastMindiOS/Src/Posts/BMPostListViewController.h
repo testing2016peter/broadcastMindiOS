@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BMBaseViewController.h"
-@interface BMArticleListViewController : BMBaseViewController
+@interface BMPostListViewController : BMBaseViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end
