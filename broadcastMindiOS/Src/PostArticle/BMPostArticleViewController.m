@@ -16,6 +16,9 @@
 
 - (void)setupView
 {
+    self.contentTextView.placeholderColor = [UIColor blueColor];
+    self.contentTextView.placeholderString = @"靠北事件";//
+
     self.containerView.layer.cornerRadius = 5;
     self.containerView.layer.masksToBounds = YES;
     self.view.backgroundColor = [UIColor clearColor];

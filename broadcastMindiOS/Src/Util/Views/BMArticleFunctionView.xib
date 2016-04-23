@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMArticleFunctionView">
@@ -10,54 +11,75 @@
                 <outlet property="likeButton" destination="u60-7o-vTB" id="urE-Ib-l6h"/>
                 <outlet property="replyButton" destination="nco-4a-wcR" id="IfQ-wv-1o9"/>
                 <outlet property="topLevelSubview" destination="iN0-l3-epB" id="PyU-aL-X9g"/>
-                <outlet property="viewNumberLabel" destination="oIp-f4-RhH" id="618-Mk-Y8X"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="269" height="34"/>
+            <rect key="frame" x="0.0" y="0.0" width="160" height="43"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u60-7o-vTB">
-                    <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
-                    <state key="normal" title="cow"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nco-4a-wcR">
-                    <rect key="frame" x="40" y="0.0" width="34" height="34"/>
-                    <state key="normal" title="reply"/>
+                    <rect key="frame" x="80" y="0.0" width="80" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Dyk-t5-knr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="留言">
+                        <color key="titleColor" red="0.62352943420410156" green="0.62352943420410156" blue="0.62352943420410156" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="view:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRO-tk-fEn">
-                    <rect key="frame" x="84" y="0.0" width="40" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIp-f4-RhH">
-                    <rect key="frame" x="124" y="0.0" width="8" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u60-7o-vTB">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="CQa-kv-AP3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <inset key="imageEdgeInsets" minX="-21" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="靠北">
+                        <color key="titleColor" red="0.62352943420410156" green="0.62352943420410156" blue="0.62352943420410156" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clenched Fist-50 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="5xQ-Vr-ZcM">
+                    <rect key="frame" x="5" y="15" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="5xQ-Vr-ZcM" secondAttribute="height" multiplier="1:1" id="QSy-20-1Md"/>
+                        <constraint firstAttribute="height" constant="12" id="rLZ-dA-12S"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comments-64" translatesAutoresizingMaskIntoConstraints="NO" id="Fvo-MQ-3hJ">
+                    <rect key="frame" x="85" y="15" width="13" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fvo-MQ-3hJ" secondAttribute="height" multiplier="1:1" id="LUW-SM-c34"/>
+                        <constraint firstAttribute="width" constant="13" id="gO5-8Z-M98"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="oIp-f4-RhH" firstAttribute="leading" secondItem="LRO-tk-fEn" secondAttribute="trailing" id="3xz-sV-Tka"/>
-                <constraint firstAttribute="bottom" secondItem="LRO-tk-fEn" secondAttribute="bottom" id="4Ao-xW-cyV"/>
-                <constraint firstItem="nco-4a-wcR" firstAttribute="leading" secondItem="u60-7o-vTB" secondAttribute="trailing" constant="10" id="4iS-Ou-Agh"/>
-                <constraint firstAttribute="bottom" secondItem="oIp-f4-RhH" secondAttribute="bottom" id="AT4-Yo-QPF"/>
-                <constraint firstItem="LRO-tk-fEn" firstAttribute="leading" secondItem="nco-4a-wcR" secondAttribute="trailing" constant="10" id="EvK-3Y-Eck"/>
-                <constraint firstItem="nco-4a-wcR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NP6-x0-E3P"/>
-                <constraint firstItem="LRO-tk-fEn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W7r-Ba-eAe"/>
-                <constraint firstAttribute="bottom" secondItem="u60-7o-vTB" secondAttribute="bottom" id="ab7-b4-7VT"/>
-                <constraint firstItem="oIp-f4-RhH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cip-Im-Kqh"/>
-                <constraint firstItem="u60-7o-vTB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eDn-1h-A43"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oIp-f4-RhH" secondAttribute="trailing" constant="16" id="nUK-z3-GUy"/>
-                <constraint firstItem="u60-7o-vTB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tJO-wy-9YH"/>
-                <constraint firstAttribute="bottom" secondItem="nco-4a-wcR" secondAttribute="bottom" id="zsX-wQ-XTJ"/>
+                <constraint firstItem="Fvo-MQ-3hJ" firstAttribute="leading" secondItem="nco-4a-wcR" secondAttribute="leading" id="0bd-cX-lxM"/>
+                <constraint firstAttribute="bottom" secondItem="nco-4a-wcR" secondAttribute="bottom" id="AiB-Dn-VLA"/>
+                <constraint firstItem="Fvo-MQ-3hJ" firstAttribute="centerY" secondItem="nco-4a-wcR" secondAttribute="centerY" id="HYH-xg-Crt"/>
+                <constraint firstAttribute="bottom" secondItem="u60-7o-vTB" secondAttribute="bottom" id="OQV-Hy-pPb"/>
+                <constraint firstItem="nco-4a-wcR" firstAttribute="leading" secondItem="u60-7o-vTB" secondAttribute="trailing" id="QKx-Im-7Hq"/>
+                <constraint firstItem="5xQ-Vr-ZcM" firstAttribute="leading" secondItem="u60-7o-vTB" secondAttribute="leading" constant="5" id="QW0-x1-BfJ"/>
+                <constraint firstItem="5xQ-Vr-ZcM" firstAttribute="centerY" secondItem="u60-7o-vTB" secondAttribute="centerY" id="YeL-M5-33w"/>
+                <constraint firstItem="nco-4a-wcR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zl9-0m-OhW"/>
+                <constraint firstItem="u60-7o-vTB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mM7-GV-hnH"/>
+                <constraint firstItem="u60-7o-vTB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ycz-mO-Oh2"/>
+                <constraint firstItem="Fvo-MQ-3hJ" firstAttribute="leading" secondItem="nco-4a-wcR" secondAttribute="leading" constant="5" id="yoh-bO-X2Z"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="145.5" y="105"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="0bd-cX-lxM"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="18" y="109.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Clenched Fist-50 (1)" width="50" height="50"/>
+        <image name="Comments-64" width="64" height="64"/>
+    </resources>
 </document>

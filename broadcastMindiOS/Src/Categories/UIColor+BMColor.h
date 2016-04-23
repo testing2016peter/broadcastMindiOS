@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (BMColor)
++ (UIColor *)BMNavBackgroundColor;
 + (UIColor *)BMBackgroundColor;
 + (UIColor *)BMActionColor;
 

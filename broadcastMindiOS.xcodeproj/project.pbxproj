@@ -48,6 +48,8 @@
 		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
 		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
 		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
+		F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD01CC55684009F7906 /* BMImageButton.m */; };
+		F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,10 @@
 		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
 		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
 		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		F7C8BDCF1CC55684009F7906 /* BMImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageButton.h; sourceTree = "<group>"; };
+		F7C8BDD01CC55684009F7906 /* BMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageButton.m; sourceTree = "<group>"; };
+		F7C8BDD21CC56EB7009F7906 /* BMCopyableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCopyableLabel.h; sourceTree = "<group>"; };
+		F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCopyableLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +339,8 @@
 		F793D3031CC2AE1F006CE8D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7C8BDD21CC56EB7009F7906 /* BMCopyableLabel.h */,
+				F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */,
 				F793D30F1CC2AF5C006CE8D4 /* BMPlaceholderTextView.h */,
 				F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */,
 				F793D3041CC2AE37006CE8D4 /* BMBaseCollectionViewCell.h */,
@@ -353,6 +361,8 @@
 				F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */,
 				F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */,
 				F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */,
+				F7C8BDCF1CC55684009F7906 /* BMImageButton.h */,
+				F7C8BDD01CC55684009F7906 /* BMImageButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -616,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F793D3271CC37BFD006CE8D4 /* APCalculatorHelper.m in Sources */,
+				F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */,
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
@@ -641,6 +652,7 @@
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,
 				F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */,
+				F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */,
 				F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */,
 				F793D2A91CC15AC0006CE8D4 /* main.m in Sources */,
 			);
@@ -888,6 +900,7 @@
 				F793D2FD1CC2AA34006CE8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

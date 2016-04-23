@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     BMArticleListViewController *vc = [[BMArticleListViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navigationController.navigationBar.barTintColor = [UIColor BMBackgroundColor];
+    navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
 
 
 
