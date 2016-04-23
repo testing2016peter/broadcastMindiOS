@@ -15,8 +15,6 @@
 		F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F793D2B31CC15AC0006CE8D4 /* Assets.xcassets */; };
 		F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F793D2B51CC15AC0006CE8D4 /* LaunchScreen.storyboard */; };
 		F793D2C21CC15AC0006CE8D4 /* broadcastMindiOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2C11CC15AC0006CE8D4 /* broadcastMindiOSTests.m */; };
-		F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2DC1CC15C29006CE8D4 /* BMArticleListViewController.m */; };
-		F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D2DD1CC15C29006CE8D4 /* BMArticleListViewController.xib */; };
 		F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E01CC15C29006CE8D4 /* BMClient.m */; };
 		F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2E21CC15C29006CE8D4 /* BMService.m */; };
 		F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */; };
@@ -26,8 +24,6 @@
 		F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */; };
 		F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */; };
 		F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */; };
-		F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */; };
-		F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */; };
 		F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */; };
 		F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */; };
 		F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D31E1CC33F69006CE8D4 /* BMBaseView.m */; };
@@ -39,15 +35,21 @@
 		F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */; };
 		F793D33B1CC38C72006CE8D4 /* BMPostArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */; };
 		F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */; };
-		F793D3401CC3B7ED006CE8D4 /* BMArticleListDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D33F1CC3B7ED006CE8D4 /* BMArticleListDataStore.m */; };
+		F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */; };
 		F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3421CC3B7FC006CE8D4 /* BMBaseDataStore.m */; };
 		F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3461CC3BC2F006CE8D4 /* BMBaseJSONModel.m */; };
-		F793D34A1CC3BC5B006CE8D4 /* BMArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3491CC3BC5B006CE8D4 /* BMArticle.m */; };
-		F793D34D1CC3BCD6006CE8D4 /* BMArticleList.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D34C1CC3BCD6006CE8D4 /* BMArticleList.m */; };
+		F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3491CC3BC5B006CE8D4 /* BMPost.m */; };
+		F793D34D1CC3BCD6006CE8D4 /* BMPostList.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D34C1CC3BCD6006CE8D4 /* BMPostList.m */; };
 		F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D3541CC3C1D5006CE8D4 /* BMMainFilterView.xib */; };
 		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
 		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
 		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
+		F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */; };
+		F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */; };
+		F7C2DF821CCB8DB5000CBD61 /* BMPostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF7C1CCB8DB5000CBD61 /* BMPostListViewController.m */; };
+		F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF7D1CCB8DB5000CBD61 /* BMPostListViewController.xib */; };
+		F7C2DF841CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */; };
+		F7C2DF851CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */; };
 		F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD01CC55684009F7906 /* BMImageButton.m */; };
 		F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */; };
 /* End PBXBuildFile section */
@@ -88,9 +90,6 @@
 		F793D2C31CC15AC0006CE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F793D2CC1CC15AC0006CE8D4 /* broadcastMindiOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = broadcastMindiOSUITests.m; sourceTree = "<group>"; };
 		F793D2CE1CC15AC0006CE8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F793D2DB1CC15C29006CE8D4 /* BMArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListViewController.h; sourceTree = "<group>"; };
-		F793D2DC1CC15C29006CE8D4 /* BMArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListViewController.m; sourceTree = "<group>"; };
-		F793D2DD1CC15C29006CE8D4 /* BMArticleListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListViewController.xib; sourceTree = "<group>"; };
 		F793D2DF1CC15C29006CE8D4 /* BMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMClient.h; sourceTree = "<group>"; };
 		F793D2E01CC15C29006CE8D4 /* BMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMClient.m; sourceTree = "<group>"; };
 		F793D2E11CC15C29006CE8D4 /* BMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMService.h; sourceTree = "<group>"; };
@@ -109,9 +108,6 @@
 		F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInputTextView.xib; sourceTree = "<group>"; };
 		F793D30F1CC2AF5C006CE8D4 /* BMPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPlaceholderTextView.h; sourceTree = "<group>"; };
 		F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPlaceholderTextView.m; sourceTree = "<group>"; };
-		F793D3131CC2B834006CE8D4 /* BMArticleListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListCollectionViewCell.h; sourceTree = "<group>"; };
-		F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListCollectionViewCell.m; sourceTree = "<group>"; };
-		F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListCollectionViewCell.xib; sourceTree = "<group>"; };
 		F793D3181CC33EB7006CE8D4 /* BMArticleFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleFunctionView.h; sourceTree = "<group>"; };
 		F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleFunctionView.m; sourceTree = "<group>"; };
 		F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleFunctionView.xib; sourceTree = "<group>"; };
@@ -132,16 +128,16 @@
 		F793D3381CC38C72006CE8D4 /* BMPostArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostArticleViewController.h; sourceTree = "<group>"; };
 		F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostArticleViewController.m; sourceTree = "<group>"; };
 		F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostArticleViewController.xib; sourceTree = "<group>"; };
-		F793D33E1CC3B7ED006CE8D4 /* BMArticleListDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListDataStore.h; sourceTree = "<group>"; };
-		F793D33F1CC3B7ED006CE8D4 /* BMArticleListDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListDataStore.m; sourceTree = "<group>"; };
+		F793D33E1CC3B7ED006CE8D4 /* BMPostListDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostListDataStore.h; sourceTree = "<group>"; };
+		F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostListDataStore.m; sourceTree = "<group>"; };
 		F793D3411CC3B7FC006CE8D4 /* BMBaseDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseDataStore.h; sourceTree = "<group>"; };
 		F793D3421CC3B7FC006CE8D4 /* BMBaseDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseDataStore.m; sourceTree = "<group>"; };
 		F793D3451CC3BC2F006CE8D4 /* BMBaseJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseJSONModel.h; sourceTree = "<group>"; };
 		F793D3461CC3BC2F006CE8D4 /* BMBaseJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseJSONModel.m; sourceTree = "<group>"; };
-		F793D3481CC3BC5B006CE8D4 /* BMArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticle.h; sourceTree = "<group>"; };
-		F793D3491CC3BC5B006CE8D4 /* BMArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticle.m; sourceTree = "<group>"; };
-		F793D34B1CC3BCD6006CE8D4 /* BMArticleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleList.h; sourceTree = "<group>"; };
-		F793D34C1CC3BCD6006CE8D4 /* BMArticleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleList.m; sourceTree = "<group>"; };
+		F793D3481CC3BC5B006CE8D4 /* BMPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPost.h; sourceTree = "<group>"; };
+		F793D3491CC3BC5B006CE8D4 /* BMPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPost.m; sourceTree = "<group>"; };
+		F793D34B1CC3BCD6006CE8D4 /* BMPostList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostList.h; sourceTree = "<group>"; };
+		F793D34C1CC3BCD6006CE8D4 /* BMPostList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostList.m; sourceTree = "<group>"; };
 		F793D34E1CC3BD83006CE8D4 /* BMObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMObjects.h; sourceTree = "<group>"; };
 		F793D3541CC3C1D5006CE8D4 /* BMMainFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterView.xib; sourceTree = "<group>"; };
 		F793D3561CC3C1E1006CE8D4 /* BMMainFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterView.h; sourceTree = "<group>"; };
@@ -149,6 +145,15 @@
 		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
 		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
 		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		F7C2DF751CCB8D81000CBD61 /* BMUserPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMUserPostsViewController.h; sourceTree = "<group>"; };
+		F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMUserPostsViewController.m; sourceTree = "<group>"; };
+		F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMUserPostsViewController.xib; sourceTree = "<group>"; };
+		F7C2DF7B1CCB8DB5000CBD61 /* BMPostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostListViewController.h; sourceTree = "<group>"; };
+		F7C2DF7C1CCB8DB5000CBD61 /* BMPostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostListViewController.m; sourceTree = "<group>"; };
+		F7C2DF7D1CCB8DB5000CBD61 /* BMPostListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostListViewController.xib; sourceTree = "<group>"; };
+		F7C2DF7F1CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListCollectionViewCell.h; sourceTree = "<group>"; };
+		F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListCollectionViewCell.m; sourceTree = "<group>"; };
+		F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListCollectionViewCell.xib; sourceTree = "<group>"; };
 		F7C8BDCF1CC55684009F7906 /* BMImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageButton.h; sourceTree = "<group>"; };
 		F7C8BDD01CC55684009F7906 /* BMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageButton.m; sourceTree = "<group>"; };
 		F7C8BDD21CC56EB7009F7906 /* BMCopyableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCopyableLabel.h; sourceTree = "<group>"; };
@@ -224,6 +229,8 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F7C2DF7A1CCB8DB5000CBD61 /* Posts */,
+				F7C2DF741CCB8D81000CBD61 /* UserPosts */,
 				F793D3441CC3BBF0006CE8D4 /* DataObject */,
 				F793D33D1CC3B7D7006CE8D4 /* DataStore */,
 				F793D3341CC38C4C006CE8D4 /* PostArticle */,
@@ -231,7 +238,6 @@
 				F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */,
 				F793D2FE1CC2ACBD006CE8D4 /* Util */,
 				F793D2EC1CC15D2F006CE8D4 /* Categories */,
-				F793D2DA1CC15C29006CE8D4 /* ArticleList */,
 				F793D2DE1CC15C29006CE8D4 /* Client */,
 				F793D2AA1CC15AC0006CE8D4 /* AppDelegate.h */,
 				F793D2AB1CC15AC0006CE8D4 /* AppDelegate.m */,
@@ -270,18 +276,6 @@
 				F793D2CE1CC15AC0006CE8D4 /* Info.plist */,
 			);
 			path = broadcastMindiOSUITests;
-			sourceTree = "<group>";
-		};
-		F793D2DA1CC15C29006CE8D4 /* ArticleList */ = {
-			isa = PBXGroup;
-			children = (
-				F793D3121CC2B819006CE8D4 /* Cell */,
-				F793D2DB1CC15C29006CE8D4 /* BMArticleListViewController.h */,
-				F793D2DC1CC15C29006CE8D4 /* BMArticleListViewController.m */,
-				F793D2DD1CC15C29006CE8D4 /* BMArticleListViewController.xib */,
-			);
-			name = ArticleList;
-			path = Src/ArticleList;
 			sourceTree = "<group>";
 		};
 		F793D2DE1CC15C29006CE8D4 /* Client */ = {
@@ -367,16 +361,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F793D3121CC2B819006CE8D4 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				F793D3131CC2B834006CE8D4 /* BMArticleListCollectionViewCell.h */,
-				F793D3141CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m */,
-				F793D3151CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		F793D3201CC37BFD006CE8D4 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,8 +397,8 @@
 		F793D33D1CC3B7D7006CE8D4 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				F793D33E1CC3B7ED006CE8D4 /* BMArticleListDataStore.h */,
-				F793D33F1CC3B7ED006CE8D4 /* BMArticleListDataStore.m */,
+				F793D33E1CC3B7ED006CE8D4 /* BMPostListDataStore.h */,
+				F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */,
 				F793D3411CC3B7FC006CE8D4 /* BMBaseDataStore.h */,
 				F793D3421CC3B7FC006CE8D4 /* BMBaseDataStore.m */,
 			);
@@ -427,14 +411,47 @@
 			children = (
 				F793D3451CC3BC2F006CE8D4 /* BMBaseJSONModel.h */,
 				F793D3461CC3BC2F006CE8D4 /* BMBaseJSONModel.m */,
-				F793D3481CC3BC5B006CE8D4 /* BMArticle.h */,
-				F793D3491CC3BC5B006CE8D4 /* BMArticle.m */,
-				F793D34B1CC3BCD6006CE8D4 /* BMArticleList.h */,
-				F793D34C1CC3BCD6006CE8D4 /* BMArticleList.m */,
+				F793D3481CC3BC5B006CE8D4 /* BMPost.h */,
+				F793D3491CC3BC5B006CE8D4 /* BMPost.m */,
+				F793D34B1CC3BCD6006CE8D4 /* BMPostList.h */,
+				F793D34C1CC3BCD6006CE8D4 /* BMPostList.m */,
 				F793D34E1CC3BD83006CE8D4 /* BMObjects.h */,
 			);
 			name = DataObject;
 			path = Src/DataObject;
+			sourceTree = "<group>";
+		};
+		F7C2DF741CCB8D81000CBD61 /* UserPosts */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2DF751CCB8D81000CBD61 /* BMUserPostsViewController.h */,
+				F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */,
+				F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */,
+			);
+			name = UserPosts;
+			path = Src/UserPosts;
+			sourceTree = "<group>";
+		};
+		F7C2DF7A1CCB8DB5000CBD61 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2DF7B1CCB8DB5000CBD61 /* BMPostListViewController.h */,
+				F7C2DF7C1CCB8DB5000CBD61 /* BMPostListViewController.m */,
+				F7C2DF7D1CCB8DB5000CBD61 /* BMPostListViewController.xib */,
+				F7C2DF7E1CCB8DB5000CBD61 /* Cell */,
+			);
+			name = Posts;
+			path = Src/Posts;
+			sourceTree = "<group>";
+		};
+		F7C2DF7E1CCB8DB5000CBD61 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2DF7F1CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.h */,
+				F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */,
+				F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +524,12 @@
 				TargetAttributes = {
 					F793D2A31CC15AC0006CE8D4 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = QDCB462MRQ;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					F793D2BC1CC15AC0006CE8D4 = {
 						CreatedOnToolsVersion = 7.3;
@@ -543,14 +566,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C2DF851CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib in Resources */,
 				F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */,
 				F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */,
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
-				F793D2E61CC15C29006CE8D4 /* BMArticleListViewController.xib in Resources */,
+				F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */,
 				F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
-				F793D3171CC2B834006CE8D4 /* BMArticleListCollectionViewCell.xib in Resources */,
+				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
 				F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */,
 			);
@@ -629,8 +653,8 @@
 				F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */,
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
+				F7C2DF841CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m in Sources */,
 				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
-				F793D3161CC2B834006CE8D4 /* BMArticleListCollectionViewCell.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
 				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
 				F793D33B1CC38C72006CE8D4 /* BMPostArticleViewController.m in Sources */,
@@ -641,17 +665,18 @@
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
 				F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */,
 				F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */,
-				F793D34D1CC3BCD6006CE8D4 /* BMArticleList.m in Sources */,
+				F793D34D1CC3BCD6006CE8D4 /* BMPostList.m in Sources */,
+				F7C2DF821CCB8DB5000CBD61 /* BMPostListViewController.m in Sources */,
 				F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */,
-				F793D3401CC3B7ED006CE8D4 /* BMArticleListDataStore.m in Sources */,
+				F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
 				F793D3291CC37BFD006CE8D4 /* APNibSizeCalculator.m in Sources */,
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
-				F793D34A1CC3BC5B006CE8D4 /* BMArticle.m in Sources */,
+				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
+				F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */,
 				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,
-				F793D2E51CC15C29006CE8D4 /* BMArticleListViewController.m in Sources */,
 				F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */,
 				F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */,
 				F793D2A91CC15AC0006CE8D4 /* main.m in Sources */,
@@ -798,7 +823,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = broadcastMindiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSProd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -810,7 +835,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = broadcastMindiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSProd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

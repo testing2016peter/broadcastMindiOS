@@ -10,6 +10,7 @@
 #import "APNibSizeCalculator.h"
 #import "BMAppConstant.h"
 #import "BMService.h"
+#import "UIColor+BMColor.h"
 @interface BMBaseViewController : UIViewController
 - (void)setupView;
 @end

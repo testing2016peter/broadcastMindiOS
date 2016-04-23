@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "BMArticleListViewController.h"
+#import "BMPostListViewController.h"
 #import "UIColor+BMColor.h"
 @interface AppDelegate ()
 
@@ -18,15 +18,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    BMArticleListViewController *vc = [[BMArticleListViewController alloc] init];
+    BMPostListViewController *vc = [[BMPostListViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
-
-
-
+    [self setupRequestRegisterNotificationWithApplication:application];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+- (void)setupRequestRegisterNotificationWithApplication:(UIApplication *)application
+{
+    [application registerForRemoteNotifications];
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert
+                                                                                         | UIUserNotificationTypeBadge
+                                                                                         | UIUserNotificationTypeSound) categories:nil];
+    [application registerUserNotificationSettings:settings];
+
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+
+    NSString * tempToken = [deviceToken description];
+    NSString *token = @"";
+
+    token = [tempToken stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    token = [token stringByReplacingOccurrencesOfString:@">" withString:@""];
+    token = [[token componentsSeparatedByString:@" "] componentsJoinedByString:@"" ];
+    NSLog(@"got string token %@", token);
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error
+{
+    NSLog(@"error:%@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

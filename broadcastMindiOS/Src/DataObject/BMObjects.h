@@ -6,5 +6,5 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import "BMArticle.h"
-#import "BMArticleList.h"
+#import "BMPost.h"
+#import "BMPostList.h"

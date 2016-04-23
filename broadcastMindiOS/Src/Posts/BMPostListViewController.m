@@ -7,26 +7,26 @@
 //
 
 #import <TLYShyNavBarManager.h>
-#import "BMArticleListViewController.h"
+#import "BMPostListViewController.h"
 #import "BMInputTextView.h"
 #import "BMArticleListCollectionViewCell.h"
 #import "BMCommonViewUtil.h"
 #import "BMPostArticleViewController.h"
-#import "BMArticleListDataStore.h"
-#import "BMMainFilterCollectionReusableView.h"
+#import "BMPostListDataStore.h"
 #import "BMMainFilterView.h"
-#import "UIColor+BMColor.h"
 #import <UIScrollView+SVPullToRefresh.h>
 #import <UIScrollView+SVInfiniteScrolling.h>
-@interface BMArticleListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
-@property (strong, nonatomic) BMArticleListDataStore *dataStore;
+#import "BMUserPostsViewController.h"
+
+@interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
+@property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
 @property (strong, nonatomic) TLYShyNavBarManager *shyManage;
 @property (strong, nonatomic) BMMainFilterView *bmMainFilterView;
 
 @end
 
-@implementation BMArticleListViewController
+@implementation BMPostListViewController
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -41,8 +41,6 @@
     [self.shyNavBarManager setStickyNavigationBar:NO];
     /* Make the extension view stick to the top */
     [self.shyNavBarManager setStickyExtensionView:NO];
-
-
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
     searchBar.barTintColor = [UIColor BMBackgroundColor];
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -60,7 +58,7 @@
     self.shyNavBarManager.scrollView = self.collectionView;
 
     self.bmArticles = [NSMutableArray array];
-    self.dataStore = [[BMArticleListDataStore alloc] init];
+    self.dataStore = [[BMPostListDataStore alloc] init];
     [self setupCollectionView];
     [self.dataStore beginWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"respons:%@" ,response);
@@ -69,7 +67,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         NSLog(@"respons:%@" ,err);
     }];
-
 
 }
 
@@ -81,7 +78,6 @@
         NSLog(@"err:%@,", err);
     }];
     [self.collectionView registerNib: [UINib nibWithNibName:BMArticleListCollectionViewCellIdentified bundle:nil]forCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified];
-    [self.collectionView registerNib: [UINib nibWithNibName:BMMainFilterCollectionReusableViewIdentified bundle:nil]forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:BMMainFilterCollectionReusableViewIdentified];
 
     [self.collectionView addPullToRefreshWithActionHandler:^{
         [self.collectionView.pullToRefreshView stopAnimating];
@@ -96,8 +92,6 @@
             NSLog(@"erorr:%@", err);
         }];
         [self.collectionView.infiniteScrollingView stopAnimating];
-        
-
     }];
 }
 
@@ -117,7 +111,7 @@
 {
     BMArticleListCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified forIndexPath:indexPath];
     if (indexPath.item < self.bmArticles.count) {
-        BMArticle *article = self.bmArticles[indexPath.item];
+        BMPost *article = self.bmArticles[indexPath.item];
         cell.contentTextView.text = article.text;
         cell.userNameLabel.text = @"匿名";//Translate
         cell.dateLabel.text = article.updatedAt;
@@ -139,7 +133,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    BMUserPostsViewController *bmMyViewController = [[BMUserPostsViewController alloc] init];
+    [self.navigationController pushViewController:bmMyViewController animated:YES];
 }
+
 - (void)tapPostButton:(UIButton *)button
 {
     BMPostArticleViewController *vc = [[BMPostArticleViewController alloc] init];
@@ -147,7 +144,6 @@
     vc.postArticleViewControllerDelegate = self;
     [self.view addSubview:vc.view];
     [self addChildViewController:vc];
-
 }
 
 -(void)tapPostArticleViewController:(BMPostArticleViewController *)vc cancelButton:(id)cancelButton
@@ -166,7 +162,5 @@
     }];
 
 }
-
-
 
 @end
