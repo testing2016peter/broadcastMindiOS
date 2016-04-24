@@ -19,5 +19,6 @@ static NSString * const BMArticleListCollectionViewCellIdentified = @"BMArticleL
 
 @property (weak, nonatomic) IBOutlet BMArticleFunctionView *bmArticleFunctionView;
 @property (weak, nonatomic) IBOutlet UIView *backgroundUIView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
