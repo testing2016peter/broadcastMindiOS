@@ -82,7 +82,6 @@
             weakSelf.bmArticles = [[NSMutableArray alloc] initWithArray:self.dataStore.data];
             [weakSelf.collectionView reloadData];
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-            NSLog(@"erorr:%@", err);
         }];
         [weakSelf.collectionView.infiniteScrollingView stopAnimating];
     }];

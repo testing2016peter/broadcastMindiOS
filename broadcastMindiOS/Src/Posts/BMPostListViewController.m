@@ -61,11 +61,9 @@
     self.dataStore = [[BMPostListDataStore alloc] init];
     [self setupCollectionView];
     [self.dataStore beginWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"respons:%@" ,response);
         self.bmArticles = [self.dataStore.data copy];
         [self.collectionView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        NSLog(@"respons:%@" ,err);
     }];
 
 }
@@ -73,9 +71,7 @@
 - (void)setupCollectionView
 {
     [[BMService sharedInstance] loginUserEmail:@"cwnga@yahoo-inc.com" password:@"12345" success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"success:%@,", response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        NSLog(@"err:%@,", err);
     }];
     [self.collectionView registerNib: [UINib nibWithNibName:BMArticleListCollectionViewCellIdentified bundle:nil]forCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified];
 
@@ -89,7 +85,6 @@
                     self.bmArticles = [self.dataStore.data copy];
             [self.collectionView reloadData];
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-            NSLog(@"erorr:%@", err);
         }];
         [self.collectionView.infiniteScrollingView stopAnimating];
     }];
@@ -155,11 +150,9 @@
 
 -(void)tapPostArticleViewController:(BMPostArticleViewController *)vc sendButton:(id)sendButton
 {
-    [[BMService sharedInstance] insertArticleWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"response:%@" ,response);
+    [[BMService sharedInstance] insertPostWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
         [vc.view removeFromSuperview];
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        NSLog(@"err:%@" ,err);
         [vc.view removeFromSuperview];
     }];
 

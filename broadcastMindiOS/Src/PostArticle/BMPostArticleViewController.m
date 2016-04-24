@@ -7,6 +7,7 @@
 //
 
 #import "BMPostArticleViewController.h"
+#import "BMService.h"
 
 @interface BMPostArticleViewController ()
 
@@ -55,6 +56,19 @@
         [self.postArticleViewControllerDelegate tapPostArticleViewController:self sendButton:self.sendButton];
 
     }
+}
+- (IBAction)logout:(id)sender
+{
+    [[BMService sharedInstance] logoutUserWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"logout:%@", response);
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+
+        NSLog(@"err:%@" , err);
+        NSLog(@"err:%@" , err);
+        NSLog(@"err:%@" , err);
+    }];
+
 }
 
 @end

@@ -31,7 +31,9 @@
 - (void)signUpUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     [self.client signUpUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
+        if (success) {
         success(operation, response);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
         if (failure) {
@@ -43,7 +45,9 @@
 - (void)loginUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     [self.client loginUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
-        success(operation, response);
+        if (success) {
+            success(operation, response);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
         if (failure) {
@@ -51,13 +55,12 @@
         }
     }];
 }
-
-- (void)insertArticleWithText:(NSString *)text success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+- (void)logoutUserWithSuccess:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
-    [self.client insertArticleWithText:text success:^(AFHTTPRequestOperation *operation, id response) {
-
-        success(operation, response);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+    [self.client logoutUserWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        if (success) {
+            success(operation, response);
+        }    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
         if (failure) {
             failure(operation, err);
@@ -65,9 +68,9 @@
     }];
 }
 
-- (void)getArticleListWithParameter:(NSDictionary *)parameter range:(NSRange)range success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+- (void)getPostListWithParameter:(NSDictionary *)parameter range:(NSRange)range success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
-    [self.client getArticleListWithParameter:parameter range:range success:^(AFHTTPRequestOperation *operation, id response) {
+    [self.client getPostListWithParameter:parameter range:range success:^(AFHTTPRequestOperation *operation, id response) {
         NSError *err;
         BMPostList *bmArticleList = [[BMPostList alloc] initWithDictionary:response error:&err];
         if (success) {
@@ -80,4 +83,119 @@
         }
     }];
 }
+
+- (void)insertPostWithText:(NSString *)text success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client insertPostWithText:text success:^(AFHTTPRequestOperation *operation, id response) {
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+}
+- (void)getPostWithPostId:(NSString *)postId success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client getPostWithPostId:postId success:^(AFHTTPRequestOperation *operation, id response) {
+        //TODO
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        //TODO
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+
+}
+
+- (void)insertPostCommentWithPostId:(NSString *)postId text:(NSString *)text success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client insertPostCommentWithPostId:postId text:text success:^(AFHTTPRequestOperation *operation, id response) {
+        //TODO
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        //TODO
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+}
+- (void)getCommentWithCommentId:(NSString *)commentId success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client getCommentWithCommentId:commentId success:^(AFHTTPRequestOperation *operation, id response) {
+        //TODO
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        //TODO
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+
+}
+
+- (void)insertPostLikeWithPostId:(NSString *)postId success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client insertPostLikeWithPostId:postId success:^(AFHTTPRequestOperation *operation, id response) {
+        //TODO
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        //TODO
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+
+}
+
+- (void)insertCommentLikeWithCommentId:(NSString *)commentId success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client insertCommentLikeWithCommentId:commentId success:^(AFHTTPRequestOperation *operation, id response) {
+        //TODO
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        //TODO
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+
+}
+
+- (void)uploadImage:(UIImage *)image success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure process:(BMClientProcessBlock)process
+{
+    [self.client uploadImage:image success:^(AFHTTPRequestOperation *operation, id response) {
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    } process:^(CGFloat processPercentage) {
+        if (process) {
+            process(processPercentage);
+        }
+    }];
+}
+
 @end

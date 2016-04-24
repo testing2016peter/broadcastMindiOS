@@ -24,9 +24,7 @@
 {
     if ([self.emailTextField.text length] > 0 && [self.passwordTextField.text length] > 0) {
         [[BMService sharedInstance] loginUserEmail:self.emailTextField.text password:self.passwordTextField.text success:^(AFHTTPRequestOperation *operation, id response) {
-            NSLog(@"response:%@", response);
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-            NSLog(@"error:%@", err);
         }];
 
     }
@@ -35,9 +33,7 @@
 {
     if ([self.emailTextField.text length] > 0 && [self.passwordTextField.text length] > 0) {
         [[BMService sharedInstance] signUpUserEmail:self.emailTextField.text password:self.passwordTextField.text  success:^(AFHTTPRequestOperation *operation, id response) {
-            NSLog(@"response:%@", response);
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-            NSLog(@"error:%@", err);
         }];
     }
 }
