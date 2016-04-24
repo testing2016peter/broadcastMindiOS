@@ -12,6 +12,14 @@
 
 - (void)setupView
 {
+    self.layer.masksToBounds = NO;
+
+    [self.layer setShadowOpacity:0.4];
+    self.layer.shadowOffset = CGSizeMake(0, 1);
+    self.layer.shadowRadius = 1.0f;
+    self.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.layer.shadowOpacity = 0.3f;
+
     [self prepareForReuse];
 }
 
@@ -19,8 +27,14 @@
 {
 
     self.contentTextView.text = @"";
-    self.backgroundUIView.layer.cornerRadius = 5;
-    self.backgroundUIView.layer.masksToBounds = YES;
+
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 }
 
 @end

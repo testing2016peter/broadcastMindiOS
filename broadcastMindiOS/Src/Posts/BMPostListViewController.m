@@ -110,9 +110,11 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     BMArticleListCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified forIndexPath:indexPath];
+
     if (indexPath.item < self.bmArticles.count) {
         BMPost *article = self.bmArticles[indexPath.item];
         cell.contentTextView.text = article.text;
+          cell.titleLabel.text = article.text;
         cell.userNameLabel.text = @"匿名";//Translate
         cell.dateLabel.text = article.updatedAt;
     }
