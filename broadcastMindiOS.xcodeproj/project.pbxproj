@@ -50,6 +50,8 @@
 		F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF7D1CCB8DB5000CBD61 /* BMPostListViewController.xib */; };
 		F7C2DF841CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */; };
 		F7C2DF851CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */; };
+		F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF881CCC8839000CBD61 /* BMLoginViewController.m */; };
+		F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF891CCC8839000CBD61 /* BMLoginViewController.xib */; };
 		F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD01CC55684009F7906 /* BMImageButton.m */; };
 		F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */; };
 /* End PBXBuildFile section */
@@ -154,6 +156,9 @@
 		F7C2DF7F1CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListCollectionViewCell.h; sourceTree = "<group>"; };
 		F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListCollectionViewCell.m; sourceTree = "<group>"; };
 		F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7C2DF871CCC8839000CBD61 /* BMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLoginViewController.h; sourceTree = "<group>"; };
+		F7C2DF881CCC8839000CBD61 /* BMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLoginViewController.m; sourceTree = "<group>"; };
+		F7C2DF891CCC8839000CBD61 /* BMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLoginViewController.xib; sourceTree = "<group>"; };
 		F7C8BDCF1CC55684009F7906 /* BMImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageButton.h; sourceTree = "<group>"; };
 		F7C8BDD01CC55684009F7906 /* BMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageButton.m; sourceTree = "<group>"; };
 		F7C8BDD21CC56EB7009F7906 /* BMCopyableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCopyableLabel.h; sourceTree = "<group>"; };
@@ -229,6 +234,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F7C2DF861CCC880E000CBD61 /* Login */,
 				F7C2DF7A1CCB8DB5000CBD61 /* Posts */,
 				F7C2DF741CCB8D81000CBD61 /* UserPosts */,
 				F793D3441CC3BBF0006CE8D4 /* DataObject */,
@@ -454,6 +460,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F7C2DF861CCC880E000CBD61 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2DF871CCC8839000CBD61 /* BMLoginViewController.h */,
+				F7C2DF881CCC8839000CBD61 /* BMLoginViewController.m */,
+				F7C2DF891CCC8839000CBD61 /* BMLoginViewController.xib */,
+			);
+			name = Login;
+			path = Src/Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -575,6 +592,7 @@
 				F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
 				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
+				F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
 				F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */,
 			);
@@ -674,6 +692,7 @@
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
+				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */,
 				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,
