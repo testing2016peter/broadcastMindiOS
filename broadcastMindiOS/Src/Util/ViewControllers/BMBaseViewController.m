@@ -14,7 +14,11 @@
 @end
 
 @implementation BMBaseViewController
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [BMTrackUtil logEvent:BMTrackEventNameViewDidAppear withParameters:@{BMTrackParameterNameView: NSStringFromClass([self class])}];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];

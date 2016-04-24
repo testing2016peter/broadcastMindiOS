@@ -7,9 +7,5 @@
 //
 
 #import "BMAppConstant.h"
-
-
-                                     
 NSString * const BMEnvBetaApiUrl = @"https://petertest2016.herokuapp.com";
 NSString * const BMEnvProductionApiUrl = @"https://petertest2016.herokuapp.com";
-
