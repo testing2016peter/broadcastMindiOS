@@ -18,7 +18,7 @@
 
 + (void)logEvent:(NSString *)eventName withParameters:(NSDictionary *)parameters
 {
-    [Flurry logEvent:@"" withParameters:@{}];
+    [Flurry logEvent:eventName withParameters:parameters];
 }
 
 + (void)logError:(NSString *)errorID message:(NSString *)message error:(NSError *)error
