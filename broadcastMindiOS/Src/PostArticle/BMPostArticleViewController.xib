@@ -70,6 +70,13 @@
                             <color key="textColor" red="0.24705882370471954" green="0.24705882370471954" blue="0.24705882370471954" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k30-rv-vBH">
+                            <rect key="frame" x="476" y="15" width="44" height="30"/>
+                            <state key="normal" title="logout"/>
+                            <connections>
+                                <action selector="logout:" destination="-1" eventType="touchUpInside" id="nCm-Ak-Xlr"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -77,10 +84,12 @@
                         <constraint firstItem="5UH-Rd-2eX" firstAttribute="top" secondItem="sH4-4e-760" secondAttribute="bottom" constant="5" id="7mn-ho-Grl"/>
                         <constraint firstAttribute="bottom" secondItem="4wZ-XC-0gQ" secondAttribute="bottom" constant="16" id="8fD-LA-d2P"/>
                         <constraint firstItem="Bm0-aN-am9" firstAttribute="top" secondItem="5UH-Rd-2eX" secondAttribute="bottom" constant="10" id="8vG-C8-Zkm"/>
+                        <constraint firstItem="qaQ-XX-UcD" firstAttribute="leading" secondItem="k30-rv-vBH" secondAttribute="trailing" constant="8" id="9ZL-Sv-MGf"/>
                         <constraint firstItem="Bm0-aN-am9" firstAttribute="leading" secondItem="sH4-4e-760" secondAttribute="leading" id="Ald-Iz-9ab"/>
                         <constraint firstAttribute="trailing" secondItem="5UH-Rd-2eX" secondAttribute="trailing" constant="5" id="LPz-A5-V2O"/>
                         <constraint firstItem="4wZ-XC-0gQ" firstAttribute="leading" secondItem="Bm0-aN-am9" secondAttribute="trailing" constant="16" id="MeS-5L-DHf"/>
                         <constraint firstItem="4wZ-XC-0gQ" firstAttribute="top" secondItem="Bm0-aN-am9" secondAttribute="top" id="PPA-Bv-7TZ"/>
+                        <constraint firstItem="k30-rv-vBH" firstAttribute="top" secondItem="Ta4-X8-img" secondAttribute="top" constant="15" id="QWs-Mz-Yrp"/>
                         <constraint firstAttribute="trailing" secondItem="4wZ-XC-0gQ" secondAttribute="trailing" constant="16" id="aNu-gw-TTT"/>
                         <constraint firstItem="sH4-4e-760" firstAttribute="leading" secondItem="Ta4-X8-img" secondAttribute="leading" constant="10" id="gRu-gQ-eeS"/>
                         <constraint firstItem="5UH-Rd-2eX" firstAttribute="leading" secondItem="Ta4-X8-img" secondAttribute="leading" constant="5" id="qcD-Pd-QL3"/>

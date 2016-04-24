@@ -22,7 +22,7 @@
 
 - (void)fetchDataWithSuccess:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
-    [[self service] getArticleListWithParameter:nil range:NSMakeRange(self.start, 20) success:success failure:failure];
+    [[self service] getPostListWithParameter:nil range:NSMakeRange(self.start, 20) success:success failure:failure];
 }
 
 - (void)populateDataWithResponse:(id)response
