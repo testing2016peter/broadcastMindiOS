@@ -7,6 +7,7 @@
 //
 
 #import "BMService.h"
+#import "BMTrackUtil.h"
 
 @interface BMService ()
 @property (strong, nonatomic) BMClient *client;
@@ -32,7 +33,10 @@
     [self.client signUpUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
         success(operation, response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        failure(operation, err);
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
     }];
 }
 
@@ -41,7 +45,10 @@
     [self.client loginUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
         success(operation, response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        failure(operation, err);
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
     }];
 }
 
@@ -51,8 +58,10 @@
 
         success(operation, response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-
-        failure(operation, err);
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
     }];
 }
 
@@ -65,6 +74,7 @@
             success(operation, bmArticleList);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
         if (failure) {
             failure(operation, err);
         }

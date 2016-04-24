@@ -20,6 +20,10 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
+  - Flurry-iOS-SDK/FlurrySDK (7.6.0)
   - JSONModel (1.2.0)
   - MNColorKit (1.0.3)
   - SDWebImage (3.7.5):
@@ -30,6 +34,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - Crashlytics
+  - Fabric
+  - Flurry-iOS-SDK/FlurrySDK
   - JSONModel
   - MNColorKit
   - SDWebImage (~> 3.7)
@@ -38,6 +45,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Flurry-iOS-SDK: 9822fe709195f0e3ae3e52c785eee9ff651ff648
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   MNColorKit: c492a81e55832327c86146accc30a666486befe4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461

@@ -9,6 +9,11 @@
 #import "AppDelegate.h"
 #import "BMPostListViewController.h"
 #import "UIColor+BMColor.h"
+#import "BMLoginViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import <Flurry.h>
+#import "BMTrackUtil.h"
 @interface AppDelegate ()
 
 @end
@@ -16,16 +21,32 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [BMTrackUtil startSession];
+
+    // TODO: Move this to where you establish a user session
+    //    [self logUser];
     // Override point for customization after application launch.
     BMPostListViewController *vc = [[BMPostListViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
     [self setupRequestRegisterNotificationWithApplication:application];
+
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+//- (void) logUser {
+//    // TODO: Use the current user's information
+//    // You can call any combination of these three methods
+//    [CrashlyticsKit setUserIdentifier:@"12345"];
+//    [CrashlyticsKit setUserEmail:@"user@fabric.io"];
+//    [CrashlyticsKit setUserName:@"Test User"];
+//}
+//
+
 - (void)setupRequestRegisterNotificationWithApplication:(UIApplication *)application
 {
     [application registerForRemoteNotifications];

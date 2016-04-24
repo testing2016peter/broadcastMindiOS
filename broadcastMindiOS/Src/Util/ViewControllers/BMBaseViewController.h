@@ -11,6 +11,7 @@
 #import "BMAppConstant.h"
 #import "BMService.h"
 #import "UIColor+BMColor.h"
+#import "BMTrackUtil.h"
 @interface BMBaseViewController : UIViewController
 - (void)setupView;
 @end

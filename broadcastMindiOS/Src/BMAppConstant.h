@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
-
 typedef NS_ENUM(NSUInteger, BMEnv) {
     BMEnvBeta = 0,
     BMEnvProduction = 1,
@@ -18,4 +16,3 @@ typedef NS_ENUM(NSUInteger, BMEnv) {
 
 extern NSString * const BMEnvBetaApiUrl;
 extern NSString * const BMEnvProductionApiUrl;
-
