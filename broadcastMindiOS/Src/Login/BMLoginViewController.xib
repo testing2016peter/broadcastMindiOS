@@ -99,7 +99,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVE-yX-5wl">
-                    <rect key="frame" x="30" y="388" width="354" height="50"/>
+                    <rect key="frame" x="30" y="358" width="354" height="50"/>
                     <color key="backgroundColor" red="0.99607843160629272" green="0.98039215803146362" blue="0.88235294818878174" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="n9S-3D-ze5"/>
@@ -110,7 +110,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ycs-rO-Sp1">
-                    <rect key="frame" x="30" y="474" width="354" height="50"/>
+                    <rect key="frame" x="30" y="444" width="354" height="50"/>
                     <color key="backgroundColor" red="0.99607843159999998" green="0.98039215800000001" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5IT-sM-Res"/>
@@ -121,12 +121,12 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVC-0E-7KR">
-                    <rect key="frame" x="198" y="448" width="19" height="21"/>
+                    <rect key="frame" x="198" y="418" width="19" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-User" translatesAutoresizingMaskIntoConstraints="NO" id="pxk-BB-fb9">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-User" translatesAutoresizingMaskIntoConstraints="NO" id="pxk-BB-fb9">
                     <rect key="frame" x="167" y="150" width="80" height="80"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="pxk-BB-fb9" secondAttribute="height" multiplier="1:1" id="Ctf-yR-LvR"/>
@@ -145,7 +145,7 @@
                 <constraint firstItem="Ycs-rO-Sp1" firstAttribute="leading" secondItem="nVE-yX-5wl" secondAttribute="leading" id="fR8-a4-Hfx"/>
                 <constraint firstItem="Ycs-rO-Sp1" firstAttribute="top" secondItem="sVC-0E-7KR" secondAttribute="bottom" constant="5" id="hmo-aX-6BF"/>
                 <constraint firstAttribute="trailing" secondItem="wyo-4K-obB" secondAttribute="trailing" constant="30" id="j4V-ZQ-f80"/>
-                <constraint firstItem="nVE-yX-5wl" firstAttribute="top" secondItem="wyo-4K-obB" secondAttribute="bottom" constant="50" id="lqh-2T-Rg6"/>
+                <constraint firstItem="nVE-yX-5wl" firstAttribute="top" secondItem="wyo-4K-obB" secondAttribute="bottom" constant="20" id="lqh-2T-Rg6"/>
                 <constraint firstItem="wyo-4K-obB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="qZE-O9-5nT"/>
                 <constraint firstItem="pxk-BB-fb9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sb0-dg-Pgp"/>
                 <constraint firstItem="sVC-0E-7KR" firstAttribute="top" secondItem="nVE-yX-5wl" secondAttribute="bottom" constant="10" id="wGK-4L-pOY"/>

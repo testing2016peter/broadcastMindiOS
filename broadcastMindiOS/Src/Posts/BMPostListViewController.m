@@ -61,6 +61,8 @@
     self.dataStore = [[BMPostListDataStore alloc] init];
     [self setupCollectionView];
     [self.dataStore beginWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSArray *array = [NSArray array];
+        array[1];
         NSLog(@"respons:%@" ,response);
         self.bmArticles = [self.dataStore.data copy];
         [self.collectionView reloadData];
