@@ -14,6 +14,7 @@
 #import <Crashlytics/Crashlytics.h>
 #import <Flurry.h>
 #import "BMTrackUtil.h"
+#import "BMLoginViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -32,8 +33,8 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
     [self setupRequestRegisterNotificationWithApplication:application];
-
-    self.window.rootViewController = navigationController;
+    BMLoginViewController *vc2 = [[BMLoginViewController alloc] init];
+    self.window.rootViewController = vc2;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -10,3 +10,4 @@
 //BMTrackEventNameViewDidAppear
 NSString * const BMTrackEventNameViewDidAppear = @"ViewDidAppear";
 NSString * const BMTrackParameterNameView = @"view";
+NSString * const BMTrackErrorApi = @"api";

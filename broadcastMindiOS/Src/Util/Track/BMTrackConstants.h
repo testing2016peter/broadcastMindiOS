@@ -8,5 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 extern NSString * const BMTrackEventNameViewDidAppear;
 extern NSString * const BMTrackParameterNameView;
+
+//error api
+extern NSString * const BMTrackErrorApi;
