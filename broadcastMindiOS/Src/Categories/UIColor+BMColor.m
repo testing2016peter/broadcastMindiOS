@@ -18,7 +18,7 @@
 + (UIColor *)BMBackgroundColor
 {
  //   return RGBX(0xF3F3F3);
-    return RGBX(0xb8b8b8);
+    return RGBX(0xF1F0F0);
 }
 
 + (UIColor *)BMActionColor

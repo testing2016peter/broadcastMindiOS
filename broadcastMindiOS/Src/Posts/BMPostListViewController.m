@@ -11,7 +11,7 @@
 #import "BMInputTextView.h"
 #import "BMArticleListCollectionViewCell.h"
 #import "BMCommonViewUtil.h"
-#import "BMPostArticleViewController.h"
+#import "BMInsertPostViewController.h"
 #import "BMPostListDataStore.h"
 #import "BMMainFilterView.h"
 #import <UIScrollView+SVPullToRefresh.h>
@@ -36,11 +36,11 @@
     CGRect rect = self.view.bounds;
     rect.size.height = 30.0f;
     self.bmMainFilterView = [[BMMainFilterView alloc] initWithFrame:rect];
-    [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
+  //  [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
     /* Make navbar stick to the top */
     [self.shyNavBarManager setStickyNavigationBar:NO];
     /* Make the extension view stick to the top */
-    [self.shyNavBarManager setStickyExtensionView:NO];
+    //[self.shyNavBarManager setStickyExtensionView:NO];
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
     searchBar.barTintColor = [UIColor BMBackgroundColor];
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -52,6 +52,15 @@
 
 - (void)setupView
 {
+
+
+    UIImage *closeButtonImage = [UIImage imageNamed:@"Icon-User-White"];
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [closeButton setImage:closeButtonImage forState:UIControlStateNormal];
+    closeButton.bounds = CGRectMake(0.0f, 0.0f, 30, 30);
+    closeButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [closeButton addTarget:self action:@selector(dismissModalViewController:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
 
     TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
     self.shyNavBarManager = shyManager;
@@ -98,7 +107,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.bmArticles.count;
+    return self.bmArticles.count ? self.bmArticles.count : 10;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -121,7 +130,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMArticleListCollectionViewCellIdentified withstyle:APNibFixedHeightScaling];
-    size.width -= (2* 16.0f);
+    //size.width -= (2* 16.0f);
     return size;
 
 }
@@ -136,19 +145,19 @@
 
 - (void)tapPostButton:(UIButton *)button
 {
-    BMPostArticleViewController *vc = [[BMPostArticleViewController alloc] init];
+    BMInsertPostViewController *vc = [[BMInsertPostViewController alloc] init];
     vc.view.frame = self.view.bounds;
     vc.postArticleViewControllerDelegate = self;
     [self.view addSubview:vc.view];
     [self addChildViewController:vc];
 }
 
--(void)tapPostArticleViewController:(BMPostArticleViewController *)vc cancelButton:(id)cancelButton
+-(void)tapPostArticleViewController:(BMInsertPostViewController *)vc cancelButton:(id)cancelButton
 {
     [vc.view removeFromSuperview];
 }
 
--(void)tapPostArticleViewController:(BMPostArticleViewController *)vc sendButton:(id)sendButton
+-(void)tapPostArticleViewController:(BMInsertPostViewController *)vc sendButton:(id)sendButton
 {
     [[BMService sharedInstance] insertPostWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
         [vc.view removeFromSuperview];

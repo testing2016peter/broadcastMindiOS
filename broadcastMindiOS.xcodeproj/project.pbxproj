@@ -33,8 +33,8 @@
 		F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */; };
 		F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */; };
 		F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */; };
-		F793D33B1CC38C72006CE8D4 /* BMPostArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */; };
-		F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */; };
+		F793D33B1CC38C72006CE8D4 /* BMInsertPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3391CC38C72006CE8D4 /* BMInsertPostViewController.m */; };
+		F793D33C1CC38C72006CE8D4 /* BMInsertPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D33A1CC38C72006CE8D4 /* BMInsertPostViewController.xib */; };
 		F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */; };
 		F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3421CC3B7FC006CE8D4 /* BMBaseDataStore.m */; };
 		F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3461CC3BC2F006CE8D4 /* BMBaseJSONModel.m */; };
@@ -129,9 +129,9 @@
 		F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMEnvConfig.m; sourceTree = "<group>"; };
 		F793D3311CC38780006CE8D4 /* BMCommonViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCommonViewUtil.h; sourceTree = "<group>"; };
 		F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCommonViewUtil.m; sourceTree = "<group>"; };
-		F793D3381CC38C72006CE8D4 /* BMPostArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostArticleViewController.h; sourceTree = "<group>"; };
-		F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostArticleViewController.m; sourceTree = "<group>"; };
-		F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostArticleViewController.xib; sourceTree = "<group>"; };
+		F793D3381CC38C72006CE8D4 /* BMInsertPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInsertPostViewController.h; sourceTree = "<group>"; };
+		F793D3391CC38C72006CE8D4 /* BMInsertPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInsertPostViewController.m; sourceTree = "<group>"; };
+		F793D33A1CC38C72006CE8D4 /* BMInsertPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInsertPostViewController.xib; sourceTree = "<group>"; };
 		F793D33E1CC3B7ED006CE8D4 /* BMPostListDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostListDataStore.h; sourceTree = "<group>"; };
 		F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostListDataStore.m; sourceTree = "<group>"; };
 		F793D3411CC3B7FC006CE8D4 /* BMBaseDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseDataStore.h; sourceTree = "<group>"; };
@@ -399,9 +399,9 @@
 		F793D3341CC38C4C006CE8D4 /* PostArticle */ = {
 			isa = PBXGroup;
 			children = (
-				F793D3381CC38C72006CE8D4 /* BMPostArticleViewController.h */,
-				F793D3391CC38C72006CE8D4 /* BMPostArticleViewController.m */,
-				F793D33A1CC38C72006CE8D4 /* BMPostArticleViewController.xib */,
+				F793D3381CC38C72006CE8D4 /* BMInsertPostViewController.h */,
+				F793D3391CC38C72006CE8D4 /* BMInsertPostViewController.m */,
+				F793D33A1CC38C72006CE8D4 /* BMInsertPostViewController.xib */,
 			);
 			name = PostArticle;
 			path = Src/PostArticle;
@@ -613,7 +613,7 @@
 				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
 				F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
-				F793D33C1CC38C72006CE8D4 /* BMPostArticleViewController.xib in Resources */,
+				F793D33C1CC38C72006CE8D4 /* BMInsertPostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +707,7 @@
 				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
 				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
-				F793D33B1CC38C72006CE8D4 /* BMPostArticleViewController.m in Sources */,
+				F793D33B1CC38C72006CE8D4 /* BMInsertPostViewController.m in Sources */,
 				F7C2DF901CCD093A000CBD61 /* BMTrackUtil.m in Sources */,
 				F793D3281CC37BFD006CE8D4 /* APNibCacheManager.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,

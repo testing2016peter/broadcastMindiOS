@@ -6,14 +6,14 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import "BMPostArticleViewController.h"
+#import "BMInsertPostViewController.h"
 #import "BMService.h"
 
-@interface BMPostArticleViewController ()
+@interface BMInsertPostViewController ()
 
 @end
 
-@implementation BMPostArticleViewController
+@implementation BMInsertPostViewController
 
 - (void)setupView
 {

@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "BMBaseViewController.h"
 #import "BMPlaceholderTextView.h"
-@class BMPostArticleViewController;
+@class BMInsertPostViewController;
 
 @protocol BMPostArticleViewControllerDelegate <NSObject>
 
-- (void)tapPostArticleViewController:(BMPostArticleViewController *)vc cancelButton:(id)cancelButton;
-- (void)tapPostArticleViewController:(BMPostArticleViewController *)vc sendButton:(id)sendButton;
+- (void)tapPostArticleViewController:(BMInsertPostViewController *)vc cancelButton:(id)cancelButton;
+- (void)tapPostArticleViewController:(BMInsertPostViewController *)vc sendButton:(id)sendButton;
 
 @end
 
-@interface BMPostArticleViewController : BMBaseViewController
+@interface BMInsertPostViewController : BMBaseViewController
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
