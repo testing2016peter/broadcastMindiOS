@@ -14,6 +14,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    [self setupComponent];
     [self setupView];
 }
 
@@ -22,6 +23,7 @@
     self = [super initWithFrame:frame];
 
     if (self) {
+        [self setupComponent];
         [self setupView];
     }
 
@@ -31,4 +33,58 @@
 - (void)setupView
 {
 }
+
+
+- (void)setupComponent
+{
+    self.borderLayer = [CALayer layer];
+    self.borderLayer.backgroundColor = [UIColor blackColor].CGColor;
+    self.borderHidden = YES;
+    self.topBorderLayer = [CALayer layer];
+    self.topBorderLayer.backgroundColor = [UIColor blackColor].CGColor;
+    self.topBorderHidden = YES;//default
+
+    [self.contentView.layer addSublayer:self.borderLayer];
+    [self.contentView.layer addSublayer:self.topBorderLayer];
+}
+
+- (void)setBorderColor:(UIColor *)borderColor
+{
+    _borderColor = borderColor;
+    self.borderLayer.backgroundColor = borderColor.CGColor;
+}
+
+- (void)setBorderHidden:(BOOL)borderHidden
+{
+    _borderHidden = borderHidden;
+    self.borderLayer.hidden = borderHidden;
+}
+
+- (void)setTopBorderHidden:(BOOL)topBorderHidden
+{
+    _topBorderHidden = topBorderHidden;
+    self.topBorderLayer.hidden = topBorderHidden;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    CGFloat borderWidth = CGRectGetWidth(self.frame) - self.leadingMargin - self.tailingMargin;
+    CGFloat topBorderBorderWidth = CGRectGetWidth(self.frame) - self.topBorderLeadingMargin - self.topBorderTailingMargin;
+    CGFloat borderHeight = (self.borderHeight) ? self.borderHeight : 0.3f;
+    
+    CGFloat borderX = self.leadingMargin;
+    CGFloat topBorderBorderX = self.topBorderLeadingMargin;
+
+    CGFloat borderY = CGRectGetHeight(self.frame) - borderHeight;
+
+    [CATransaction begin];
+    [CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
+    self.borderLayer.frame = CGRectMake(borderX, borderY, borderWidth, borderHeight);
+    self.topBorderLayer.frame = CGRectMake(topBorderBorderX, 0.0f, topBorderBorderWidth, borderHeight);
+    [CATransaction commit];
+}
+
+
 @end

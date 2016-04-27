@@ -11,7 +11,7 @@
 #import "BMUserPostsViewController.h"
 #import "BMPostListDataStore.h"
 #import "BMInputTextView.h"
-#import "BMArticleListCollectionViewCell.h"
+#import "BMPostCollectionViewCell.h"
 #import "BMCommonViewUtil.h"
 
 @interface BMUserPostsViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -58,7 +58,7 @@
 
 - (void)setupCollectionView
 {
-    [self.collectionView registerNib: [UINib nibWithNibName:BMArticleListCollectionViewCellIdentified bundle:nil]forCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified];
+    [self.collectionView registerNib: [UINib nibWithNibName:BMPostCollectionViewCellIdentifier bundle:nil]forCellWithReuseIdentifier:BMPostCollectionViewCellIdentifier];
 
     __weak __typeof(self)weakSelf = self;
     [self.collectionView addPullToRefreshWithActionHandler:^{
@@ -111,7 +111,7 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    BMArticleListCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified forIndexPath:indexPath];
+    BMPostCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMPostCollectionViewCellIdentifier forIndexPath:indexPath];
     if (indexPath.item < self.bmArticles.count) {
         BMPost *article = self.bmArticles[indexPath.item];
         cell.contentTextView.text = article.text;
@@ -125,7 +125,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMArticleListCollectionViewCellIdentified withstyle:APNibFixedHeightScaling];
+    CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMPostCollectionViewCellIdentifier withstyle:APNibFixedHeightScaling];
     return size;
 
 }

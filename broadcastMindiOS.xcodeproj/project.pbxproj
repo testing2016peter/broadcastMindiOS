@@ -33,8 +33,6 @@
 		F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */; };
 		F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */; };
 		F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */; };
-		F793D33B1CC38C72006CE8D4 /* BMInsertPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3391CC38C72006CE8D4 /* BMInsertPostViewController.m */; };
-		F793D33C1CC38C72006CE8D4 /* BMInsertPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D33A1CC38C72006CE8D4 /* BMInsertPostViewController.xib */; };
 		F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */; };
 		F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3421CC3B7FC006CE8D4 /* BMBaseDataStore.m */; };
 		F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3461CC3BC2F006CE8D4 /* BMBaseJSONModel.m */; };
@@ -44,12 +42,18 @@
 		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
 		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
 		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
+		F7BF4CDF1CD10CA6000BB5E5 /* BMInsertPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF4CDD1CD10CA6000BB5E5 /* BMInsertPostViewController.m */; };
+		F7BF4CE01CD10CA6000BB5E5 /* BMInsertPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BF4CDE1CD10CA6000BB5E5 /* BMInsertPostViewController.xib */; };
+		F7BF4CE51CD10CD3000BB5E5 /* PostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF4CE31CD10CD3000BB5E5 /* PostDetailViewController.m */; };
+		F7BF4CE61CD10CD3000BB5E5 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BF4CE41CD10CD3000BB5E5 /* PostDetailViewController.xib */; };
+		F7BF4CEB1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF4CE91CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m */; };
+		F7BF4CEC1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BF4CEA1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib */; };
 		F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */; };
 		F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */; };
 		F7C2DF821CCB8DB5000CBD61 /* BMPostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF7C1CCB8DB5000CBD61 /* BMPostListViewController.m */; };
 		F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF7D1CCB8DB5000CBD61 /* BMPostListViewController.xib */; };
-		F7C2DF841CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */; };
-		F7C2DF851CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */; };
+		F7C2DF841CCB8DB5000CBD61 /* BMPostCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF801CCB8DB5000CBD61 /* BMPostCollectionViewCell.m */; };
+		F7C2DF851CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF811CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib */; };
 		F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF881CCC8839000CBD61 /* BMLoginViewController.m */; };
 		F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF891CCC8839000CBD61 /* BMLoginViewController.xib */; };
 		F7C2DF901CCD093A000CBD61 /* BMTrackUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF8F1CCD093A000CBD61 /* BMTrackUtil.m */; };
@@ -129,9 +133,6 @@
 		F793D32F1CC37FCA006CE8D4 /* BMEnvConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMEnvConfig.m; sourceTree = "<group>"; };
 		F793D3311CC38780006CE8D4 /* BMCommonViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCommonViewUtil.h; sourceTree = "<group>"; };
 		F793D3321CC38780006CE8D4 /* BMCommonViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCommonViewUtil.m; sourceTree = "<group>"; };
-		F793D3381CC38C72006CE8D4 /* BMInsertPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInsertPostViewController.h; sourceTree = "<group>"; };
-		F793D3391CC38C72006CE8D4 /* BMInsertPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInsertPostViewController.m; sourceTree = "<group>"; };
-		F793D33A1CC38C72006CE8D4 /* BMInsertPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInsertPostViewController.xib; sourceTree = "<group>"; };
 		F793D33E1CC3B7ED006CE8D4 /* BMPostListDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostListDataStore.h; sourceTree = "<group>"; };
 		F793D33F1CC3B7ED006CE8D4 /* BMPostListDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostListDataStore.m; sourceTree = "<group>"; };
 		F793D3411CC3B7FC006CE8D4 /* BMBaseDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseDataStore.h; sourceTree = "<group>"; };
@@ -149,15 +150,24 @@
 		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
 		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
 		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		F7BF4CDC1CD10CA6000BB5E5 /* BMInsertPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInsertPostViewController.h; sourceTree = "<group>"; };
+		F7BF4CDD1CD10CA6000BB5E5 /* BMInsertPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInsertPostViewController.m; sourceTree = "<group>"; };
+		F7BF4CDE1CD10CA6000BB5E5 /* BMInsertPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInsertPostViewController.xib; sourceTree = "<group>"; };
+		F7BF4CE21CD10CD3000BB5E5 /* PostDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostDetailViewController.h; sourceTree = "<group>"; };
+		F7BF4CE31CD10CD3000BB5E5 /* PostDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostDetailViewController.m; sourceTree = "<group>"; };
+		F7BF4CE41CD10CD3000BB5E5 /* PostDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
+		F7BF4CE81CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostCommentCollectionViewCell.h; sourceTree = "<group>"; };
+		F7BF4CE91CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostCommentCollectionViewCell.m; sourceTree = "<group>"; };
+		F7BF4CEA1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostCommentCollectionViewCell.xib; sourceTree = "<group>"; };
 		F7C2DF751CCB8D81000CBD61 /* BMUserPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMUserPostsViewController.h; sourceTree = "<group>"; };
 		F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMUserPostsViewController.m; sourceTree = "<group>"; };
 		F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMUserPostsViewController.xib; sourceTree = "<group>"; };
 		F7C2DF7B1CCB8DB5000CBD61 /* BMPostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostListViewController.h; sourceTree = "<group>"; };
 		F7C2DF7C1CCB8DB5000CBD61 /* BMPostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostListViewController.m; sourceTree = "<group>"; };
 		F7C2DF7D1CCB8DB5000CBD61 /* BMPostListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostListViewController.xib; sourceTree = "<group>"; };
-		F7C2DF7F1CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleListCollectionViewCell.h; sourceTree = "<group>"; };
-		F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMArticleListCollectionViewCell.m; sourceTree = "<group>"; };
-		F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMArticleListCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7C2DF7F1CCB8DB5000CBD61 /* BMPostCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostCollectionViewCell.h; sourceTree = "<group>"; };
+		F7C2DF801CCB8DB5000CBD61 /* BMPostCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostCollectionViewCell.m; sourceTree = "<group>"; };
+		F7C2DF811CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostCollectionViewCell.xib; sourceTree = "<group>"; };
 		F7C2DF871CCC8839000CBD61 /* BMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLoginViewController.h; sourceTree = "<group>"; };
 		F7C2DF881CCC8839000CBD61 /* BMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLoginViewController.m; sourceTree = "<group>"; };
 		F7C2DF891CCC8839000CBD61 /* BMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLoginViewController.xib; sourceTree = "<group>"; };
@@ -240,12 +250,13 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F7BF4CE11CD10CBA000BB5E5 /* PostDetail */,
+				F7BF4CDB1CD10CA6000BB5E5 /* PostInert */,
 				F7C2DF861CCC880E000CBD61 /* Login */,
 				F7C2DF7A1CCB8DB5000CBD61 /* Posts */,
 				F7C2DF741CCB8D81000CBD61 /* UserPosts */,
 				F793D3441CC3BBF0006CE8D4 /* DataObject */,
 				F793D33D1CC3B7D7006CE8D4 /* DataStore */,
-				F793D3341CC38C4C006CE8D4 /* PostArticle */,
 				F793D32B1CC37EF0006CE8D4 /* BMAppConstant.h */,
 				F793D32C1CC37EF0006CE8D4 /* BMAppConstant.m */,
 				F793D2FE1CC2ACBD006CE8D4 /* Util */,
@@ -396,17 +407,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		F793D3341CC38C4C006CE8D4 /* PostArticle */ = {
-			isa = PBXGroup;
-			children = (
-				F793D3381CC38C72006CE8D4 /* BMInsertPostViewController.h */,
-				F793D3391CC38C72006CE8D4 /* BMInsertPostViewController.m */,
-				F793D33A1CC38C72006CE8D4 /* BMInsertPostViewController.xib */,
-			);
-			name = PostArticle;
-			path = Src/PostArticle;
-			sourceTree = "<group>";
-		};
 		F793D33D1CC3B7D7006CE8D4 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +432,39 @@
 			);
 			name = DataObject;
 			path = Src/DataObject;
+			sourceTree = "<group>";
+		};
+		F7BF4CDB1CD10CA6000BB5E5 /* PostInert */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF4CDC1CD10CA6000BB5E5 /* BMInsertPostViewController.h */,
+				F7BF4CDD1CD10CA6000BB5E5 /* BMInsertPostViewController.m */,
+				F7BF4CDE1CD10CA6000BB5E5 /* BMInsertPostViewController.xib */,
+			);
+			name = PostInert;
+			path = Src/PostInert;
+			sourceTree = "<group>";
+		};
+		F7BF4CE11CD10CBA000BB5E5 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF4CE71CD10EF2000BB5E5 /* Cell */,
+				F7BF4CE21CD10CD3000BB5E5 /* PostDetailViewController.h */,
+				F7BF4CE31CD10CD3000BB5E5 /* PostDetailViewController.m */,
+				F7BF4CE41CD10CD3000BB5E5 /* PostDetailViewController.xib */,
+			);
+			name = PostDetail;
+			path = Src/PostDetail;
+			sourceTree = "<group>";
+		};
+		F7BF4CE71CD10EF2000BB5E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F7BF4CE81CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.h */,
+				F7BF4CE91CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m */,
+				F7BF4CEA1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F7C2DF741CCB8D81000CBD61 /* UserPosts */ = {
@@ -460,9 +493,9 @@
 		F7C2DF7E1CCB8DB5000CBD61 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F7C2DF7F1CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.h */,
-				F7C2DF801CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m */,
-				F7C2DF811CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib */,
+				F7C2DF7F1CCB8DB5000CBD61 /* BMPostCollectionViewCell.h */,
+				F7C2DF801CCB8DB5000CBD61 /* BMPostCollectionViewCell.m */,
+				F7C2DF811CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -602,10 +635,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C2DF851CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.xib in Resources */,
+				F7BF4CE61CD10CD3000BB5E5 /* PostDetailViewController.xib in Resources */,
+				F7C2DF851CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib in Resources */,
 				F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */,
+				F7BF4CEC1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib in Resources */,
 				F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */,
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
+				F7BF4CE01CD10CA6000BB5E5 /* BMInsertPostViewController.xib in Resources */,
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
 				F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */,
 				F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */,
@@ -613,7 +649,6 @@
 				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
 				F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
-				F793D33C1CC38C72006CE8D4 /* BMInsertPostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,13 +736,13 @@
 			files = (
 				F793D3271CC37BFD006CE8D4 /* APCalculatorHelper.m in Sources */,
 				F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */,
+				F7BF4CDF1CD10CA6000BB5E5 /* BMInsertPostViewController.m in Sources */,
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
-				F7C2DF841CCB8DB5000CBD61 /* BMArticleListCollectionViewCell.m in Sources */,
+				F7C2DF841CCB8DB5000CBD61 /* BMPostCollectionViewCell.m in Sources */,
 				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
 				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
-				F793D33B1CC38C72006CE8D4 /* BMInsertPostViewController.m in Sources */,
 				F7C2DF901CCD093A000CBD61 /* BMTrackUtil.m in Sources */,
 				F793D3281CC37BFD006CE8D4 /* APNibCacheManager.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
@@ -715,6 +750,7 @@
 				F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */,
 				F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
+				F7BF4CE51CD10CD3000BB5E5 /* PostDetailViewController.m in Sources */,
 				F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */,
 				F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */,
 				F793D34D1CC3BCD6006CE8D4 /* BMPostList.m in Sources */,
@@ -731,6 +767,7 @@
 				F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */,
 				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,
 				F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */,
+				F7BF4CEB1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m in Sources */,
 				F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */,
 				F793D2A91CC15AC0006CE8D4 /* main.m in Sources */,
 			);
