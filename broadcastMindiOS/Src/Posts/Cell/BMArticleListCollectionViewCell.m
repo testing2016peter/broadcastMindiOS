@@ -37,4 +37,16 @@
     self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 }
 
+- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text
+{
+    self.cellWidthConstaint.constant = width;
+    self.contentTextView.text = text;
+    CGSize textViewSize = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.frame.size.width, FLT_MAX)];
+    self.contentTextHeight.constant = textViewSize.height;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+
+    return [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+}
+
 @end

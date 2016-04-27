@@ -16,9 +16,12 @@ static NSString * const BMArticleListCollectionViewCellIdentified = @"BMArticleL
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-
 @property (weak, nonatomic) IBOutlet BMArticleFunctionView *bmArticleFunctionView;
 @property (weak, nonatomic) IBOutlet UIView *backgroundUIView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidthConstaint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeight;
+
+- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text;
 
 @end
