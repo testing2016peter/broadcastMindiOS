@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BMInputFieldCollectionViewCell" id="gTV-IL-0wX" customClass="BMInputFieldCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="310" height="40"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="NickName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xO-xN-YPT">
+                        <rect key="frame" x="6" y="2" width="67" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W18-i0-SBx">
+                        <rect key="frame" x="103" y="12" width="201" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="1xO-xN-YPT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="SbW-3k-0dK"/>
+                <constraint firstItem="W18-i0-SBx" firstAttribute="leading" secondItem="1xO-xN-YPT" secondAttribute="trailing" constant="30" id="VdU-z7-ca8"/>
+                <constraint firstItem="1xO-xN-YPT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="ZDI-hR-9bU"/>
+                <constraint firstAttribute="bottom" secondItem="1xO-xN-YPT" secondAttribute="bottom" constant="2" id="dxI-Nu-qhF"/>
+                <constraint firstAttribute="trailing" secondItem="W18-i0-SBx" secondAttribute="trailing" constant="6" id="l8h-fo-Ejk"/>
+                <constraint firstItem="W18-i0-SBx" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="mba-sa-mVp"/>
+            </constraints>
+            <size key="customSize" width="310" height="37"/>
+            <connections>
+                <outlet property="inputLabel" destination="1xO-xN-YPT" id="XYg-b5-3Pn"/>
+                <outlet property="inputTextField" destination="W18-i0-SBx" id="UZ5-jI-FXi"/>
+            </connections>
+            <point key="canvasLocation" x="10" y="215.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

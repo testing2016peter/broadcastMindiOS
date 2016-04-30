@@ -18,6 +18,7 @@
 #import <UIScrollView+SVInfiniteScrolling.h>
 #import "BMUserPostsViewController.h"
 #import "PostDetailViewController.h"
+#import "BMSettingViewController.h"
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
@@ -143,7 +144,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    PostDetailViewController *postDetailViewController = [[PostDetailViewController alloc] init];
+    BMSettingViewController *postDetailViewController = [[BMSettingViewController alloc] init];
     [self.navigationController pushViewController:postDetailViewController animated:YES];
 }
 

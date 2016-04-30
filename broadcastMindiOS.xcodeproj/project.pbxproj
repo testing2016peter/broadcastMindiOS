@@ -42,6 +42,14 @@
 		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
 		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
 		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
+		F7B15E731CD4A75600A00E5D /* BMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */; };
+		F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */; };
+		F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E771CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m */; };
+		F7B15E7A1CD4A88500A00E5D /* BMInputFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B15E781CD4A88500A00E5D /* BMInputFieldCollectionViewCell.xib */; };
+		F7B15E7E1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E7C1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.m */; };
+		F7B15E7F1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B15E7D1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib */; };
+		F7B15E831CD4B21800A00E5D /* BMSettingHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E811CD4B21800A00E5D /* BMSettingHeaderReusableView.m */; };
+		F7B15E841CD4B21800A00E5D /* BMSettingHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B15E821CD4B21800A00E5D /* BMSettingHeaderReusableView.xib */; };
 		F7BF4CDF1CD10CA6000BB5E5 /* BMInsertPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF4CDD1CD10CA6000BB5E5 /* BMInsertPostViewController.m */; };
 		F7BF4CE01CD10CA6000BB5E5 /* BMInsertPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BF4CDE1CD10CA6000BB5E5 /* BMInsertPostViewController.xib */; };
 		F7BF4CE51CD10CD3000BB5E5 /* PostDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF4CE31CD10CD3000BB5E5 /* PostDetailViewController.m */; };
@@ -150,6 +158,18 @@
 		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
 		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
 		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		F7B15E701CD4A75600A00E5D /* BMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSettingViewController.h; sourceTree = "<group>"; };
+		F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSettingViewController.m; sourceTree = "<group>"; };
+		F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMSettingViewController.xib; sourceTree = "<group>"; };
+		F7B15E761CD4A88500A00E5D /* BMInputFieldCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInputFieldCollectionViewCell.h; sourceTree = "<group>"; };
+		F7B15E771CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInputFieldCollectionViewCell.m; sourceTree = "<group>"; };
+		F7B15E781CD4A88500A00E5D /* BMInputFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInputFieldCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7B15E7B1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInputSwitchCollectionViewCell.h; sourceTree = "<group>"; };
+		F7B15E7C1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInputSwitchCollectionViewCell.m; sourceTree = "<group>"; };
+		F7B15E7D1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInputSwitchCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7B15E801CD4B21800A00E5D /* BMSettingHeaderReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSettingHeaderReusableView.h; sourceTree = "<group>"; };
+		F7B15E811CD4B21800A00E5D /* BMSettingHeaderReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSettingHeaderReusableView.m; sourceTree = "<group>"; };
+		F7B15E821CD4B21800A00E5D /* BMSettingHeaderReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMSettingHeaderReusableView.xib; sourceTree = "<group>"; };
 		F7BF4CDC1CD10CA6000BB5E5 /* BMInsertPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInsertPostViewController.h; sourceTree = "<group>"; };
 		F7BF4CDD1CD10CA6000BB5E5 /* BMInsertPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInsertPostViewController.m; sourceTree = "<group>"; };
 		F7BF4CDE1CD10CA6000BB5E5 /* BMInsertPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInsertPostViewController.xib; sourceTree = "<group>"; };
@@ -250,6 +270,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F7B15E6F1CD4A75600A00E5D /* Setting */,
 				F7BF4CE11CD10CBA000BB5E5 /* PostDetail */,
 				F7BF4CDB1CD10CA6000BB5E5 /* PostInert */,
 				F7C2DF861CCC880E000CBD61 /* Login */,
@@ -432,6 +453,34 @@
 			);
 			name = DataObject;
 			path = Src/DataObject;
+			sourceTree = "<group>";
+		};
+		F7B15E6F1CD4A75600A00E5D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F7B15E751CD4A85500A00E5D /* Cell */,
+				F7B15E701CD4A75600A00E5D /* BMSettingViewController.h */,
+				F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */,
+				F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */,
+			);
+			name = Setting;
+			path = Src/Setting;
+			sourceTree = "<group>";
+		};
+		F7B15E751CD4A85500A00E5D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F7B15E761CD4A88500A00E5D /* BMInputFieldCollectionViewCell.h */,
+				F7B15E771CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m */,
+				F7B15E781CD4A88500A00E5D /* BMInputFieldCollectionViewCell.xib */,
+				F7B15E7B1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.h */,
+				F7B15E7C1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.m */,
+				F7B15E7D1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib */,
+				F7B15E801CD4B21800A00E5D /* BMSettingHeaderReusableView.h */,
+				F7B15E811CD4B21800A00E5D /* BMSettingHeaderReusableView.m */,
+				F7B15E821CD4B21800A00E5D /* BMSettingHeaderReusableView.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F7BF4CDB1CD10CA6000BB5E5 /* PostInert */ = {
@@ -636,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7BF4CE61CD10CD3000BB5E5 /* PostDetailViewController.xib in Resources */,
+				F7B15E7A1CD4A88500A00E5D /* BMInputFieldCollectionViewCell.xib in Resources */,
 				F7C2DF851CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib in Resources */,
 				F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */,
 				F7BF4CEC1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib in Resources */,
@@ -643,9 +693,12 @@
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
 				F7BF4CE01CD10CA6000BB5E5 /* BMInsertPostViewController.xib in Resources */,
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
+				F7B15E7F1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib in Resources */,
+				F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */,
 				F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */,
 				F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
+				F7B15E841CD4B21800A00E5D /* BMSettingHeaderReusableView.xib in Resources */,
 				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
 				F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */,
 				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
@@ -754,19 +807,23 @@
 				F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */,
 				F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */,
 				F793D34D1CC3BCD6006CE8D4 /* BMPostList.m in Sources */,
+				F7B15E831CD4B21800A00E5D /* BMSettingHeaderReusableView.m in Sources */,
 				F7C2DF821CCB8DB5000CBD61 /* BMPostListViewController.m in Sources */,
 				F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */,
 				F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
 				F793D3291CC37BFD006CE8D4 /* APNibSizeCalculator.m in Sources */,
+				F7B15E7E1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.m in Sources */,
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
+				F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */,
 				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */,
 				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,
 				F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */,
+				F7B15E731CD4A75600A00E5D /* BMSettingViewController.m in Sources */,
 				F7BF4CEB1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m in Sources */,
 				F793D3301CC37FCA006CE8D4 /* BMEnvConfig.m in Sources */,
 				F793D2A91CC15AC0006CE8D4 /* main.m in Sources */,
