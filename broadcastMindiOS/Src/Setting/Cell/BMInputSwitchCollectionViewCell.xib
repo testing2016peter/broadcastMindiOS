@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BMInputSwitchCollectionViewCell" id="gTV-IL-0wX" customClass="BMInputSwitchCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="303" height="40"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="soD-Gz-ruL">
+                        <rect key="frame" x="248" y="5" width="51" height="31"/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="NickName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpP-zK-uZ6">
+                        <rect key="frame" x="6" y="2" width="232" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="PpP-zK-uZ6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="1tM-yn-hLk"/>
+                <constraint firstItem="soD-Gz-ruL" firstAttribute="leading" secondItem="PpP-zK-uZ6" secondAttribute="trailing" constant="10" id="b41-gG-Yp4"/>
+                <constraint firstAttribute="bottom" secondItem="PpP-zK-uZ6" secondAttribute="bottom" constant="2" id="n0v-bu-X8c"/>
+                <constraint firstAttribute="trailing" secondItem="soD-Gz-ruL" secondAttribute="trailing" constant="6" id="olx-TZ-moj"/>
+                <constraint firstItem="soD-Gz-ruL" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wKp-8C-csj"/>
+                <constraint firstItem="PpP-zK-uZ6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="xlx-NM-Epi"/>
+            </constraints>
+            <size key="customSize" width="303" height="50"/>
+            <connections>
+                <outlet property="inputSwitch" destination="soD-Gz-ruL" id="dwi-px-S3R"/>
+                <outlet property="titleLabel" destination="PpP-zK-uZ6" id="VNW-qO-JzU"/>
+            </connections>
+            <point key="canvasLocation" x="29.5" y="222"/>
+        </collectionViewCell>
+    </objects>
+</document>
