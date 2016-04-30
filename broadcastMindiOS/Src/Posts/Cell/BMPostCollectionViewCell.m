@@ -6,9 +6,9 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import "BMArticleListCollectionViewCell.h"
+#import "BMPostCollectionViewCell.h"
 
-@implementation BMArticleListCollectionViewCell
+@implementation BMPostCollectionViewCell
 
 - (void)setupView
 {
@@ -39,10 +39,10 @@
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text
 {
-    self.cellWidthConstaint.constant = width;
+    self.cellWidthConstraint.constant = width;
     self.contentTextView.text = text;
     CGSize textViewSize = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.frame.size.width, FLT_MAX)];
-    self.contentTextHeight.constant = textViewSize.height;
+    self.contentTextHeightConstraint.constant = textViewSize.height;
     [self setNeedsLayout];
     [self layoutIfNeeded];
 

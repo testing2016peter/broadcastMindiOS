@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-static NSString * const BMMainFilterCollectionReusableViewIdentified = @"BMMainFilterCollectionReusableView";
+static NSString * const BMMainFilterCollectionReusableViewIdentifier = @"BMMainFilterCollectionReusableView";
 @interface BMMainFilterCollectionReusableView : UICollectionReusableView
 
 @end

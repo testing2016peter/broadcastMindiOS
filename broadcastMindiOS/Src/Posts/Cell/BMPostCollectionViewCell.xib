@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BMArticleListCollectionViewCell" id="gTV-IL-0wX" customClass="BMArticleListCollectionViewCell">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BMPostCollectionViewCell" id="gTV-IL-0wX" customClass="BMPostCollectionViewCell">
             <rect key="frame" x="0.0" y="0.0" width="397" height="173"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -102,8 +102,8 @@
             <connections>
                 <outlet property="backgroundUIView" destination="3aq-m7-Q3R" id="NXa-Xn-7qy"/>
                 <outlet property="bmArticleFunctionView" destination="9hQ-Dj-kky" id="OeW-JF-Buf"/>
-                <outlet property="cellWidthConstaint" destination="Tdv-7q-1Ss" id="jxY-F7-FHY"/>
-                <outlet property="contentTextHeight" destination="p9t-ma-tOj" id="vwl-v2-J7I"/>
+                <outlet property="cellWidthConstraint" destination="Tdv-7q-1Ss" id="Dnx-9r-Tc0"/>
+                <outlet property="contentTextHeightConstraint" destination="p9t-ma-tOj" id="sXK-mO-ddM"/>
                 <outlet property="contentTextView" destination="dZB-ET-FRu" id="sdr-4y-2RI"/>
                 <outlet property="dateLabel" destination="hG5-vp-3Bt" id="QxA-Zm-3Bn"/>
                 <outlet property="titleLabel" destination="tZQ-DB-8IB" id="5KI-Fl-vI0"/>

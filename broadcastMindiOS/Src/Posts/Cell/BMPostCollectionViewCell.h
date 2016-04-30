@@ -8,9 +8,9 @@
 
 #import "BMBaseCollectionViewCell.h"
 #import "BMArticleFunctionView.h"
-static NSString * const BMArticleListCollectionViewCellIdentified = @"BMArticleListCollectionViewCell";
+static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionViewCell";
 
-@interface BMArticleListCollectionViewCell : BMBaseCollectionViewCell
+@interface BMPostCollectionViewCell : BMBaseCollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
@@ -19,8 +19,8 @@ static NSString * const BMArticleListCollectionViewCellIdentified = @"BMArticleL
 @property (weak, nonatomic) IBOutlet BMArticleFunctionView *bmArticleFunctionView;
 @property (weak, nonatomic) IBOutlet UIView *backgroundUIView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidthConstaint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeightConstraint;
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text;
 

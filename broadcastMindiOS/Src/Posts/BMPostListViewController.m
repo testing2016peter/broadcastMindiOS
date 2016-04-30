@@ -9,7 +9,7 @@
 #import <TLYShyNavBarManager.h>
 #import "BMPostListViewController.h"
 #import "BMInputTextView.h"
-#import "BMArticleListCollectionViewCell.h"
+#import "BMPostCollectionViewCell.h"
 #import "BMCommonViewUtil.h"
 #import "BMInsertPostViewController.h"
 #import "BMPostListDataStore.h"
@@ -17,7 +17,7 @@
 #import <UIScrollView+SVPullToRefresh.h>
 #import <UIScrollView+SVInfiniteScrolling.h>
 #import "BMUserPostsViewController.h"
-
+#import "PostDetailViewController.h"
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
@@ -36,7 +36,7 @@
     CGRect rect = self.view.bounds;
     rect.size.height = 30.0f;
     self.bmMainFilterView = [[BMMainFilterView alloc] initWithFrame:rect];
-  //  [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
+    //  [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
     /* Make navbar stick to the top */
     [self.shyNavBarManager setStickyNavigationBar:NO];
     /* Make the extension view stick to the top */
@@ -82,7 +82,7 @@
     [[BMService sharedInstance] loginUserEmail:@"cwnga@yahoo-inc.com" password:@"12345" success:^(AFHTTPRequestOperation *operation, id response) {
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
     }];
-    [self.collectionView registerNib: [UINib nibWithNibName:BMArticleListCollectionViewCellIdentified bundle:nil]forCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified];
+    [self.collectionView registerNib: [UINib nibWithNibName:BMPostCollectionViewCellIdentifier bundle:nil]forCellWithReuseIdentifier:BMPostCollectionViewCellIdentifier];
 
     [self.collectionView addPullToRefreshWithActionHandler:^{
         [self.collectionView.pullToRefreshView stopAnimating];
@@ -91,7 +91,7 @@
     [self.collectionView addInfiniteScrollingWithActionHandler:^{
         [self.dataStore loadNextBunchWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
             [self.collectionView.infiniteScrollingView stopAnimating];
-                    self.bmArticles = [self.dataStore.data copy];
+            self.bmArticles = [self.dataStore.data copy];
             [self.collectionView reloadData];
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         }];
@@ -113,12 +113,12 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    BMArticleListCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMArticleListCollectionViewCellIdentified forIndexPath:indexPath];
+    BMPostCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMPostCollectionViewCellIdentifier forIndexPath:indexPath];
 
     if (indexPath.item < self.bmArticles.count) {
         BMPost *article = self.bmArticles[indexPath.item];
 
-          cell.titleLabel.text = article.text;
+        cell.titleLabel.text = article.text;
         cell.userNameLabel.text = @"匿名";//Translate
         cell.dateLabel.text = article.updatedAt;
     }
@@ -131,10 +131,10 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMArticleListCollectionViewCellIdentified withstyle:APNibFixedHeightScaling];
-   BMArticleListCollectionViewCell  *cell = [[[NSBundle bundleForClass:self.class] loadNibNamed:BMArticleListCollectionViewCellIdentified owner:self options:nil] lastObject];
+    CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMPostCollectionViewCellIdentifier withstyle:APNibFixedHeightScaling];
+    BMPostCollectionViewCell  *cell = [[[NSBundle bundleForClass:self.class] loadNibNamed:BMPostCollectionViewCellIdentifier owner:self options:nil] lastObject];
     //size.width -= (2* 16.0f);
-size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB"];
+    size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB"];
     return size;
 
 }
@@ -143,8 +143,8 @@ size = [cell sizeForWidth:size.width text:@"123456789012345678901234567890123456
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    BMUserPostsViewController *bmMyViewController = [[BMUserPostsViewController alloc] init];
-    [self.navigationController pushViewController:bmMyViewController animated:YES];
+    PostDetailViewController *postDetailViewController = [[PostDetailViewController alloc] init];
+    [self.navigationController pushViewController:postDetailViewController animated:YES];
 }
 
 - (void)tapPostButton:(UIButton *)button
@@ -168,7 +168,7 @@ size = [cell sizeForWidth:size.width text:@"123456789012345678901234567890123456
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [vc.view removeFromSuperview];
     }];
-
+    
 }
 
 @end
