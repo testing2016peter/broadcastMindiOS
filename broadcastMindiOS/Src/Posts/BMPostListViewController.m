@@ -19,12 +19,15 @@
 #import "BMUserPostsViewController.h"
 #import "PostDetailViewController.h"
 #import "BMSettingViewController.h"
+#import "BMMenuViewController.h"
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
 @property (strong, nonatomic) TLYShyNavBarManager *shyManage;
 @property (strong, nonatomic) BMMainFilterView *bmMainFilterView;
-
+@property (strong, nonatomic) BMMenuViewController *bmMenuViewController;
+@property (assign, nonatomic) CGFloat bmMenuViewControllerViewWidth;
+@property (assign, nonatomic) BOOL isShowedMenu;
 @end
 
 @implementation BMPostListViewController
@@ -32,35 +35,48 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    self.bmMenuViewController.view.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
+                                                      CGRectGetHeight(self.navigationController.navigationBar.frame),
+                                                      self.bmMenuViewControllerViewWidth,
+                                                      CGRectGetHeight(self.view.frame)
+                                                      );
+
     UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
     [self.view addSubview:button];
     CGRect rect = self.view.bounds;
     rect.size.height = 30.0f;
     self.bmMainFilterView = [[BMMainFilterView alloc] initWithFrame:rect];
-    //  [self.shyNavBarManager setExtensionView:self.bmMainFilterView];
-    /* Make navbar stick to the top */
-    [self.shyNavBarManager setStickyNavigationBar:NO];
-    /* Make the extension view stick to the top */
-    //[self.shyNavBarManager setStickyExtensionView:NO];
+
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
     searchBar.barTintColor = [UIColor BMBackgroundColor];
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     searchBar.backgroundColor = [UIColor clearColor];
     self.navigationItem.titleView = searchBar;
-
 }
-
 
 - (void)setupView
 {
 
+    self.bmMenuViewControllerViewWidth = 250.0f;
+
+    [self.navigationController.navigationBar setTranslucent:NO];
+
+    self.bmMenuViewController = [[BMMenuViewController alloc] init];
+    self.bmMenuViewController.view.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
+                                                      CGRectGetHeight(self.navigationController.navigationBar.frame),
+                                                      self.bmMenuViewControllerViewWidth,
+                                                      CGRectGetHeight(self.view.frame)
+                                                      );
+
+    [self.view addSubview:self.bmMenuViewController.view];
+    [self addChildViewController:self.bmMenuViewController];
 
     UIImage *closeButtonImage = [UIImage imageNamed:@"Icon-User-White"];
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeButton setImage:closeButtonImage forState:UIControlStateNormal];
     closeButton.bounds = CGRectMake(0.0f, 0.0f, 30, 30);
     closeButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
-    [closeButton addTarget:self action:@selector(dismissModalViewController:) forControlEvents:UIControlEventTouchUpInside];
+    [closeButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
 
     TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
@@ -169,7 +185,51 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [vc.view removeFromSuperview];
     }];
-    
+
+}
+
+- (void)showMenu:(id)sender
+{
+    static BOOL isShowing;
+    if (isShowing == NO) {
+        [UIView animateWithDuration:0.5f animations:^{
+            isShowing = YES;
+            if (self.isShowedMenu == YES) {
+                //hide
+                self.collectionView.frame = CGRectMake(
+                                                       0.0f,
+                                                       CGRectGetMinY(self.collectionView.frame),
+                                                       CGRectGetWidth(self.collectionView.frame),
+                                                       CGRectGetHeight(self.collectionView.frame)
+                                                       );
+                self.bmMenuViewController.view.frame = CGRectMake(
+                                                                  CGRectGetMaxX(self.collectionView.frame),
+                                                                  CGRectGetMinY(self.bmMenuViewController.view.frame),
+                                                                  CGRectGetWidth(self.bmMenuViewController.view.frame),
+                                                                  CGRectGetHeight(self.bmMenuViewController.view.frame)
+                                                                  );
+            } else {
+                //show
+                self.collectionView.frame = CGRectMake(
+                                                       - CGRectGetWidth(self.bmMenuViewController.view.frame),
+                                                       CGRectGetMinY(self.collectionView.frame),
+                                                       CGRectGetWidth(self.collectionView.frame),
+                                                       CGRectGetHeight(self.collectionView.frame)
+                                                       );
+                self.bmMenuViewController.view.frame = CGRectMake(
+                                                                  CGRectGetMinX(self.bmMenuViewController.view.frame) -        CGRectGetWidth(self.bmMenuViewController.view.frame),
+                                                                  CGRectGetMinY(self.bmMenuViewController.view.frame),
+                                                                  CGRectGetWidth(self.bmMenuViewController.view.frame),
+                                                                  CGRectGetHeight(self.bmMenuViewController.view.frame)
+                                                                  );
+
+            }
+
+        } completion:^(BOOL finished) {
+            isShowing = NO;
+            self.isShowedMenu = !self.isShowedMenu;
+        }];
+    }
 }
 
 @end
