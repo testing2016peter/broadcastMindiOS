@@ -20,6 +20,8 @@
 #import "PostDetailViewController.h"
 #import "BMSettingViewController.h"
 #import "BMMenuViewController.h"
+#import "BMCacheManager.h"
+#import "BMAccountManager.h"
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;

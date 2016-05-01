@@ -7,7 +7,7 @@
 //
 
 #import "BMBaseJSONModel.h"
-
+#import "BMUser.h"
 @protocol BMPost
 
 @end
@@ -17,6 +17,10 @@
 @property (strong, nonatomic) NSString <Optional> *text;
 @property (strong, nonatomic) NSString <Optional> *createdAt;
 @property (strong, nonatomic) NSString <Optional> *updatedAt;
-@property (strong, nonatomic) NSString <Optional> *author;
+@property (strong, nonatomic) BMUser <Optional, BMUser> *author;
+@property (strong, nonatomic) NSString <Optional> *like1_count;
+@property (strong, nonatomic) NSString <Optional> *like2_count;
+@property (strong, nonatomic) NSString <Optional> *objectId;
+
 
 @end

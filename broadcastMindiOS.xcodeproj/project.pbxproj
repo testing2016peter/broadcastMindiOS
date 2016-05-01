@@ -14,6 +14,11 @@
 		F786B7361CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B7341CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib */; };
 		F786B73A1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7381CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m */; };
 		F786B73B1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B7391CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib */; };
+		F786B73F1CD62D3400E79930 /* BMAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B73E1CD62D3400E79930 /* BMAccountManager.m */; };
+		F786B7421CD62DE300E79930 /* BMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7411CD62DE300E79930 /* BMUser.m */; };
+		F786B7491CD634E900E79930 /* BMCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7481CD634E900E79930 /* BMCacheManager.m */; };
+		F786B74C1CD63CEE00E79930 /* BMCacheData.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B74B1CD63CEE00E79930 /* BMCacheData.m */; };
+		F786B74F1CD6455C00E79930 /* BMCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B74E1CD6455C00E79930 /* BMCookieManager.m */; };
 		F793D2A91CC15AC0006CE8D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2A81CC15AC0006CE8D4 /* main.m */; };
 		F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2AB1CC15AC0006CE8D4 /* AppDelegate.m */; };
 		F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2AE1CC15AC0006CE8D4 /* ViewController.m */; };
@@ -106,6 +111,16 @@
 		F786B7371CD4D2C500E79930 /* BMMenuTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuTextCollectionViewCell.h; sourceTree = "<group>"; };
 		F786B7381CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuTextCollectionViewCell.m; sourceTree = "<group>"; };
 		F786B7391CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuTextCollectionViewCell.xib; sourceTree = "<group>"; };
+		F786B73D1CD62D3400E79930 /* BMAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAccountManager.h; sourceTree = "<group>"; };
+		F786B73E1CD62D3400E79930 /* BMAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAccountManager.m; sourceTree = "<group>"; };
+		F786B7401CD62DE300E79930 /* BMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMUser.h; sourceTree = "<group>"; };
+		F786B7411CD62DE300E79930 /* BMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMUser.m; sourceTree = "<group>"; };
+		F786B7471CD634E900E79930 /* BMCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCacheManager.h; sourceTree = "<group>"; };
+		F786B7481CD634E900E79930 /* BMCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCacheManager.m; sourceTree = "<group>"; };
+		F786B74A1CD63CEE00E79930 /* BMCacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCacheData.h; sourceTree = "<group>"; };
+		F786B74B1CD63CEE00E79930 /* BMCacheData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCacheData.m; sourceTree = "<group>"; };
+		F786B74D1CD6455C00E79930 /* BMCookieManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCookieManager.h; sourceTree = "<group>"; };
+		F786B74E1CD6455C00E79930 /* BMCookieManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCookieManager.m; sourceTree = "<group>"; };
 		F793D2A41CC15AC0006CE8D4 /* broadcastMindiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = broadcastMindiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793D2A81CC15AC0006CE8D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F793D2AA1CC15AC0006CE8D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -284,6 +299,28 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F786B73C1CD62D1500E79930 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				F786B73D1CD62D3400E79930 /* BMAccountManager.h */,
+				F786B73E1CD62D3400E79930 /* BMAccountManager.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		F786B7431CD6340E00E79930 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				F786B74A1CD63CEE00E79930 /* BMCacheData.h */,
+				F786B74B1CD63CEE00E79930 /* BMCacheData.m */,
+				F786B7471CD634E900E79930 /* BMCacheManager.h */,
+				F786B7481CD634E900E79930 /* BMCacheManager.m */,
+				F786B74D1CD6455C00E79930 /* BMCookieManager.h */,
+				F786B74E1CD6455C00E79930 /* BMCookieManager.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		F793D29B1CC15AC0006CE8D4 = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +434,8 @@
 		F793D2FE1CC2ACBD006CE8D4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F786B7431CD6340E00E79930 /* Cache */,
+				F786B73C1CD62D1500E79930 /* Account */,
 				F7C2DF8D1CCD0924000CBD61 /* Track */,
 				F793D32A1CC37E85006CE8D4 /* Config */,
 				F793D3201CC37BFD006CE8D4 /* Layout */,
@@ -491,6 +530,8 @@
 				F793D34B1CC3BCD6006CE8D4 /* BMPostList.h */,
 				F793D34C1CC3BCD6006CE8D4 /* BMPostList.m */,
 				F793D34E1CC3BD83006CE8D4 /* BMObjects.h */,
+				F786B7401CD62DE300E79930 /* BMUser.h */,
+				F786B7411CD62DE300E79930 /* BMUser.m */,
 			);
 			name = DataObject;
 			path = Src/DataObject;
@@ -847,6 +888,7 @@
 				F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */,
 				F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
+				F786B73F1CD62D3400E79930 /* BMAccountManager.m in Sources */,
 				F7BF4CE51CD10CD3000BB5E5 /* PostDetailViewController.m in Sources */,
 				F793D3331CC38780006CE8D4 /* BMCommonViewUtil.m in Sources */,
 				F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */,
@@ -857,15 +899,19 @@
 				F786B73A1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m in Sources */,
 				F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
+				F786B74C1CD63CEE00E79930 /* BMCacheData.m in Sources */,
 				F793D3291CC37BFD006CE8D4 /* APNibSizeCalculator.m in Sources */,
 				F7B15E7E1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.m in Sources */,
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
+				F786B74F1CD6455C00E79930 /* BMCookieManager.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
 				F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */,
 				F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */,
+				F786B7421CD62DE300E79930 /* BMUser.m in Sources */,
 				F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */,
 				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
+				F786B7491CD634E900E79930 /* BMCacheManager.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */,
 				F793D32D1CC37EF0006CE8D4 /* BMAppConstant.m in Sources */,

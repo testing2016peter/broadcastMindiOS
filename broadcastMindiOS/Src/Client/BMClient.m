@@ -73,7 +73,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSString *host = self.config.apiHostString;
-    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host,@"/v1/data/post"];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host,@"/v1/posts"];
     NSDictionary *parameter = @{
                                 @"text": text
                                 };
@@ -95,7 +95,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSString *host = self.config.apiHostString;
-    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host,@"/v1/data/posts"];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host,@"/v1/posts"];
     NSMutableDictionary *queryParameter = [[NSMutableDictionary alloc] initWithDictionary:parameter];
     queryParameter[@"offset"] = @(range.location);
     queryParameter[@"limit"] = @(range.length);
@@ -108,7 +108,7 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     NSString *host = self.config.apiHostString;
     ///v1/post/:postId/comment
-    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@/%@/%@" ,host,@"/v1/post", postId, @"comment"];
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@/%@/%@" ,host,@"/v1/posts", postId, @"comment"];
     NSDictionary *parameter = @{
                                 @"text": text
                                 };
