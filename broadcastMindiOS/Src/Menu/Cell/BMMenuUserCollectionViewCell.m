@@ -1,14 +1,14 @@
 //
-//  BMInputFieldCollectionViewCell.m
+//  BMMenuUserCollectionViewCell.m
 //  broadcastMindiOS
 //
 //  Created by Anson Ng on 4/30/16.
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import "BMInputFieldCollectionViewCell.h"
+#import "BMMenuUserCollectionViewCell.h"
 
-@implementation BMInputFieldCollectionViewCell
+@implementation BMMenuUserCollectionViewCell
 
 - (void)setupView
 {
@@ -18,7 +18,8 @@
 - (void)prepareForReuse
 {
     [super prepareForReuse];
-    self.inputLabel.text = @"";
-    self.inputTextField.text = @"";
+    self.userImageView.image = [UIImage imageNamed:@"Icon-User"];
+    self.userNameLabel.text = @"Login";
 }
+
 @end

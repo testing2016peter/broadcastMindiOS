@@ -17,12 +17,12 @@
 
 - (void)prepareForReuse
 {
+    [super prepareForReuse];
     self.userImageView.image = [UIImage imageNamed:@"Icon-User"];
     self.userNameLabel.text = @"";
     self.timeLabel.text = @"";
     self.commentTextView.text = @"";
 }
-
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text
 {

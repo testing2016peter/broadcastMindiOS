@@ -17,5 +17,7 @@
 
 - (void)prepareForReuse
 {
+    [self prepareForReuse];
+    self.inputSwitch.on = NO;
 }
 @end

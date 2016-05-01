@@ -25,9 +25,8 @@
 
 - (void)prepareForReuse
 {
-
+    [super prepareForReuse];
     self.contentTextView.text = @"";
-
 }
 
 - (void)layoutSubviews

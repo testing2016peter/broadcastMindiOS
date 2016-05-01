@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		96B538EC13C966F6BAE1DE5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7A8E33B39F2F84B9C55037 /* libPods.a */; };
+		F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */; };
+		F786B7301CD4CF5600E79930 /* BMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */; };
+		F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7331CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m */; };
+		F786B7361CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B7341CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib */; };
+		F786B73A1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7381CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m */; };
+		F786B73B1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B7391CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib */; };
 		F793D2A91CC15AC0006CE8D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2A81CC15AC0006CE8D4 /* main.m */; };
 		F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2AB1CC15AC0006CE8D4 /* AppDelegate.m */; };
 		F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2AE1CC15AC0006CE8D4 /* ViewController.m */; };
@@ -91,6 +97,15 @@
 		4B08BE04D5A798E7FE0116FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E7A8E33B39F2F84B9C55037 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA4D3E442759A83C92BC948 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F786B72C1CD4CF5600E79930 /* BMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuViewController.h; sourceTree = "<group>"; };
+		F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuViewController.m; sourceTree = "<group>"; };
+		F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuViewController.xib; sourceTree = "<group>"; };
+		F786B7321CD4D04F00E79930 /* BMMenuUserCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuUserCollectionViewCell.h; sourceTree = "<group>"; };
+		F786B7331CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuUserCollectionViewCell.m; sourceTree = "<group>"; };
+		F786B7341CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuUserCollectionViewCell.xib; sourceTree = "<group>"; };
+		F786B7371CD4D2C500E79930 /* BMMenuTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuTextCollectionViewCell.h; sourceTree = "<group>"; };
+		F786B7381CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuTextCollectionViewCell.m; sourceTree = "<group>"; };
+		F786B7391CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuTextCollectionViewCell.xib; sourceTree = "<group>"; };
 		F793D2A41CC15AC0006CE8D4 /* broadcastMindiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = broadcastMindiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793D2A81CC15AC0006CE8D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F793D2AA1CC15AC0006CE8D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -244,6 +259,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F786B72B1CD4CF4900E79930 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F786B7311CD4D03100E79930 /* Cell */,
+				F786B72C1CD4CF5600E79930 /* BMMenuViewController.h */,
+				F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */,
+				F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */,
+			);
+			name = Menu;
+			path = Src/Menu;
+			sourceTree = "<group>";
+		};
+		F786B7311CD4D03100E79930 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F786B7321CD4D04F00E79930 /* BMMenuUserCollectionViewCell.h */,
+				F786B7331CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m */,
+				F786B7341CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib */,
+				F786B7371CD4D2C500E79930 /* BMMenuTextCollectionViewCell.h */,
+				F786B7381CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m */,
+				F786B7391CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F793D29B1CC15AC0006CE8D4 = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +310,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F786B72B1CD4CF4900E79930 /* Menu */,
 				F7B15E6F1CD4A75600A00E5D /* Setting */,
 				F7BF4CE11CD10CBA000BB5E5 /* PostDetail */,
 				F7BF4CDB1CD10CA6000BB5E5 /* PostInert */,
@@ -687,6 +728,7 @@
 				F7BF4CE61CD10CD3000BB5E5 /* PostDetailViewController.xib in Resources */,
 				F7B15E7A1CD4A88500A00E5D /* BMInputFieldCollectionViewCell.xib in Resources */,
 				F7C2DF851CCB8DB5000CBD61 /* BMPostCollectionViewCell.xib in Resources */,
+				F786B7301CD4CF5600E79930 /* BMMenuViewController.xib in Resources */,
 				F793D3551CC3C1D5006CE8D4 /* BMMainFilterView.xib in Resources */,
 				F7BF4CEC1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib in Resources */,
 				F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */,
@@ -695,8 +737,10 @@
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
 				F7B15E7F1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib in Resources */,
 				F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */,
+				F786B73B1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.xib in Resources */,
 				F7C2DF831CCB8DB5000CBD61 /* BMPostListViewController.xib in Resources */,
 				F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */,
+				F786B7361CD4D04F00E79930 /* BMMenuUserCollectionViewCell.xib in Resources */,
 				F793D2B21CC15AC0006CE8D4 /* Main.storyboard in Resources */,
 				F7B15E841CD4B21800A00E5D /* BMSettingHeaderReusableView.xib in Resources */,
 				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
@@ -810,6 +854,7 @@
 				F7B15E831CD4B21800A00E5D /* BMSettingHeaderReusableView.m in Sources */,
 				F7C2DF821CCB8DB5000CBD61 /* BMPostListViewController.m in Sources */,
 				F793D31F1CC33F69006CE8D4 /* BMBaseView.m in Sources */,
+				F786B73A1CD4D2C500E79930 /* BMMenuTextCollectionViewCell.m in Sources */,
 				F793D3401CC3B7ED006CE8D4 /* BMPostListDataStore.m in Sources */,
 				F793D2E81CC15C29006CE8D4 /* BMService.m in Sources */,
 				F793D3291CC37BFD006CE8D4 /* APNibSizeCalculator.m in Sources */,
@@ -817,6 +862,8 @@
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
+				F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */,
+				F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */,
 				F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */,
 				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
