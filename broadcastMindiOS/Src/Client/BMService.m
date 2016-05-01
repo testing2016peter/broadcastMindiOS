@@ -32,7 +32,7 @@
 {
     [self.client signUpUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
         if (success) {
-        success(operation, response);
+            success(operation, response);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
@@ -45,8 +45,10 @@
 - (void)loginUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     [self.client loginUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
+        NSError *err;
+        BMUser *user = [[BMUser alloc] initWithDictionary:response error:&err];
         if (success) {
-            success(operation, response);
+            success(operation, user);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
@@ -61,11 +63,11 @@
         if (success) {
             success(operation, response);
         }    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
-        if (failure) {
-            failure(operation, err);
-        }
-    }];
+            [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+            if (failure) {
+                failure(operation, err);
+            }
+        }];
 }
 
 - (void)getPostListWithParameter:(NSDictionary *)parameter range:(NSRange)range success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
