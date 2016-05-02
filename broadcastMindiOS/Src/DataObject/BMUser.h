@@ -16,5 +16,5 @@
 @property (strong, nonatomic) NSString <Optional >* nickname;     // = badass;
 @property (strong, nonatomic) NSString <Optional >* objectId;     // = 57134de771cfe400677e6779;
 @property (strong, nonatomic) NSString <Optional >* profileImg;   // = "http://webneel.com/sites/default/files/images/project/best-portrait-photography-regina-pagles%20(10).jpg";
-
+- (NSString *)dispalyName;
 @end

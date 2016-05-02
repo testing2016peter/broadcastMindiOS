@@ -31,8 +31,25 @@
 - (void)signUpUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     [self.client signUpUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
+                NSError *err;
+        BMUser *user = [[BMUser alloc] initWithDictionary:response error:&err];
         if (success) {
-            success(operation, response);
+            success(operation, user);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+}
+- (void)getMeProfileWithSuccess:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    [self.client getMeProfileWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+        NSError *err;
+        BMUser *user = [[BMUser alloc] initWithDictionary:response error:&err];
+        if (success) {
+            success(operation, user);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];

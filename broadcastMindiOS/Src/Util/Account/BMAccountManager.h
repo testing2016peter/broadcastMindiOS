@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "BMCacheData.h"
 #import "BMUser.h"
+#import "BMService.h"
+
 static NSString * const BMAccountManagerUserLoginSuccessNotification = @"BMAccountManagerUserLoginSuccessNotification";
 static NSString * const BMAccountManagerUserLogoutSuccessNotification = @"BMAccountManagerUserLogoutSuccessNotification";
 static NSString * const BMAccountManagerUserLoginFailNotification = @"BMAccountManagerUserLoginFailNotification";
@@ -17,7 +20,9 @@ static NSString * const BMAccountManagerUserLogoutFailNotification = @"BMAccount
 @interface BMAccountManager : NSObject
 
 + (instancetype)sharedInstance;
-- (void)login;
+- (void)requestLoginWithParentViewController:(UIViewController *)parentViewController;
+- (void)loginUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
+- (void)signUpUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
 - (void)logout;
 - (BMUser *)currentUser;
 

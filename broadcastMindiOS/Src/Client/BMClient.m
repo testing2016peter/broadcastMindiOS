@@ -57,6 +57,16 @@
     [manager POST:urlString parameters:parameter success:success failure:failure];
 }
 
+- (void)getMeProfileWithSuccess:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    NSString *host = self.config.apiHostString;
+    NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host,@"/v1/users/me"];
+
+    [manager GET:urlString parameters:nil success:success failure:failure];
+}
+
 - (void)logoutUserWithSuccess:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];

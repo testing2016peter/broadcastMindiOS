@@ -10,6 +10,8 @@
 #import "BMService.h"
 #import "BMCacheData.h"
 #import "BMCacheManager.h"
+#import "BMLoginViewController.h"
+static NSString * const BMAccountManagerUserKey = @"BMAccountManagerUserKey";
 @interface BMAccountManager ()
 @property (strong, nonatomic) BMUser *currentUser;
 @end
@@ -22,35 +24,84 @@
     dispatch_once(&onceToken, ^{
         @synchronized(self) {
             instance = [[BMAccountManager alloc] init];
+            instance.currentUser = [[BMCacheManager sharedInstance] getDataWithKey:BMAccountManagerUserKey];
+            __weak __typeof(instance)weakInstance = instance;
+
+            [[BMService sharedInstance]getMeProfileWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
+                [instance setupCurrentUser:response];
+                [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginSuccessNotification object:weakInstance];
+            } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+                [instance removeCurrentUser];
+                [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginFailNotification object:weakInstance];
+            }];
         }
     });
 
     return instance;
 }
 
-- (void)loginUserEmail:(NSString *)email password:(NSString *)password
+- (void)requestLoginWithParentViewController:(UIViewController *)parentViewController
+{
+    BMLoginViewController *loginVc = [[BMLoginViewController alloc] init];
+    [parentViewController presentViewController:loginVc animated:YES completion:nil];
+}
+
+- (void)loginUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     __weak __typeof(self)weakSelf = self;
     [[BMService sharedInstance] loginUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
-        self.currentUser = response;
+        [self setupCurrentUser:response];
         [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginSuccessNotification object:weakSelf];
-
+        if (success) {
+            success(operation, response);
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginFailNotification object:weakSelf];
+        if (failure) {
+            failure(operation, err);
+        }
     }];
 }
 
+- (void)signUpUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
+{
+    __weak __typeof(self)weakSelf = self;
+    [[BMService sharedInstance] signUpUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
+        [self setupCurrentUser:response];
+        [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginSuccessNotification object:weakSelf];
+        if (success) {
+            success(operation, response);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginFailNotification object:weakSelf];
+        if (failure) {
+            failure(operation, err);
+        }
+    }];
+
+}
 - (void)logout
 {
     __weak __typeof(self)weakSelf = self;
     [[BMService sharedInstance] logoutUserWithSuccess:^(AFHTTPRequestOperation *operation, id response) {
-        self.currentUser = nil;
+        [weakSelf removeCurrentUser];
         [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLogoutSuccessNotification object:weakSelf];
+
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLogoutFailNotification object:weakSelf];
 
     }];
+}
+- (void)setupCurrentUser:(BMUser *)currentUser
+{
+    self.currentUser = currentUser;
+    [[BMCacheManager sharedInstance] setDataWithKey:BMAccountManagerUserKey data:currentUser cacheSecDuration:999999999];
+}
+- (void)removeCurrentUser
+{
+    self.currentUser = nil;
+    [[BMCacheManager sharedInstance] removeDataWithKey:BMAccountManagerUserKey];
 }
 
 - (BMUser *)currentUser
@@ -84,7 +135,7 @@
         NSHTTPCookie* cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
     }];
-
+    
 }
 
 @end

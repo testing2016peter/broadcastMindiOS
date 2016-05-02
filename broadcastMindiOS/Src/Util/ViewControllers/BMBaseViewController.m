@@ -22,8 +22,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        [self setupBaseView];
+    [self setupBaseView];
     [self setupView];
+    [self setupNotification];
+}
+- (void)dealloc
+{
+    [self cleanupNotification];
 }
 
 - (void)setupBaseView
@@ -33,5 +38,12 @@
 
 - (void)setupView
 {
+}
+- (void)setupNotification
+{
+}
+- (void)cleanupNotification
+{
+     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

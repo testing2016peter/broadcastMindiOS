@@ -22,6 +22,7 @@
 #import "BMMenuViewController.h"
 #import "BMCacheManager.h"
 #import "BMAccountManager.h"
+
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
@@ -162,8 +163,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    BMSettingViewController *postDetailViewController = [[BMSettingViewController alloc] init];
-    [self.navigationController pushViewController:postDetailViewController animated:YES];
+
+    //
+    //    BMSettingViewController *postDetailViewController = [[BMSettingViewController alloc] init];
+    //    [self.navigationController pushViewController:postDetailViewController animated:YES];
 }
 
 - (void)tapPostButton:(UIButton *)button
@@ -219,7 +222,7 @@
                                                        CGRectGetHeight(self.collectionView.frame)
                                                        );
                 self.bmMenuViewController.view.frame = CGRectMake(
-                                                                  CGRectGetMinX(self.bmMenuViewController.view.frame) -        CGRectGetWidth(self.bmMenuViewController.view.frame),
+                                                                  CGRectGetMinX(self.bmMenuViewController.view.frame) - CGRectGetWidth(self.bmMenuViewController.view.frame),
                                                                   CGRectGetMinY(self.bmMenuViewController.view.frame),
                                                                   CGRectGetWidth(self.bmMenuViewController.view.frame),
                                                                   CGRectGetHeight(self.bmMenuViewController.view.frame)

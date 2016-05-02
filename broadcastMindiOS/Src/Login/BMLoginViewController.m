@@ -8,6 +8,7 @@
 
 #import "BMLoginViewController.h"
 #import "BMService.h"
+#import "BMAccountManager.h"
 
 @interface BMLoginViewController ()
 
@@ -23,7 +24,7 @@
 - (IBAction)tapLoginButton:(id)sender
 {
     if ([self.emailTextField.text length] > 0 && [self.passwordTextField.text length] > 0) {
-        [[BMService sharedInstance] loginUserEmail:self.emailTextField.text password:self.passwordTextField.text success:^(AFHTTPRequestOperation *operation, id response) {
+        [[BMAccountManager sharedInstance]loginUserEmail:self.emailTextField.text password:self.passwordTextField.text success:^(AFHTTPRequestOperation *operation, id response) {
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         }];
 
@@ -36,6 +37,10 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         }];
     }
+}
+- (IBAction)tapCloseButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

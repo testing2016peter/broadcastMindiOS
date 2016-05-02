@@ -9,5 +9,12 @@
 #import "BMUser.h"
 
 @implementation BMUser
+- (NSString *)dispalyName
+{
+    if ([self.nickname length] > 0) {
+        return self.nickname;
+    }
+    return self.email;
+}
 
 @end

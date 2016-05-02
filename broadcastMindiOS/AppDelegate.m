@@ -14,6 +14,7 @@
 #import <Crashlytics/Crashlytics.h>
 #import <Flurry.h>
 #import "BMTrackUtil.h"
+#import "BMAccountManager.h"
 @interface AppDelegate ()
 
 @end
@@ -36,6 +37,7 @@
 
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    [BMAccountManager sharedInstance];
     return YES;
 }
 

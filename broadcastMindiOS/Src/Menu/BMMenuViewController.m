@@ -9,6 +9,11 @@
 #import "BMMenuViewController.h"
 #import "BMMenuUserCollectionViewCell.h"
 #import "BMMenuTextCollectionViewCell.h"
+#import "BMAccountManager.h"
+#import "BMUserPostsViewController.h"
+#import "BMSettingViewController.h"
+#import <UIImageView+WebCache.h>
+
 typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
     BMMenuViewControllerUserCell = 0,
     BMMenuViewControllerSetting,
@@ -55,11 +60,26 @@ typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[self cellIdentifierWithIndexPath:indexPath] forIndexPath:indexPath];
     if (indexPath.item == BMMenuViewControllerUserCell) {
         BMMenuUserCollectionViewCell *bmMenuUserCollectionViewCell = (BMMenuUserCollectionViewCell *)cell;
+        BMUser *user = [[BMAccountManager sharedInstance] currentUser];
+        if (user) {
+            [ bmMenuUserCollectionViewCell.userImageView sd_setImageWithURL:[NSURL URLWithString:[user profileImg] ]
+                                                           placeholderImage:nil
+                                                                  completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                                                      if (image) {
+                                                                          bmMenuUserCollectionViewCell.userImageView.image = image;
+                                                                      }
+                                                                  }];
+
+            bmMenuUserCollectionViewCell.userNameLabel.text = [user dispalyName];
+        } else {
+            bmMenuUserCollectionViewCell.userNameLabel.text = @"Login";
+        }
+
     } else if (indexPath.item == BMMenuViewControllerSetting) {
         BMMenuTextCollectionViewCell *bmMenuTextCollectionViewCell = (BMMenuTextCollectionViewCell *)cell;
-                bmMenuTextCollectionViewCell.inputLabel.text = @"Setting";
+        bmMenuTextCollectionViewCell.inputLabel.text = @"Setting";
     } else if (indexPath.item == BMMenuViewControllerLogout) {
-      BMMenuTextCollectionViewCell *bmMenuTextCollectionViewCell = (BMMenuTextCollectionViewCell *)cell;
+        BMMenuTextCollectionViewCell *bmMenuTextCollectionViewCell = (BMMenuTextCollectionViewCell *)cell;
         bmMenuTextCollectionViewCell.inputLabel.text = @"Logout";
 
     }
@@ -80,9 +100,9 @@ typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
         identifier = BMMenuTextCollectionViewCellIdentifier;
 
     } else {
-         identifier = BMMenuTextCollectionViewCellIdentifier;
+        identifier = BMMenuTextCollectionViewCellIdentifier;
     }
-    
+
     return identifier;
 }
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -91,6 +111,12 @@ typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
 {
     CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:[self cellIdentifierWithIndexPath:indexPath] withstyle:APNibFixedHeightScaling];
     size.width = self.collectionView.frame.size.width;
+    BMUser *user = [[BMAccountManager sharedInstance] currentUser];
+    if (indexPath.item == BMMenuViewControllerLogout && !user) {
+        size.height = 0.0f;
+    }
+
+
     return size;
 }
 
@@ -98,8 +124,46 @@ typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
+    if (indexPath.item == BMMenuViewControllerUserCell) {
+        if (![[BMAccountManager sharedInstance] currentUser]) {
+            [[BMAccountManager sharedInstance] requestLoginWithParentViewController:self];
+        } else {
+            BMUserPostsViewController *vc = [[BMUserPostsViewController alloc] init];
+            if (self.parentViewController && self.parentViewController.navigationController) {
+                [self.parentViewController.navigationController pushViewController:vc animated:YES];
+            }
+
+        }
+    } else if (indexPath.item == BMMenuViewControllerSetting) {
+        BMSettingViewController *settingVc = [[BMSettingViewController alloc] init];
+
+        if (self.parentViewController && self.parentViewController.navigationController) {
+            [self.parentViewController.navigationController pushViewController:settingVc animated:YES];
+        }
+
+    } else if (indexPath.item == BMMenuViewControllerLogout && [[BMAccountManager sharedInstance] currentUser]) {
+        [[BMAccountManager sharedInstance] logout];
+    }
+
 }
 
+- (void)setupNotification
+{
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(handleLogin:) name:BMAccountManagerUserLoginSuccessNotification object:nil];
+    [nc addObserver:self selector:@selector(handleLogout:) name:BMAccountManagerUserLoginFailNotification object:nil];
 
+}
+
+- (void)handleLogin:(id)test
+{
+    [self.collectionView reloadData];
+}
+
+- (void)handleLogout:(id)test
+{
+    
+    [self.collectionView reloadData];
+}
 @end

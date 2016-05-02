@@ -133,6 +133,13 @@
                         <constraint firstAttribute="height" constant="80" id="rPW-jm-xAS"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-AC-48L">
+                    <rect key="frame" x="345" y="32" width="39" height="30"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="tapCloseButton:" destination="-1" eventType="touchUpInside" id="HJa-KB-unl"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -140,6 +147,7 @@
                 <constraint firstItem="nVE-yX-5wl" firstAttribute="leading" secondItem="wyo-4K-obB" secondAttribute="leading" id="2HF-RZ-Y1P"/>
                 <constraint firstItem="wyo-4K-obB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-80" id="2lO-hc-yk9"/>
                 <constraint firstItem="wyo-4K-obB" firstAttribute="top" secondItem="pxk-BB-fb9" secondAttribute="bottom" constant="8" id="4Nj-1B-67p"/>
+                <constraint firstAttribute="trailing" secondItem="6gM-AC-48L" secondAttribute="trailing" constant="30" id="5B7-if-bWA"/>
                 <constraint firstItem="nVE-yX-5wl" firstAttribute="trailing" secondItem="wyo-4K-obB" secondAttribute="trailing" id="DKJ-Uh-ByJ"/>
                 <constraint firstItem="Ycs-rO-Sp1" firstAttribute="trailing" secondItem="nVE-yX-5wl" secondAttribute="trailing" id="QXd-Y0-gid"/>
                 <constraint firstItem="Ycs-rO-Sp1" firstAttribute="leading" secondItem="nVE-yX-5wl" secondAttribute="leading" id="fR8-a4-Hfx"/>
@@ -147,6 +155,7 @@
                 <constraint firstAttribute="trailing" secondItem="wyo-4K-obB" secondAttribute="trailing" constant="30" id="j4V-ZQ-f80"/>
                 <constraint firstItem="nVE-yX-5wl" firstAttribute="top" secondItem="wyo-4K-obB" secondAttribute="bottom" constant="20" id="lqh-2T-Rg6"/>
                 <constraint firstItem="wyo-4K-obB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="qZE-O9-5nT"/>
+                <constraint firstItem="6gM-AC-48L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="rp0-ep-g4r"/>
                 <constraint firstItem="pxk-BB-fb9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sb0-dg-Pgp"/>
                 <constraint firstItem="sVC-0E-7KR" firstAttribute="top" secondItem="nVE-yX-5wl" secondAttribute="bottom" constant="10" id="wGK-4L-pOY"/>
                 <constraint firstItem="wyo-4K-obB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zJe-1C-jSW"/>
