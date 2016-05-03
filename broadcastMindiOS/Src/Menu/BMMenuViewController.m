@@ -159,6 +159,7 @@ typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
 - (void)handleLogin:(id)test
 {
     [self.collectionView reloadData];
+    
 }
 
 - (void)handleLogout:(id)test

@@ -14,6 +14,7 @@
 static NSString * const BMAccountManagerUserKey = @"BMAccountManagerUserKey";
 @interface BMAccountManager ()
 @property (strong, nonatomic) BMUser *currentUser;
+@property (strong, nonatomic) BMLoginViewController *bmLoginViewController;
 @end
 @implementation BMAccountManager
 + (instancetype)sharedInstance
@@ -42,17 +43,20 @@ static NSString * const BMAccountManagerUserKey = @"BMAccountManagerUserKey";
 
 - (void)requestLoginWithParentViewController:(UIViewController *)parentViewController
 {
-    BMLoginViewController *loginVc = [[BMLoginViewController alloc] init];
-    [parentViewController presentViewController:loginVc animated:YES completion:nil];
+    self.bmLoginViewController= [[BMLoginViewController alloc] init];
+    [parentViewController presentViewController:self.bmLoginViewController animated:YES completion:nil];
 }
 
 - (void)loginUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     __weak __typeof(self)weakSelf = self;
     [[BMService sharedInstance] loginUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
-        [self setupCurrentUser:response];
+        [weakSelf setupCurrentUser:response];
         [[NSNotificationCenter defaultCenter] postNotificationName:BMAccountManagerUserLoginSuccessNotification object:weakSelf];
         if (success) {
+            if (weakSelf.bmLoginViewController.presentedViewController) {
+                [weakSelf.bmLoginViewController dismissViewControllerAnimated:YES completion:nil];
+            }
             success(operation, response);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {

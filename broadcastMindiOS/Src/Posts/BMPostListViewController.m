@@ -38,11 +38,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.bmMenuViewController.view.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
-                                                      CGRectGetHeight(self.navigationController.navigationBar.frame),
-                                                      self.bmMenuViewControllerViewWidth,
-                                                      CGRectGetHeight(self.view.frame)
-                                                      );
+    [self setupMenuFrameOnce];
 
     UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
     [self.view addSubview:button];
@@ -55,6 +51,23 @@
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     searchBar.backgroundColor = [UIColor clearColor];
     self.navigationItem.titleView = searchBar;
+}
+
+- (void)setupMenuFrameOnce
+{
+    static dispatch_once_t onceToken;
+
+
+    dispatch_once(&onceToken, ^{
+        self.bmMenuViewController.view.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
+                                                          CGRectGetMaxY(self.navigationController.navigationBar.frame),
+                                                          self.bmMenuViewControllerViewWidth,
+                                                          CGRectGetHeight(self.view.frame)
+                                                          );
+    });
+
+
+
 }
 
 - (void)setupView
@@ -195,12 +208,18 @@
 
 - (void)showMenu:(id)sender
 {
+    [self showHideoMenu];
+}
+
+- (void)showHideoMenu
+{
     static BOOL isShowing;
     if (isShowing == NO) {
         [UIView animateWithDuration:0.5f animations:^{
             isShowing = YES;
             if (self.isShowedMenu == YES) {
-                //hide
+                //hide menu
+                self.collectionView.userInteractionEnabled = YES;
                 self.collectionView.frame = CGRectMake(
                                                        0.0f,
                                                        CGRectGetMinY(self.collectionView.frame),
@@ -214,7 +233,9 @@
                                                                   CGRectGetHeight(self.bmMenuViewController.view.frame)
                                                                   );
             } else {
-                //show
+                //show menu
+
+                self.collectionView.userInteractionEnabled = NO;
                 self.collectionView.frame = CGRectMake(
                                                        - CGRectGetWidth(self.bmMenuViewController.view.frame),
                                                        CGRectGetMinY(self.collectionView.frame),
@@ -236,5 +257,4 @@
         }];
     }
 }
-
 @end
