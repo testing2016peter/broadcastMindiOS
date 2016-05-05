@@ -22,6 +22,7 @@
 #import "BMMenuViewController.h"
 #import "BMCacheManager.h"
 #import "BMAccountManager.h"
+#import <AFURLSessionManager.h>
 
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
@@ -74,15 +75,45 @@
 {
     UIImage *image = [UIImage imageNamed:@"Icon-User"];
     NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:@"https://petertest2016.herokuapp.com/v1/upload" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFormData:imageData name:@"file"];
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Success: %@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    NSDictionary *dic = @{};
+//
+//
+//    AFHTTPRequestOperation *op = [manager POST:@"https://petertest2016.herokuapp.com/v1/upload" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+//        //do not put image inside parameters dictionary as I did, but append it!
+//        [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
+//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+//    }];
+//    [op start];
+//
+//
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"https://petertest2016.herokuapp.com/v1/upload"  parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        //[formData appendPartWithFileURL:[NSURL fileURLWithPath:@"file://path/to/image.jpg"] name:@"file" fileName:@"filename.jpg" mimeType:@"image/jpeg" error:nil];
+         [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
 
+    } error:nil];
+
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSURLSessionUploadTask *uploadTask;
+    NSProgress *progress;
+    uploadTask = [manager
+                  uploadTaskWithStreamedRequest:request
+                  progress:&progress
+                  completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                      if (error) {
+                          NSLog(@"Error: %@", error);
+                      } else {
+                          NSLog(@"%@ %@", response,  [[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil] description]);
+                      }
+                  }];
+    
+    [uploadTask resume];
+
+    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
 
     self.bmMenuViewControllerViewWidth = 250.0f;
 
@@ -119,6 +150,16 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
     }];
 
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([keyPath isEqualToString:@"fractionCompleted"]) {
+        NSLog(@"change:%@", change);
+    }
 }
 
 - (void)setupCollectionView
@@ -167,7 +208,7 @@
         cell.dateLabel.text = article.updatedAt;
     }
 
-    cell.contentTextView.text = @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB";
+    cell.contentTextView.text = @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABBYYUUOO";
     return cell;
 }
 
@@ -178,7 +219,7 @@
     CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMPostCollectionViewCellIdentifier withstyle:APNibFixedHeightScaling];
     BMPostCollectionViewCell  *cell = [[[NSBundle bundleForClass:self.class] loadNibNamed:BMPostCollectionViewCellIdentifier owner:self options:nil] lastObject];
     //size.width -= (2* 16.0f);
-    size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB"];
+    size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABBYYUUOO"];
     return size;
 
 }
