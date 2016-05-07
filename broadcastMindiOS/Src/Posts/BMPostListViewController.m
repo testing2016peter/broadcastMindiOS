@@ -73,47 +73,15 @@
 
 - (void)setupView
 {
-    UIImage *image = [UIImage imageNamed:@"Icon-User"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    NSDictionary *dic = @{};
+//    UIImage *image = [UIImage imageNamed:@"Img-test-image"];
+//    NSProgress *progress = [[NSProgress alloc] init];
+//    [[BMService sharedInstance] uploadImage:image progress:&progress success:^(AFHTTPRequestOperation *operation, id response) {
+//        NSLog(@"success:%@", response);
 //
-//
-//    AFHTTPRequestOperation *op = [manager POST:@"https://petertest2016.herokuapp.com/v1/upload" parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-//        //do not put image inside parameters dictionary as I did, but append it!
-//        [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
-//    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSLog(@"Success: %@ ***** %@", operation.responseString, responseObject);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog(@"Error: %@ ***** %@", operation.responseString, error);
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+//        NSLog(@"err:%@", err);
 //    }];
-//    [op start];
-//
-//
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:@"https://petertest2016.herokuapp.com/v1/upload"  parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        //[formData appendPartWithFileURL:[NSURL fileURLWithPath:@"file://path/to/image.jpg"] name:@"file" fileName:@"filename.jpg" mimeType:@"image/jpeg" error:nil];
-         [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
-
-    } error:nil];
-
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    NSURLSessionUploadTask *uploadTask;
-    NSProgress *progress;
-    uploadTask = [manager
-                  uploadTaskWithStreamedRequest:request
-                  progress:&progress
-                  completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-                      if (error) {
-                          NSLog(@"Error: %@", error);
-                      } else {
-                          NSLog(@"%@ %@", response,  [[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil] description]);
-                      }
-                  }];
-    
-    [uploadTask resume];
-
-    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
+//    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
 
     self.bmMenuViewControllerViewWidth = 250.0f;
 
@@ -152,15 +120,15 @@ manager.responseSerializer = [AFHTTPResponseSerializer serializer];
 
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context
-{
-    if ([keyPath isEqualToString:@"fractionCompleted"]) {
-        NSLog(@"change:%@", change);
-    }
-}
+//- (void)observeValueForKeyPath:(NSString *)keyPath
+//                      ofObject:(id)object
+//                        change:(NSDictionary *)change
+//                       context:(void *)context
+//{
+//    if ([keyPath isEqualToString:@"fractionCompleted"]) {
+//        NSLog(@"change:%@", change);
+//    }
+//}
 
 - (void)setupCollectionView
 {

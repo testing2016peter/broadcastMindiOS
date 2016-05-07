@@ -12,5 +12,6 @@
 + (UIColor *)BMNavBackgroundColor;
 + (UIColor *)BMBackgroundColor;
 + (UIColor *)BMActionColor;
-
++ (UIColor *)BMImageNonSelectColor;
++ (UIColor *)BMImageSelectedColor;
 @end
