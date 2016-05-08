@@ -27,6 +27,8 @@
 {
     [super prepareForReuse];
     self.contentTextView.text = @"";
+    self.imageView.image = nil;
+    self.imageViewHeightConstraint.constant = 0.0f;
 }
 
 - (void)layoutSubviews
@@ -36,8 +38,13 @@
     self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 }
 
-- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text
+- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text hasImage:(BOOL)hasImage
 {
+    if (hasImage) {
+        self.imageViewHeightConstraint.constant = 200.0f;
+    } else {
+        self.imageViewHeightConstraint.constant = 0.0f;
+    }
     self.bounds = CGRectMake(0, 0, width,  self.bounds.size.height);
     self.cellWidthConstraint.constant = width;
     [self setNeedsLayout];
@@ -45,8 +52,8 @@
     self.contentTextView.text = text;
     CGSize textViewSize = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.frame.size.width, FLT_MAX)];
     self.contentTextHeightConstraint.constant = textViewSize.height;
-//    [self setNeedsLayout];
-//    [self layoutIfNeeded];
+    //    [self setNeedsLayout];
+    //    [self layoutIfNeeded];
 
     return [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 }
