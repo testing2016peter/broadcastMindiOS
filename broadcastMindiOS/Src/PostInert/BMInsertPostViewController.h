@@ -14,7 +14,7 @@
 @protocol BMPostArticleViewControllerDelegate <NSObject>
 
 - (void)tapPostArticleViewController:(BMInsertPostViewController *)vc cancelButton:(id)cancelButton;
-- (void)tapPostArticleViewController:(BMInsertPostViewController *)vc sendButton:(id)sendButton;
+- (void)tapPostArticleViewController:(BMInsertPostViewController *)vc contentText:(NSString *)contentText sendButton:(id)sendButton;
 
 @end
 

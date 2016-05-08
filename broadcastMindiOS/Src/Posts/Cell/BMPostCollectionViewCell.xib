@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-ET-FRu">
-                        <rect key="frame" x="42" y="48" width="336" height="70"/>
+                        <rect key="frame" x="45" y="48" width="333" height="70"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="p9t-ma-tOj"/>
@@ -43,7 +43,7 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hQ-Dj-kky" customClass="BMArticleFunctionView">
-                        <rect key="frame" x="42" y="118" width="336" height="47"/>
+                        <rect key="frame" x="0.0" y="118" width="378" height="47"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="47" id="YpO-WY-Df2"/>
@@ -86,19 +86,25 @@
                 <constraint firstItem="hG5-vp-3Bt" firstAttribute="top" secondItem="mqK-cu-yvb" secondAttribute="top" id="MXV-Sm-Nrq"/>
                 <constraint firstItem="hG5-vp-3Bt" firstAttribute="trailing" secondItem="tZQ-DB-8IB" secondAttribute="trailing" id="QGK-v8-E53"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="top" secondItem="dZB-ET-FRu" secondAttribute="bottom" id="VEN-Oj-Yxo"/>
-                <constraint firstItem="9hQ-Dj-kky" firstAttribute="leading" secondItem="dZB-ET-FRu" secondAttribute="leading" id="X7w-yu-2gH"/>
+                <constraint firstItem="9hQ-Dj-kky" firstAttribute="leading" secondItem="dZB-ET-FRu" secondAttribute="leading" constant="-45" id="X7w-yu-2gH"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="trailing" secondItem="dZB-ET-FRu" secondAttribute="trailing" id="cfv-3r-jwU"/>
                 <constraint firstItem="3aq-m7-Q3R" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="g8Z-SS-G1N"/>
                 <constraint firstItem="9hQ-Dj-kky" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" id="isB-n1-zQa"/>
                 <constraint firstItem="3aq-m7-Q3R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kKR-u9-q1N"/>
                 <constraint firstAttribute="bottom" secondItem="3aq-m7-Q3R" secondAttribute="bottom" id="kcC-Oa-YfI"/>
                 <constraint firstItem="hG5-vp-3Bt" firstAttribute="leading" secondItem="mqK-cu-yvb" secondAttribute="trailing" constant="10" id="nIV-Bn-wmB"/>
+                <constraint firstAttribute="trailing" secondItem="dZB-ET-FRu" secondAttribute="trailing" constant="19" id="o0G-mQ-6ul"/>
                 <constraint firstItem="mqK-cu-yvb" firstAttribute="top" secondItem="nMJ-6e-I04" secondAttribute="top" id="qbT-n1-SgB"/>
-                <constraint firstAttribute="trailing" secondItem="dZB-ET-FRu" secondAttribute="trailing" constant="19" id="r1p-ez-88Q"/>
+                <constraint firstItem="dZB-ET-FRu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="45" id="qgX-7W-mgH"/>
                 <constraint firstItem="mqK-cu-yvb" firstAttribute="leading" secondItem="nMJ-6e-I04" secondAttribute="trailing" constant="10" id="vsu-fN-3Jq"/>
                 <constraint firstItem="dZB-ET-FRu" firstAttribute="top" secondItem="tZQ-DB-8IB" secondAttribute="bottom" id="woP-kn-BaI"/>
             </constraints>
             <size key="customSize" width="397" height="173"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="DZp-nA-f0X"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="backgroundUIView" destination="3aq-m7-Q3R" id="NXa-Xn-7qy"/>
                 <outlet property="bmArticleFunctionView" destination="9hQ-Dj-kky" id="OeW-JF-Buf"/>

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 #import "BMAppConstant.h"
 
 typedef void(^BMClientSuccessBlock)(AFHTTPRequestOperation *operation, id response);
@@ -32,5 +32,5 @@ typedef void(^BMClientProcessBlock)(CGFloat processPercentage);
 - (void)insertPostLikeWithPostId:(NSString *)postId success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
 - (void)insertCommentLikeWithCommentId:(NSString *)commentId success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
 
-- (void)uploadImage:(UIImage *)image success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure process:(BMClientProcessBlock)process;
+- (void)uploadImage:(UIImage *)image progress:(NSProgress **)progress success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure;
 @end

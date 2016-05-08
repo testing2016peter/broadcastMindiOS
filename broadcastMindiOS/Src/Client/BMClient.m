@@ -156,60 +156,36 @@
     [manager POST:urlString parameters:nil success:success failure:failure];
 }
 
-- (void)uploadImage:(UIImage *)image success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure process:(BMClientProcessBlock)process
-
+- (void)uploadImage:(UIImage *)image progress:(NSProgress **)progress success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
-    static NSInteger increment = 0;
-    increment++;
-    NSString *imageName = [NSString stringWithFormat:@"image_%ld.jpg", (long)increment];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-    NSMutableDictionary *dataToPost = [NSMutableDictionary dictionary];
-    // 1. Create `AFHTTPRequestSerializer` which will create your request.
-    AFHTTPRequestSerializer *serializer = [AFHTTPRequestSerializer serializer];
-
-    // 2. Create an `NSMutableURLRequest`.
     NSString *host = self.config.apiHostString;
-    ///v1/post/:postId/comment
     NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host, @"/v1/upload"];
-    NSError *err;
-    NSMutableURLRequest *request =
-    [serializer multipartFormRequestWithMethod:@"POST" URLString:urlString parameters:dataToPost constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:imageData
-                                    name:@"attachment"
-                                fileName:imageName
-                                mimeType:@"image/jpeg"];
-    } error:&err];
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.3f);
 
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString  parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
 
-    // 3. Create and use `AFHTTPRequestOperationManager` to create an `AFHTTPRequestOperation` from the `NSMutableURLRequest` that we just created.
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    AFHTTPRequestOperation *operation =
-    [manager HTTPRequestOperationWithRequest:request
-                                     success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                         NSLog(@"Success %@", responseObject);
-                                         if (success) {
-                                             success(operation, responseObject);
-                                         }
-                                     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                         NSLog(@"Failure %@", error.description);
-                                         if (failure) {
-                                             failure(operation, error);
-                                         }
-                                     }];
+        [formData appendPartWithFileData:imageData name:@"file" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
 
-    // 4. Set the progress block of the operation.
-    [operation setUploadProgressBlock:^(NSUInteger __unused bytesWritten,
-                                        long long totalBytesWritten,
-                                        long long totalBytesExpectedToWrite) {
-        NSLog(@"Wrote %lld/%lld", totalBytesWritten, totalBytesExpectedToWrite);
-        CGFloat processPercentage = totalBytesWritten / totalBytesExpectedToWrite;
-        if (process) {
-            process(processPercentage);
-        }
-    }];
+    } error:nil];
+
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+
+    NSURLSessionUploadTask *uploadTask;
+    uploadTask = [manager
+                  uploadTaskWithStreamedRequest:request
+                  progress:progress
+                  completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+                      if (error) {
+                          failure(nil, error);
+                      } else {
+                          success(nil, responseObject);
+                      }
+                  }];
+
+    [uploadTask resume];
+
+    //    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
+    //    
     
-    // 5. Begin!
-    [operation start];
-
 }
 @end

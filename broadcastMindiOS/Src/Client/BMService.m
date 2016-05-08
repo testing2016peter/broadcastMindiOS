@@ -31,7 +31,7 @@
 - (void)signUpUserEmail:(NSString *)email password:(NSString *)password success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
     [self.client signUpUserEmail:email password:password success:^(AFHTTPRequestOperation *operation, id response) {
-                NSError *err;
+        NSError *err;
         BMUser *user = [[BMUser alloc] initWithDictionary:response error:&err];
         if (success) {
             success(operation, user);
@@ -199,20 +199,15 @@
 
 }
 
-- (void)uploadImage:(UIImage *)image success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure process:(BMClientProcessBlock)process
+- (void)uploadImage:(UIImage *)image progress:(NSProgress **)progress success:(BMClientSuccessBlock)success failure:(BMClientFailureBlock)failure
 {
-    [self.client uploadImage:image success:^(AFHTTPRequestOperation *operation, id response) {
+    [self.client uploadImage:image progress:progress success:^(AFHTTPRequestOperation *operation, id response) {
         if (success) {
             success(operation, response);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-        [BMTrackUtil logError:BMTrackErrorApi message:operation.responseString error:err];
         if (failure) {
             failure(operation, err);
-        }
-    } process:^(CGFloat processPercentage) {
-        if (process) {
-            process(processPercentage);
         }
     }];
 }

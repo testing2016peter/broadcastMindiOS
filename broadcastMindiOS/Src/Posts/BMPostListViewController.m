@@ -6,7 +6,7 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import <TLYShyNavBarManager.h>
+#import "TLYShyNavBarManager.h"
 #import "BMPostListViewController.h"
 #import "BMInputTextView.h"
 #import "BMPostCollectionViewCell.h"
@@ -14,14 +14,15 @@
 #import "BMInsertPostViewController.h"
 #import "BMPostListDataStore.h"
 #import "BMMainFilterView.h"
-#import <UIScrollView+SVPullToRefresh.h>
-#import <UIScrollView+SVInfiniteScrolling.h>
+#import "UIScrollView+SVPullToRefresh.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 #import "BMUserPostsViewController.h"
 #import "PostDetailViewController.h"
 #import "BMSettingViewController.h"
 #import "BMMenuViewController.h"
 #import "BMCacheManager.h"
 #import "BMAccountManager.h"
+
 
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
@@ -38,11 +39,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.bmMenuViewController.view.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
-                                                      CGRectGetHeight(self.navigationController.navigationBar.frame),
-                                                      self.bmMenuViewControllerViewWidth,
-                                                      CGRectGetHeight(self.view.frame)
-                                                      );
+    [self setupMenuFrameOnce];
 
     UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
     [self.view addSubview:button];
@@ -57,8 +54,34 @@
     self.navigationItem.titleView = searchBar;
 }
 
+- (void)setupMenuFrameOnce
+{
+    static dispatch_once_t onceToken;
+
+
+    dispatch_once(&onceToken, ^{
+        self.bmMenuViewController.view.frame = CGRectMake(CGRectGetMaxX(self.view.frame),
+                                                          CGRectGetMaxY(self.navigationController.navigationBar.frame),
+                                                          self.bmMenuViewControllerViewWidth,
+                                                          CGRectGetHeight(self.view.frame)
+                                                          );
+    });
+
+
+
+}
+
 - (void)setupView
 {
+//    UIImage *image = [UIImage imageNamed:@"Img-test-image"];
+//    NSProgress *progress = [[NSProgress alloc] init];
+//    [[BMService sharedInstance] uploadImage:image progress:&progress success:^(AFHTTPRequestOperation *operation, id response) {
+//        NSLog(@"success:%@", response);
+//
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+//        NSLog(@"err:%@", err);
+//    }];
+//    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
 
     self.bmMenuViewControllerViewWidth = 250.0f;
 
@@ -96,6 +119,16 @@
     }];
 
 }
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath
+//                      ofObject:(id)object
+//                        change:(NSDictionary *)change
+//                       context:(void *)context
+//{
+//    if ([keyPath isEqualToString:@"fractionCompleted"]) {
+//        NSLog(@"change:%@", change);
+//    }
+//}
 
 - (void)setupCollectionView
 {
@@ -143,7 +176,7 @@
         cell.dateLabel.text = article.updatedAt;
     }
 
-    cell.contentTextView.text = @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB";
+    cell.contentTextView.text = @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABBYYUUOO";
     return cell;
 }
 
@@ -154,7 +187,7 @@
     CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMPostCollectionViewCellIdentifier withstyle:APNibFixedHeightScaling];
     BMPostCollectionViewCell  *cell = [[[NSBundle bundleForClass:self.class] loadNibNamed:BMPostCollectionViewCellIdentifier owner:self options:nil] lastObject];
     //size.width -= (2* 16.0f);
-    size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB"];
+    size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABBYYUUOO"];
     return size;
 
 }
@@ -183,9 +216,9 @@
     [vc.view removeFromSuperview];
 }
 
--(void)tapPostArticleViewController:(BMInsertPostViewController *)vc sendButton:(id)sendButton
+-(void)tapPostArticleViewController:(BMInsertPostViewController *)vc contentText:(NSString *)contentText sendButton:(id)sendButton
 {
-    [[BMService sharedInstance] insertPostWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
+    [[BMService sharedInstance] insertPostWithText:contentText success:^(AFHTTPRequestOperation *operation, id response) {
         [vc.view removeFromSuperview];
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [vc.view removeFromSuperview];
@@ -195,12 +228,18 @@
 
 - (void)showMenu:(id)sender
 {
+    [self showHideoMenu];
+}
+
+- (void)showHideoMenu
+{
     static BOOL isShowing;
     if (isShowing == NO) {
         [UIView animateWithDuration:0.5f animations:^{
             isShowing = YES;
             if (self.isShowedMenu == YES) {
-                //hide
+                //hide menu
+                self.collectionView.userInteractionEnabled = YES;
                 self.collectionView.frame = CGRectMake(
                                                        0.0f,
                                                        CGRectGetMinY(self.collectionView.frame),
@@ -214,7 +253,9 @@
                                                                   CGRectGetHeight(self.bmMenuViewController.view.frame)
                                                                   );
             } else {
-                //show
+                //show menu
+
+                self.collectionView.userInteractionEnabled = NO;
                 self.collectionView.frame = CGRectMake(
                                                        - CGRectGetWidth(self.bmMenuViewController.view.frame),
                                                        CGRectGetMinY(self.collectionView.frame),
@@ -236,5 +277,4 @@
         }];
     }
 }
-
 @end

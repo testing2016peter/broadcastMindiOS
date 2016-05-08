@@ -12,7 +12,7 @@
 #import "BMAccountManager.h"
 #import "BMUserPostsViewController.h"
 #import "BMSettingViewController.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
     BMMenuViewControllerUserCell = 0,
@@ -159,6 +159,7 @@ typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
 - (void)handleLogin:(id)test
 {
     [self.collectionView reloadData];
+    
 }
 
 - (void)handleLogout:(id)test

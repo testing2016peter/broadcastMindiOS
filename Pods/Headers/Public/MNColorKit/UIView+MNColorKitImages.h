@@ -1,1 +1,0 @@
-../../../MNColorKit/MNColorKit/UIView+MNColorKitImages.h

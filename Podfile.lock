@@ -26,6 +26,13 @@ PODS:
   - Flurry-iOS-SDK/FlurrySDK (7.6.0)
   - JSONModel (1.2.0)
   - MNColorKit (1.0.3)
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -39,6 +46,7 @@ DEPENDENCIES:
   - Flurry-iOS-SDK/FlurrySDK
   - JSONModel
   - MNColorKit
+  - ReactiveCocoa (= 2.4.7)
   - SDWebImage (~> 3.7)
   - SVPullToRefresh
   - TLYShyNavBar
@@ -50,6 +58,7 @@ SPEC CHECKSUMS:
   Flurry-iOS-SDK: 9822fe709195f0e3ae3e52c785eee9ff651ff648
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
   MNColorKit: c492a81e55832327c86146accc30a666486befe4
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   TLYShyNavBar: d313a1c50c58cb7af744829120eaa33ca8a998ce

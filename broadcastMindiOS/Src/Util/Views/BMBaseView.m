@@ -24,6 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self loadFromNibWithRect:self.bounds];
+        [self setupView];
     }
     return self;
 }
@@ -33,6 +34,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self loadFromNibWithRect:self.bounds];
+        [self setupView];
     }
 
     return self;
@@ -49,6 +51,10 @@
 }
 
 - (void)afterLoadFromNibWithRect:(CGRect)rect
+{
+}
+
+- (void)setupView
 {
 }
 @end
