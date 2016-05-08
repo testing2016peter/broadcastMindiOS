@@ -12,10 +12,10 @@
 #import "BMLoginViewController.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-#import <Flurry.h>
+#import "Flurry.h"
 #import "BMTrackUtil.h"
 #import "BMAccountManager.h"
-#import "BMImageSelectViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -35,8 +35,8 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
     [self setupRequestRegisterNotificationWithApplication:application];
-    BMImageSelectViewController *vv = [[BMImageSelectViewController alloc] init];
-    self.window.rootViewController = vv;
+
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     [BMAccountManager sharedInstance];
     return YES;

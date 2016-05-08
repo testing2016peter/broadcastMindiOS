@@ -1,1 +1,0 @@
-../../../MNColorKit/MNColorKit/MNColorKit.h

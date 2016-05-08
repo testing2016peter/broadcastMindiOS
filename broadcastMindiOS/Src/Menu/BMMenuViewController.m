@@ -12,7 +12,7 @@
 #import "BMAccountManager.h"
 #import "BMUserPostsViewController.h"
 #import "BMSettingViewController.h"
-#import <UIImageView+WebCache.h>
+#import "UIImageView+WebCache.h"
 
 typedef NS_ENUM(NSUInteger, BMMenuViewControllerCells) {
     BMMenuViewControllerUserCell = 0,

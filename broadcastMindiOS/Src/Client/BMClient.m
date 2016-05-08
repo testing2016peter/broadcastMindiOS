@@ -160,7 +160,7 @@
 {
     NSString *host = self.config.apiHostString;
     NSString *urlString = [[NSString alloc] initWithFormat:@"%@%@" ,host, @"/v1/upload"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.8f);
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.3f);
 
     NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] multipartFormRequestWithMethod:@"POST" URLString:urlString  parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
 
@@ -169,7 +169,7 @@
     } error:nil];
 
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
     NSURLSessionUploadTask *uploadTask;
     uploadTask = [manager
                   uploadTaskWithStreamedRequest:request
@@ -178,7 +178,7 @@
                       if (error) {
                           failure(nil, error);
                       } else {
-                          success(nil, [[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil] description]);
+                          success(nil, responseObject);
                       }
                   }];
 

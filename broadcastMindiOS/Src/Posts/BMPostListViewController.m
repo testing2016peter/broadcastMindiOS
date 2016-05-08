@@ -6,7 +6,7 @@
 //  Copyright © 2016 ap. All rights reserved.
 //
 
-#import <TLYShyNavBarManager.h>
+#import "TLYShyNavBarManager.h"
 #import "BMPostListViewController.h"
 #import "BMInputTextView.h"
 #import "BMPostCollectionViewCell.h"
@@ -14,15 +14,15 @@
 #import "BMInsertPostViewController.h"
 #import "BMPostListDataStore.h"
 #import "BMMainFilterView.h"
-#import <UIScrollView+SVPullToRefresh.h>
-#import <UIScrollView+SVInfiniteScrolling.h>
+#import "UIScrollView+SVPullToRefresh.h"
+#import "UIScrollView+SVInfiniteScrolling.h"
 #import "BMUserPostsViewController.h"
 #import "PostDetailViewController.h"
 #import "BMSettingViewController.h"
 #import "BMMenuViewController.h"
 #import "BMCacheManager.h"
 #import "BMAccountManager.h"
-#import <AFURLSessionManager.h>
+
 
 @interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
@@ -216,9 +216,9 @@
     [vc.view removeFromSuperview];
 }
 
--(void)tapPostArticleViewController:(BMInsertPostViewController *)vc sendButton:(id)sendButton
+-(void)tapPostArticleViewController:(BMInsertPostViewController *)vc contentText:(NSString *)contentText sendButton:(id)sendButton
 {
-    [[BMService sharedInstance] insertPostWithText:vc.contentTextView.text success:^(AFHTTPRequestOperation *operation, id response) {
+    [[BMService sharedInstance] insertPostWithText:contentText success:^(AFHTTPRequestOperation *operation, id response) {
         [vc.view removeFromSuperview];
     } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
         [vc.view removeFromSuperview];
