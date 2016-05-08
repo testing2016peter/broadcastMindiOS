@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BMImageSelectImageCollectionViewCell" id="gTV-IL-0wX" customClass="BMImageSelectImageCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSU-As-ICA">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-Check-Empty" translatesAutoresizingMaskIntoConstraints="NO" id="Jm8-Il-cgU">
+                        <rect key="frame" x="64" y="0.0" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Jm8-Il-cgU" secondAttribute="height" multiplier="1:1" id="6iY-Ef-5Si"/>
+                            <constraint firstAttribute="width" constant="36" id="GLb-og-iF5"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Jm8-Il-cgU" secondAttribute="trailing" id="JEV-xL-S2e"/>
+                <constraint firstAttribute="trailing" secondItem="OSU-As-ICA" secondAttribute="trailing" id="ZiJ-Th-vO5"/>
+                <constraint firstItem="Jm8-Il-cgU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b4Y-Xb-jxx"/>
+                <constraint firstItem="OSU-As-ICA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="flN-vd-7UQ"/>
+                <constraint firstAttribute="bottom" secondItem="OSU-As-ICA" secondAttribute="bottom" id="i9K-lk-Moz"/>
+                <constraint firstItem="OSU-As-ICA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uUk-T2-lZI"/>
+            </constraints>
+            <size key="customSize" width="77" height="72"/>
+            <connections>
+                <outlet property="imageView" destination="OSU-As-ICA" id="xab-qE-BHb"/>
+                <outlet property="isSelectImageView" destination="Jm8-Il-cgU" id="GoG-Cd-9JV"/>
+            </connections>
+            <point key="canvasLocation" x="359" y="233"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Icon-Check-Empty" width="100" height="100"/>
+    </resources>
+</document>

@@ -25,4 +25,14 @@
 {
     return RGBX(0x9b59b6);
 }
+
++ (UIColor *)BMImageNonSelectColor
+{
+    return RGBX(0xDCDCDC);
+}
+
++ (UIColor *)BMImageSelectedColor
+{
+    return RGBX(0x85be63);
+}
 @end

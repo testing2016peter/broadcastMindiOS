@@ -1,0 +1,6 @@
+framework module MNColorKit {
+  umbrella header "MNColorKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

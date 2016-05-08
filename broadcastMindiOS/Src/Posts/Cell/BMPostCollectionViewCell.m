@@ -38,12 +38,15 @@
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text
 {
+    self.bounds = CGRectMake(0, 0, width,  self.bounds.size.height);
     self.cellWidthConstraint.constant = width;
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
     self.contentTextView.text = text;
     CGSize textViewSize = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.frame.size.width, FLT_MAX)];
     self.contentTextHeightConstraint.constant = textViewSize.height;
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
+//    [self setNeedsLayout];
+//    [self layoutIfNeeded];
 
     return [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 }

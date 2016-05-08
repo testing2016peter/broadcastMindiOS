@@ -82,3 +82,26 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/Flurry_iOS_SDK.framework"
+  install_framework "Pods/JSONModel.framework"
+  install_framework "Pods/MNColorKit.framework"
+  install_framework "Pods/ReactiveCocoa.framework"
+  install_framework "Pods/Result.framework"
+  install_framework "Pods/SDWebImage.framework"
+  install_framework "Pods/SVPullToRefresh.framework"
+  install_framework "Pods/TLYShyNavBar.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/Flurry_iOS_SDK.framework"
+  install_framework "Pods/JSONModel.framework"
+  install_framework "Pods/MNColorKit.framework"
+  install_framework "Pods/ReactiveCocoa.framework"
+  install_framework "Pods/Result.framework"
+  install_framework "Pods/SDWebImage.framework"
+  install_framework "Pods/SVPullToRefresh.framework"
+  install_framework "Pods/TLYShyNavBar.framework"
+fi

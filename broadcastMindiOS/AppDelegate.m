@@ -12,9 +12,10 @@
 #import "BMLoginViewController.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-#import <Flurry.h>
+#import "Flurry.h"
 #import "BMTrackUtil.h"
 #import "BMAccountManager.h"
+
 @interface AppDelegate ()
 
 @end

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96B538EC13C966F6BAE1DE5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7A8E33B39F2F84B9C55037 /* libPods.a */; };
+		9C87C31B9606FC2145401A94 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB20FAFA1A983A228C31D6D /* Pods.framework */; };
 		F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */; };
 		F786B7301CD4CF5600E79930 /* BMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */; };
 		F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7331CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m */; };
@@ -53,6 +53,12 @@
 		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
 		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
 		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
+		F79E6C741CDDCBFA00CC0B04 /* BMImageSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C721CDDCBFA00CC0B04 /* BMImageSelectViewController.m */; };
+		F79E6C751CDDCBFB00CC0B04 /* BMImageSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79E6C731CDDCBFA00CC0B04 /* BMImageSelectViewController.xib */; };
+		F79E6C7A1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C781CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m */; };
+		F79E6C7B1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79E6C791CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib */; };
+		F79E6C7E1CDDCF4E00CC0B04 /* UIImage+BMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C7D1CDDCF4E00CC0B04 /* UIImage+BMImage.m */; };
+		F79E6C821CDDD3A500CC0B04 /* BMCameraRollLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C811CDDD3A500CC0B04 /* BMCameraRollLib.m */; };
 		F7B15E731CD4A75600A00E5D /* BMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */; };
 		F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */; };
 		F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E771CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m */; };
@@ -100,8 +106,8 @@
 
 /* Begin PBXFileReference section */
 		4B08BE04D5A798E7FE0116FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9E7A8E33B39F2F84B9C55037 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCA4D3E442759A83C92BC948 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CEB20FAFA1A983A228C31D6D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F786B72C1CD4CF5600E79930 /* BMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuViewController.h; sourceTree = "<group>"; };
 		F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuViewController.m; sourceTree = "<group>"; };
 		F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +194,16 @@
 		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
 		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
 		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		F79E6C711CDDCBFA00CC0B04 /* BMImageSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageSelectViewController.h; sourceTree = "<group>"; };
+		F79E6C721CDDCBFA00CC0B04 /* BMImageSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageSelectViewController.m; sourceTree = "<group>"; };
+		F79E6C731CDDCBFA00CC0B04 /* BMImageSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMImageSelectViewController.xib; sourceTree = "<group>"; };
+		F79E6C771CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageSelectImageCollectionViewCell.h; sourceTree = "<group>"; };
+		F79E6C781CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageSelectImageCollectionViewCell.m; sourceTree = "<group>"; };
+		F79E6C791CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMImageSelectImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		F79E6C7C1CDDCF4E00CC0B04 /* UIImage+BMImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BMImage.h"; sourceTree = "<group>"; };
+		F79E6C7D1CDDCF4E00CC0B04 /* UIImage+BMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BMImage.m"; sourceTree = "<group>"; };
+		F79E6C801CDDD3A500CC0B04 /* BMCameraRollLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCameraRollLib.h; sourceTree = "<group>"; };
+		F79E6C811CDDD3A500CC0B04 /* BMCameraRollLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCameraRollLib.m; sourceTree = "<group>"; };
 		F7B15E701CD4A75600A00E5D /* BMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSettingViewController.h; sourceTree = "<group>"; };
 		F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSettingViewController.m; sourceTree = "<group>"; };
 		F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMSettingViewController.xib; sourceTree = "<group>"; };
@@ -236,7 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96B538EC13C966F6BAE1DE5D /* libPods.a in Frameworks */,
+				9C87C31B9606FC2145401A94 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +276,7 @@
 		A270C75BD97913D1D3814570 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E7A8E33B39F2F84B9C55037 /* libPods.a */,
+				CEB20FAFA1A983A228C31D6D /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -347,6 +363,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F79E6C701CDDCBD900CC0B04 /* Image */,
 				F786B72B1CD4CF4900E79930 /* Menu */,
 				F7B15E6F1CD4A75600A00E5D /* Setting */,
 				F7BF4CE11CD10CBA000BB5E5 /* PostDetail */,
@@ -417,6 +434,8 @@
 			children = (
 				F793D2ED1CC15D2F006CE8D4 /* UIColor+BMColor.h */,
 				F793D2EE1CC15D2F006CE8D4 /* UIColor+BMColor.m */,
+				F79E6C7C1CDDCF4E00CC0B04 /* UIImage+BMImage.h */,
+				F79E6C7D1CDDCF4E00CC0B04 /* UIImage+BMImage.m */,
 			);
 			name = Categories;
 			path = Src/Categories;
@@ -434,6 +453,7 @@
 		F793D2FE1CC2ACBD006CE8D4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F79E6C7F1CDDD3A500CC0B04 /* CameraRoll */,
 				F786B7431CD6340E00E79930 /* Cache */,
 				F786B73C1CD62D1500E79930 /* Account */,
 				F7C2DF8D1CCD0924000CBD61 /* Track */,
@@ -535,6 +555,37 @@
 			);
 			name = DataObject;
 			path = Src/DataObject;
+			sourceTree = "<group>";
+		};
+		F79E6C701CDDCBD900CC0B04 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F79E6C761CDDCC2E00CC0B04 /* Cell */,
+				F79E6C711CDDCBFA00CC0B04 /* BMImageSelectViewController.h */,
+				F79E6C721CDDCBFA00CC0B04 /* BMImageSelectViewController.m */,
+				F79E6C731CDDCBFA00CC0B04 /* BMImageSelectViewController.xib */,
+			);
+			name = Image;
+			path = Src/Image;
+			sourceTree = "<group>";
+		};
+		F79E6C761CDDCC2E00CC0B04 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F79E6C771CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.h */,
+				F79E6C781CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m */,
+				F79E6C791CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F79E6C7F1CDDD3A500CC0B04 /* CameraRoll */ = {
+			isa = PBXGroup;
+			children = (
+				F79E6C801CDDD3A500CC0B04 /* BMCameraRollLib.h */,
+				F79E6C811CDDD3A500CC0B04 /* BMCameraRollLib.m */,
+			);
+			path = CameraRoll;
 			sourceTree = "<group>";
 		};
 		F7B15E6F1CD4A75600A00E5D /* Setting */ = {
@@ -775,6 +826,8 @@
 				F793D2B71CC15AC0006CE8D4 /* LaunchScreen.storyboard in Resources */,
 				F793D2B41CC15AC0006CE8D4 /* Assets.xcassets in Resources */,
 				F7BF4CE01CD10CA6000BB5E5 /* BMInsertPostViewController.xib in Resources */,
+				F79E6C751CDDCBFB00CC0B04 /* BMImageSelectViewController.xib in Resources */,
+				F79E6C7B1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib in Resources */,
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
 				F7B15E7F1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib in Resources */,
 				F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */,
@@ -875,6 +928,7 @@
 				F793D3271CC37BFD006CE8D4 /* APCalculatorHelper.m in Sources */,
 				F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */,
 				F7BF4CDF1CD10CA6000BB5E5 /* BMInsertPostViewController.m in Sources */,
+				F79E6C821CDDD3A500CC0B04 /* BMCameraRollLib.m in Sources */,
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F7C2DF841CCB8DB5000CBD61 /* BMPostCollectionViewCell.m in Sources */,
@@ -885,6 +939,7 @@
 				F793D3281CC37BFD006CE8D4 /* APNibCacheManager.m in Sources */,
 				F793D2EF1CC15D2F006CE8D4 /* UIColor+BMColor.m in Sources */,
 				F7C2DF931CCD1470000CBD61 /* BMTrackConstants.m in Sources */,
+				F79E6C7A1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m in Sources */,
 				F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */,
 				F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
@@ -905,12 +960,14 @@
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F786B74F1CD6455C00E79930 /* BMCookieManager.m in Sources */,
+				F79E6C741CDDCBFA00CC0B04 /* BMImageSelectViewController.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
 				F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */,
 				F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */,
 				F786B7421CD62DE300E79930 /* BMUser.m in Sources */,
 				F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */,
 				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
+				F79E6C7E1CDDCF4E00CC0B04 /* UIImage+BMImage.m in Sources */,
 				F786B7491CD634E900E79930 /* BMCacheManager.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
 				F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */,
@@ -1061,6 +1118,7 @@
 			baseConfigurationReference = 4B08BE04D5A798E7FE0116FF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = broadcastMindiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1074,6 +1132,7 @@
 			baseConfigurationReference = BCA4D3E442759A83C92BC948 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = broadcastMindiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
