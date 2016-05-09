@@ -22,7 +22,6 @@
 #import "BMMenuViewController.h"
 #import "BMCacheManager.h"
 #import "BMAccountManager.h"
-#import "UITextView+BMTextView.h"
 #import "BMStringParser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
