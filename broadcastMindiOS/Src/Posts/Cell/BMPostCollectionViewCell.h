@@ -21,7 +21,9 @@ static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionV
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
 
-- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text hasImage:(BOOL)hasImage;
 
 @end
