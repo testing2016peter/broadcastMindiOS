@@ -16,4 +16,5 @@
 + (UIColor *)BMImageSelectedColor;
 
 + (UIColor *)BMBorderColor;
++ (UIColor *)BMRoundLabelColor;
 @end

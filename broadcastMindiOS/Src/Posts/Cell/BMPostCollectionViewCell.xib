@@ -48,29 +48,30 @@
                             <constraint firstAttribute="width" constant="40" id="NAA-yl-Xdb"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc0-1l-50W">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc0-1l-50W" customClass="BMInsetLabel">
                         <rect key="frame" x="369" y="123" width="6" height="20"/>
                         <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="gC5-Hg-f0s"/>
                             <constraint firstAttribute="height" constant="20" id="ig3-GJ-ulG"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVn-ym-FB9">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.9k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVn-ym-FB9" customClass="BMInsetLabel">
                         <rect key="frame" x="239" y="123" width="40" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="FtG-E2-ImX"/>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="JBI-yc-491"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="JBI-yc-491"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-Cd-263">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-Cd-263" customClass="BMInsetLabel">
                         <rect key="frame" x="143" y="123" width="6" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="T1Y-en-XU9"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="T1Y-en-XU9"/>
                             <constraint firstAttribute="height" constant="20" id="sEh-ns-aBi"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>

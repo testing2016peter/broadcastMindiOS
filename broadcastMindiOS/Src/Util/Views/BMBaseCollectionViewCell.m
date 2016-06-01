@@ -7,7 +7,7 @@
 //
 
 #import "BMBaseCollectionViewCell.h"
-#import "UIColor+BMColor.h"
+
 @implementation BMBaseCollectionViewCell
 
 

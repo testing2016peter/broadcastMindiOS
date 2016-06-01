@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C87C31B9606FC2145401A94 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB20FAFA1A983A228C31D6D /* Pods.framework */; };
+		F76E651E1CFF517000351205 /* BMInsetLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F76E651D1CFF517000351205 /* BMInsetLabel.m */; };
 		F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */; };
 		F786B7301CD4CF5600E79930 /* BMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */; };
 		F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7331CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m */; };
@@ -111,6 +112,8 @@
 		4B08BE04D5A798E7FE0116FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BCA4D3E442759A83C92BC948 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CEB20FAFA1A983A228C31D6D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76E651C1CFF517000351205 /* BMInsetLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInsetLabel.h; sourceTree = "<group>"; };
+		F76E651D1CFF517000351205 /* BMInsetLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInsetLabel.m; sourceTree = "<group>"; };
 		F786B72C1CD4CF5600E79930 /* BMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuViewController.h; sourceTree = "<group>"; };
 		F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuViewController.m; sourceTree = "<group>"; };
 		F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuViewController.xib; sourceTree = "<group>"; };
@@ -514,6 +517,8 @@
 				F796029A1CF1A479003D7B83 /* BMInputTextView.h */,
 				F796029B1CF1A479003D7B83 /* BMInputTextView.m */,
 				F796029D1CF1A484003D7B83 /* BMInputTextView.xib */,
+				F76E651C1CFF517000351205 /* BMInsetLabel.h */,
+				F76E651D1CFF517000351205 /* BMInsetLabel.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -991,6 +996,7 @@
 				F786B7421CD62DE300E79930 /* BMUser.m in Sources */,
 				F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */,
 				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
+				F76E651E1CFF517000351205 /* BMInsetLabel.m in Sources */,
 				F79E6C7E1CDDCF4E00CC0B04 /* UIImage+BMImage.m in Sources */,
 				F786B7491CD634E900E79930 /* BMCacheManager.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,

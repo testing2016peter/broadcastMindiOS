@@ -8,6 +8,7 @@
 
 #import "BMBaseCollectionViewCell.h"
 #import "BMArticleFunctionView.h"
+#import "BMInsetLabel.h"
 static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionViewCell";
 
 @interface BMPostCollectionViewCell : BMBaseCollectionViewCell
@@ -23,11 +24,11 @@ static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionV
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeightConstraint;
 
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
-@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet BMInsetLabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *likeButton;
-@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+@property (weak, nonatomic) IBOutlet BMInsetLabel *likeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
-@property (weak, nonatomic) IBOutlet UILabel *shareLabel;
+@property (weak, nonatomic) IBOutlet BMInsetLabel *shareLabel;
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text;
 
