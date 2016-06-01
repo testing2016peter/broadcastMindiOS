@@ -14,4 +14,7 @@
 + (UIColor *)BMActionColor;
 + (UIColor *)BMImageNonSelectColor;
 + (UIColor *)BMImageSelectedColor;
+
++ (UIColor *)BMBorderColor;
++ (UIColor *)BMRoundLabelColor;
 @end

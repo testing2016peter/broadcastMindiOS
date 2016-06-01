@@ -35,4 +35,14 @@
 {
     return RGBX(0x85be63);
 }
+
++ (UIColor *)BMBorderColor
+{
+    return [RGBX(0x000000) colorWithAlphaComponent:0.1];
+}
+
++ (UIColor *)BMRoundLabelColor
+{
+    return RGBX(0xF6F6F6);
+}
 @end

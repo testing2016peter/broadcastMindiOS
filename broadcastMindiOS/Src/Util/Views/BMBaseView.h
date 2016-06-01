@@ -10,4 +10,5 @@
 
 @interface BMBaseView : UIView
 - (void)afterLoadFromNibWithRect:(CGRect)rect;
+- (void)setupView;
 @end

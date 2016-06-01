@@ -106,9 +106,9 @@
     [closeButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
 
-    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
-    self.shyNavBarManager = shyManager;
-    self.shyNavBarManager.scrollView = self.collectionView;
+//    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
+//    self.shyNavBarManager = shyManager;
+//    self.shyNavBarManager.scrollView = self.collectionView;
 
     self.bmArticles = [NSMutableArray array];
     self.dataStore = [[BMPostListDataStore alloc] init];
@@ -167,7 +167,7 @@
         cell.dateLabel.text = article.updatedAt;
 
         NSString *string = article.text;
-        cell.titleLabel.text = string;
+
         NSRange range = [BMStringParser nonImageURLStringRangeWithString:string];
         NSString *subString = [string substringWithRange:range];
 
@@ -178,7 +178,7 @@
                                      completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                          if (image && !error) {
                                              cell.imageView.image = image;
-                                             cell.imageViewHeightConstraint.constant = 200.0f;
+                                             cell.imageViewHeightConstraint.constant = 100.0f;
                                          }
                                      }];
         }

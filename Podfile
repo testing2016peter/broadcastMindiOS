@@ -9,4 +9,5 @@ pod 'MNColorKit'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'Flurry-iOS-SDK/FlurrySDK'
-pod 'ReactiveCocoa'
+pod 'ReactiveCocoa', '2.4.7'
+

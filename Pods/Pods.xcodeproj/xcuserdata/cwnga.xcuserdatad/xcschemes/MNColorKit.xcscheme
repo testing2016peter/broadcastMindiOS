@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CF5A893F8D9423524AB7DB04'
+               BlueprintIdentifier = 'AE6D4B3BA09AC99467868BEC'
                BlueprintName = 'MNColorKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'MNColorKit.framework'>

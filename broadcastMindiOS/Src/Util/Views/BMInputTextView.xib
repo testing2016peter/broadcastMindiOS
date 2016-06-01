@@ -7,47 +7,50 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMInputTextView">
             <connections>
-                <outlet property="contentTextView" destination="u1M-gU-Im2" id="HO9-Cd-2nL"/>
-                <outlet property="sendButton" destination="T7n-Fh-xDf" id="r9P-p0-9b1"/>
-                <outlet property="topLevelSubview" destination="iN0-l3-epB" id="Zbe-pt-1ig"/>
+                <outlet property="contentTextBottomConstraint" destination="ImB-Wp-Wpn" id="Osc-d9-jNL"/>
+                <outlet property="contentTextTopConstraint" destination="gtF-do-cs6" id="GM1-gY-ih0"/>
+                <outlet property="contentTextView" destination="Gtl-tH-dLb" id="nf4-jc-9qJ"/>
+                <outlet property="sendButton" destination="KUC-zC-ddp" id="FFE-JL-HB2"/>
+                <outlet property="textCountLabel" destination="pu8-IP-41c" id="nAA-OP-hxN"/>
+                <outlet property="topLevelSubview" destination="iN0-l3-epB" id="ilz-PF-EUf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="326" height="65"/>
+            <rect key="frame" x="0.0" y="0.0" width="237" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="AAAAAA121212121212121212121212121212121212121212121212121212121212121212" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-gU-Im2" customClass="BMPlaceholderTextView">
-                    <rect key="frame" x="0.0" y="0.0" width="286" height="65"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtl-tH-dLb" customClass="BMPlaceholderTextView">
+                    <rect key="frame" x="2" y="2" width="189" height="36"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7n-Fh-xDf">
-                    <rect key="frame" x="286" y="10" width="30" height="30"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="9UR-FJ-4to"/>
-                        <constraint firstAttribute="width" constant="30" id="Lxb-kO-BNX"/>
-                    </constraints>
-                    <state key="normal" image="Icon-Send"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUC-zC-ddp">
+                    <rect key="frame" x="193" y="5" width="36" height="30"/>
+                    <state key="normal" title="Send"/>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pu8-IP-41c">
+                    <rect key="frame" x="194" y="30" width="43" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="u1M-gU-Im2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="432-dN-3db"/>
-                <constraint firstItem="u1M-gU-Im2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JYK-Im-yDO"/>
-                <constraint firstAttribute="bottom" secondItem="u1M-gU-Im2" secondAttribute="bottom" id="LCB-j6-7jN"/>
-                <constraint firstAttribute="trailing" secondItem="T7n-Fh-xDf" secondAttribute="trailing" constant="10" id="mjL-k8-9I8"/>
-                <constraint firstItem="T7n-Fh-xDf" firstAttribute="leading" secondItem="u1M-gU-Im2" secondAttribute="trailing" id="okm-Ys-QBW"/>
-                <constraint firstItem="T7n-Fh-xDf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="uGg-OE-8cd"/>
+                <constraint firstAttribute="bottom" secondItem="pu8-IP-41c" secondAttribute="bottom" id="0ug-0Q-ADh"/>
+                <constraint firstAttribute="trailing" secondItem="KUC-zC-ddp" secondAttribute="trailing" constant="8" id="CVE-lw-LE0"/>
+                <constraint firstAttribute="bottom" secondItem="Gtl-tH-dLb" secondAttribute="bottom" constant="2" id="ImB-Wp-Wpn"/>
+                <constraint firstItem="KUC-zC-ddp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="WEP-QA-T7d"/>
+                <constraint firstItem="KUC-zC-ddp" firstAttribute="leading" secondItem="Gtl-tH-dLb" secondAttribute="trailing" constant="2" id="Xg1-q3-61j"/>
+                <constraint firstItem="Gtl-tH-dLb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="gtF-do-cs6"/>
+                <constraint firstItem="Gtl-tH-dLb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="iCn-lh-ghX"/>
+                <constraint firstAttribute="trailing" secondItem="pu8-IP-41c" secondAttribute="trailing" id="uJ0-tG-NG0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="174" y="25"/>
+            <point key="canvasLocation" x="132.5" y="234"/>
         </view>
     </objects>
-    <resources>
-        <image name="Icon-Send" width="96" height="96"/>
-    </resources>
 </document>

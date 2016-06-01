@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C87C31B9606FC2145401A94 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB20FAFA1A983A228C31D6D /* Pods.framework */; };
+		F76E651E1CFF517000351205 /* BMInsetLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F76E651D1CFF517000351205 /* BMInsetLabel.m */; };
 		F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */; };
 		F786B7301CD4CF5600E79930 /* BMMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */; };
 		F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F786B7331CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m */; };
@@ -32,8 +33,6 @@
 		F793D2F71CC2AA33006CE8D4 /* broadcastMindiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D2F61CC2AA33006CE8D4 /* broadcastMindiOSUITests.m */; };
 		F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3011CC2ACD3006CE8D4 /* BMBaseViewController.m */; };
 		F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3051CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m */; };
-		F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */; };
-		F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */; };
 		F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */; };
 		F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */; };
 		F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */; };
@@ -53,6 +52,9 @@
 		F793D3581CC3C1E1006CE8D4 /* BMMainFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D3571CC3C1E1006CE8D4 /* BMMainFilterView.m */; };
 		F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */; };
 		F793D35D1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */; };
+		F79602991CF1A35B003D7B83 /* BMConstraintUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F79602981CF1A35B003D7B83 /* BMConstraintUtil.m */; };
+		F796029C1CF1A479003D7B83 /* BMInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F796029B1CF1A479003D7B83 /* BMInputTextView.m */; };
+		F796029E1CF1A484003D7B83 /* BMInputTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F796029D1CF1A484003D7B83 /* BMInputTextView.xib */; };
 		F79E6C741CDDCBFA00CC0B04 /* BMImageSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C721CDDCBFA00CC0B04 /* BMImageSelectViewController.m */; };
 		F79E6C751CDDCBFB00CC0B04 /* BMImageSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79E6C731CDDCBFA00CC0B04 /* BMImageSelectViewController.xib */; };
 		F79E6C7A1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C781CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m */; };
@@ -74,6 +76,8 @@
 		F7BF4CE61CD10CD3000BB5E5 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BF4CE41CD10CD3000BB5E5 /* PostDetailViewController.xib */; };
 		F7BF4CEB1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BF4CE91CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m */; };
 		F7BF4CEC1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BF4CEA1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib */; };
+		F7C059DD1CF19F5400E6E506 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C059DB1CF19F5400E6E506 /* testViewController.m */; };
+		F7C059DE1CF19F5400E6E506 /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C059DC1CF19F5400E6E506 /* testViewController.xib */; };
 		F7C2DF781CCB8D81000CBD61 /* BMUserPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */; };
 		F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */; };
 		F7C2DF821CCB8DB5000CBD61 /* BMPostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF7C1CCB8DB5000CBD61 /* BMPostListViewController.m */; };
@@ -109,6 +113,8 @@
 		4B08BE04D5A798E7FE0116FF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BCA4D3E442759A83C92BC948 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CEB20FAFA1A983A228C31D6D /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76E651C1CFF517000351205 /* BMInsetLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInsetLabel.h; sourceTree = "<group>"; };
+		F76E651D1CFF517000351205 /* BMInsetLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInsetLabel.m; sourceTree = "<group>"; };
 		F786B72C1CD4CF5600E79930 /* BMMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMenuViewController.h; sourceTree = "<group>"; };
 		F786B72D1CD4CF5600E79930 /* BMMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMenuViewController.m; sourceTree = "<group>"; };
 		F786B72E1CD4CF5600E79930 /* BMMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMenuViewController.xib; sourceTree = "<group>"; };
@@ -156,9 +162,6 @@
 		F793D3011CC2ACD3006CE8D4 /* BMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseViewController.m; sourceTree = "<group>"; };
 		F793D3041CC2AE37006CE8D4 /* BMBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMBaseCollectionViewCell.h; sourceTree = "<group>"; };
 		F793D3051CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMBaseCollectionViewCell.m; sourceTree = "<group>"; };
-		F793D3071CC2AE55006CE8D4 /* BMInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInputTextView.h; sourceTree = "<group>"; };
-		F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInputTextView.m; sourceTree = "<group>"; };
-		F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInputTextView.xib; sourceTree = "<group>"; };
 		F793D30F1CC2AF5C006CE8D4 /* BMPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPlaceholderTextView.h; sourceTree = "<group>"; };
 		F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPlaceholderTextView.m; sourceTree = "<group>"; };
 		F793D3181CC33EB7006CE8D4 /* BMArticleFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMArticleFunctionView.h; sourceTree = "<group>"; };
@@ -195,6 +198,11 @@
 		F793D3591CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMainFilterCollectionReusableView.h; sourceTree = "<group>"; };
 		F793D35A1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMainFilterCollectionReusableView.m; sourceTree = "<group>"; };
 		F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMMainFilterCollectionReusableView.xib; sourceTree = "<group>"; };
+		F79602971CF1A35B003D7B83 /* BMConstraintUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMConstraintUtil.h; sourceTree = "<group>"; };
+		F79602981CF1A35B003D7B83 /* BMConstraintUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMConstraintUtil.m; sourceTree = "<group>"; };
+		F796029A1CF1A479003D7B83 /* BMInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMInputTextView.h; sourceTree = "<group>"; };
+		F796029B1CF1A479003D7B83 /* BMInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMInputTextView.m; sourceTree = "<group>"; };
+		F796029D1CF1A484003D7B83 /* BMInputTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMInputTextView.xib; sourceTree = "<group>"; };
 		F79E6C711CDDCBFA00CC0B04 /* BMImageSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMImageSelectViewController.h; sourceTree = "<group>"; };
 		F79E6C721CDDCBFA00CC0B04 /* BMImageSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageSelectViewController.m; sourceTree = "<group>"; };
 		F79E6C731CDDCBFA00CC0B04 /* BMImageSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMImageSelectViewController.xib; sourceTree = "<group>"; };
@@ -228,6 +236,9 @@
 		F7BF4CE81CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPostCommentCollectionViewCell.h; sourceTree = "<group>"; };
 		F7BF4CE91CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPostCommentCollectionViewCell.m; sourceTree = "<group>"; };
 		F7BF4CEA1CD10F5F000BB5E5 /* BMPostCommentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMPostCommentCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7C059DA1CF19F5400E6E506 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testViewController.h; path = Src/testViewController.h; sourceTree = "<group>"; };
+		F7C059DB1CF19F5400E6E506 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = testViewController.m; path = Src/testViewController.m; sourceTree = "<group>"; };
+		F7C059DC1CF19F5400E6E506 /* testViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = testViewController.xib; path = Src/testViewController.xib; sourceTree = "<group>"; };
 		F7C2DF751CCB8D81000CBD61 /* BMUserPostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMUserPostsViewController.h; sourceTree = "<group>"; };
 		F7C2DF761CCB8D81000CBD61 /* BMUserPostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMUserPostsViewController.m; sourceTree = "<group>"; };
 		F7C2DF771CCB8D81000CBD61 /* BMUserPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMUserPostsViewController.xib; sourceTree = "<group>"; };
@@ -390,6 +401,9 @@
 				F793D2B51CC15AC0006CE8D4 /* LaunchScreen.storyboard */,
 				F793D2B81CC15AC0006CE8D4 /* Info.plist */,
 				F793D2A71CC15AC0006CE8D4 /* Supporting Files */,
+				F7C059DA1CF19F5400E6E506 /* testViewController.h */,
+				F7C059DB1CF19F5400E6E506 /* testViewController.m */,
+				F7C059DC1CF19F5400E6E506 /* testViewController.xib */,
 			);
 			path = broadcastMindiOS;
 			sourceTree = "<group>";
@@ -456,6 +470,7 @@
 		F793D2FE1CC2ACBD006CE8D4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				F79602961CF1A34F003D7B83 /* Constraint */,
 				F79E6C871CDF415900CC0B04 /* String */,
 				F79E6C7F1CDDD3A500CC0B04 /* CameraRoll */,
 				F786B7431CD6340E00E79930 /* Cache */,
@@ -488,9 +503,6 @@
 				F793D3101CC2AF5C006CE8D4 /* BMPlaceholderTextView.m */,
 				F793D3041CC2AE37006CE8D4 /* BMBaseCollectionViewCell.h */,
 				F793D3051CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m */,
-				F793D3071CC2AE55006CE8D4 /* BMInputTextView.h */,
-				F793D3081CC2AE55006CE8D4 /* BMInputTextView.m */,
-				F793D30A1CC2AE60006CE8D4 /* BMInputTextView.xib */,
 				F793D3181CC33EB7006CE8D4 /* BMArticleFunctionView.h */,
 				F793D3191CC33EB7006CE8D4 /* BMArticleFunctionView.m */,
 				F793D31B1CC33EC7006CE8D4 /* BMArticleFunctionView.xib */,
@@ -506,6 +518,11 @@
 				F793D35B1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.xib */,
 				F7C8BDCF1CC55684009F7906 /* BMImageButton.h */,
 				F7C8BDD01CC55684009F7906 /* BMImageButton.m */,
+				F796029A1CF1A479003D7B83 /* BMInputTextView.h */,
+				F796029B1CF1A479003D7B83 /* BMInputTextView.m */,
+				F796029D1CF1A484003D7B83 /* BMInputTextView.xib */,
+				F76E651C1CFF517000351205 /* BMInsetLabel.h */,
+				F76E651D1CFF517000351205 /* BMInsetLabel.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -559,6 +576,15 @@
 			);
 			name = DataObject;
 			path = Src/DataObject;
+			sourceTree = "<group>";
+		};
+		F79602961CF1A34F003D7B83 /* Constraint */ = {
+			isa = PBXGroup;
+			children = (
+				F79602971CF1A35B003D7B83 /* BMConstraintUtil.h */,
+				F79602981CF1A35B003D7B83 /* BMConstraintUtil.m */,
+			);
+			path = Constraint;
 			sourceTree = "<group>";
 		};
 		F79E6C701CDDCBD900CC0B04 /* Image */ = {
@@ -841,6 +867,7 @@
 				F7BF4CE01CD10CA6000BB5E5 /* BMInsertPostViewController.xib in Resources */,
 				F79E6C751CDDCBFB00CC0B04 /* BMImageSelectViewController.xib in Resources */,
 				F79E6C7B1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib in Resources */,
+				F796029E1CF1A484003D7B83 /* BMInputTextView.xib in Resources */,
 				F793D31C1CC33EC7006CE8D4 /* BMArticleFunctionView.xib in Resources */,
 				F7B15E7F1CD4A9D200A00E5D /* BMInputSwitchCollectionViewCell.xib in Resources */,
 				F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */,
@@ -852,7 +879,7 @@
 				F7B15E841CD4B21800A00E5D /* BMSettingHeaderReusableView.xib in Resources */,
 				F7C2DF791CCB8D81000CBD61 /* BMUserPostsViewController.xib in Resources */,
 				F7C2DF8B1CCC8839000CBD61 /* BMLoginViewController.xib in Resources */,
-				F793D30B1CC2AE60006CE8D4 /* BMInputTextView.xib in Resources */,
+				F7C059DE1CF19F5400E6E506 /* testViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,7 +973,6 @@
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F7C2DF841CCB8DB5000CBD61 /* BMPostCollectionViewCell.m in Sources */,
-				F793D3091CC2AE55006CE8D4 /* BMInputTextView.m in Sources */,
 				F793D2AC1CC15AC0006CE8D4 /* AppDelegate.m in Sources */,
 				F793D3021CC2ACD3006CE8D4 /* BMBaseViewController.m in Sources */,
 				F7C2DF901CCD093A000CBD61 /* BMTrackUtil.m in Sources */,
@@ -955,6 +981,7 @@
 				F7C2DF931CCD1470000CBD61 /* BMTrackConstants.m in Sources */,
 				F79E6C7A1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.m in Sources */,
 				F793D3431CC3B7FC006CE8D4 /* BMBaseDataStore.m in Sources */,
+				F7C059DD1CF19F5400E6E506 /* testViewController.m in Sources */,
 				F793D35C1CC3C564006CE8D4 /* BMMainFilterCollectionReusableView.m in Sources */,
 				F793D3111CC2AF5C006CE8D4 /* BMPlaceholderTextView.m in Sources */,
 				F786B73F1CD62D3400E79930 /* BMAccountManager.m in Sources */,
@@ -975,12 +1002,15 @@
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F786B74F1CD6455C00E79930 /* BMCookieManager.m in Sources */,
 				F79E6C741CDDCBFA00CC0B04 /* BMImageSelectViewController.m in Sources */,
+				F79602991CF1A35B003D7B83 /* BMConstraintUtil.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,
 				F786B72F1CD4CF5600E79930 /* BMMenuViewController.m in Sources */,
+				F796029C1CF1A479003D7B83 /* BMInputTextView.m in Sources */,
 				F786B7351CD4D04F00E79930 /* BMMenuUserCollectionViewCell.m in Sources */,
 				F786B7421CD62DE300E79930 /* BMUser.m in Sources */,
 				F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */,
 				F7C2DF8A1CCC8839000CBD61 /* BMLoginViewController.m in Sources */,
+				F76E651E1CFF517000351205 /* BMInsetLabel.m in Sources */,
 				F79E6C7E1CDDCF4E00CC0B04 /* UIImage+BMImage.m in Sources */,
 				F786B7491CD634E900E79930 /* BMCacheManager.m in Sources */,
 				F793D2E71CC15C29006CE8D4 /* BMClient.m in Sources */,
@@ -1066,6 +1096,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1110,6 +1141,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1132,7 +1164,7 @@
 			baseConfigurationReference = 4B08BE04D5A798E7FE0116FF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = broadcastMindiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1146,7 +1178,7 @@
 			baseConfigurationReference = BCA4D3E442759A83C92BC948 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = broadcastMindiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1159,6 +1191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = broadcastMindiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSTests;
@@ -1171,6 +1204,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = broadcastMindiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSTests;
@@ -1183,6 +1217,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = broadcastMindiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSUITests;
@@ -1195,6 +1230,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				INFOPLIST_FILE = broadcastMindiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ap.broadcastMindiOSUITests;

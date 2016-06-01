@@ -9,15 +9,17 @@
 #import "PostDetailViewController.h"
 #import "BMPostCommentCollectionViewCell.h"
 #import "BMPostCollectionViewCell.h"
-
+#import "BMInputTextView.h"
 typedef NS_ENUM(NSUInteger, PostDetailViewControllerSection) {
     PostDetailViewControllerPostSection = 0,
     PostDetailViewControllerCommentSection = 1,
     PostDetailViewControllerSectionTotal
 };
 
-@interface PostDetailViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface PostDetailViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMInputTextViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet BMInputTextView *bmInputTextView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bmInputTextViewHeightConstraint;
 
 @end
 
@@ -25,6 +27,7 @@ typedef NS_ENUM(NSUInteger, PostDetailViewControllerSection) {
 - (void)setupView
 {
     [self setupCollectionView];
+    self.bmInputTextView.bmInputTextViewDelegate = self;
 }
 
 - (void)setupCollectionView
@@ -58,7 +61,7 @@ typedef NS_ENUM(NSUInteger, PostDetailViewControllerSection) {
     if (indexPath.section == PostDetailViewControllerPostSection) {
         BMPostCollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:BMPostCollectionViewCellIdentifier forIndexPath:indexPath];
 
-        cell.titleLabel.text = @"XXXXXX";
+       
         cell.userNameLabel.text = @"匿名";//Translate
         cell.dateLabel.text = @"2012/12/12";
         cell.contentTextView.text = @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABB";
