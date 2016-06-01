@@ -16,11 +16,18 @@ static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionV
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet BMArticleFunctionView *bmArticleFunctionView;
+
 @property (weak, nonatomic) IBOutlet UIView *backgroundUIView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeightConstraint;
+
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UILabel *shareLabel;
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text;
 

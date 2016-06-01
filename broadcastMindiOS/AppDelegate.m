@@ -35,8 +35,8 @@
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
     [self setupRequestRegisterNotificationWithApplication:application];
-    testViewController *testVc = [[testViewController alloc] init];
-    self.window.rootViewController = testVc;
+//    testViewController *testVc = [[testViewController alloc] init];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     [BMAccountManager sharedInstance];
     return YES;

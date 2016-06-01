@@ -35,4 +35,10 @@
 {
     return RGBX(0x85be63);
 }
+
++ (UIColor *)BMBorderColor
+{
+    return [RGBX(0x000000) colorWithAlphaComponent:0.1];
+}
+
 @end

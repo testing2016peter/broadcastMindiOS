@@ -12,14 +12,17 @@
 
 - (void)setupView
 {
-    self.layer.masksToBounds = NO;
+//    self.layer.masksToBounds = NO;
+//    [self.layer setShadowOpacity:0.4];
+//    self.layer.shadowOffset = CGSizeMake(0, 1);
+//    self.layer.shadowRadius = 1.0f;
+//    self.layer.shadowColor = [UIColor blackColor].CGColor;
+//    self.layer.shadowOpacity = 0.3f;
 
-    [self.layer setShadowOpacity:0.4];
-    self.layer.shadowOffset = CGSizeMake(0, 1);
-    self.layer.shadowRadius = 1.0f;
-    self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOpacity = 0.3f;
+    self.leadingMargin = 0.0f;
+    self.tailingMargin = 0.0f;
 
+    self.borderLayer.hidden = NO;
     [self prepareForReuse];
 }
 
@@ -32,8 +35,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-
-    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+//
+//    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 }
 
 - (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text
@@ -45,10 +48,24 @@
     self.contentTextView.text = text;
     CGSize textViewSize = [self.contentTextView sizeThatFits:CGSizeMake(self.contentTextView.frame.size.width, FLT_MAX)];
     self.contentTextHeightConstraint.constant = textViewSize.height;
-//    [self setNeedsLayout];
-//    [self layoutIfNeeded];
-
     return [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+}
+
+- (IBAction)tapCommentButton:(id)sender
+{
+    self.commentButton.selected = !self.commentButton.selected;
+}
+
+- (IBAction)tapLikeButton:(id)sender
+{
+    self.likeButton.selected = !self.likeButton.selected;
+}
+
+
+
+- (IBAction)tapShareButton:(id)sender
+{
+    self.shareButton.selected = !self.shareButton.selected;
 }
 
 @end

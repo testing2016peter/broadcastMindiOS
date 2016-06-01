@@ -105,9 +105,9 @@
     [closeButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
 
-    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
-    self.shyNavBarManager = shyManager;
-    self.shyNavBarManager.scrollView = self.collectionView;
+//    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
+//    self.shyNavBarManager = shyManager;
+//    self.shyNavBarManager.scrollView = self.collectionView;
 
     self.bmArticles = [NSMutableArray array];
     self.dataStore = [[BMPostListDataStore alloc] init];

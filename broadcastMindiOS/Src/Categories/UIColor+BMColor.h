@@ -14,4 +14,6 @@
 + (UIColor *)BMActionColor;
 + (UIColor *)BMImageNonSelectColor;
 + (UIColor *)BMImageSelectedColor;
+
++ (UIColor *)BMBorderColor;
 @end

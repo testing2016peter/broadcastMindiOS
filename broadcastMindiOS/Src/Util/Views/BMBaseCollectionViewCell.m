@@ -7,7 +7,7 @@
 //
 
 #import "BMBaseCollectionViewCell.h"
-
+#import "UIColor+BMColor.h"
 @implementation BMBaseCollectionViewCell
 
 
@@ -38,10 +38,10 @@
 - (void)setupComponent
 {
     self.borderLayer = [CALayer layer];
-    self.borderLayer.backgroundColor = [UIColor blackColor].CGColor;
+    self.borderLayer.backgroundColor = [UIColor BMBorderColor].CGColor;
     self.borderHidden = YES;
     self.topBorderLayer = [CALayer layer];
-    self.topBorderLayer.backgroundColor = [UIColor blackColor].CGColor;
+    self.topBorderLayer.backgroundColor = [UIColor BMBorderColor].CGColor;
     self.topBorderHidden = YES;//default
 
     [self.contentView.layer addSublayer:self.borderLayer];
@@ -72,7 +72,7 @@
 
     CGFloat borderWidth = CGRectGetWidth(self.frame) - self.leadingMargin - self.tailingMargin;
     CGFloat topBorderBorderWidth = CGRectGetWidth(self.frame) - self.topBorderLeadingMargin - self.topBorderTailingMargin;
-    CGFloat borderHeight = (self.borderHeight) ? self.borderHeight : 0.3f;
+    CGFloat borderHeight = (self.borderHeight) ? self.borderHeight : 1.0f;
     
     CGFloat borderX = self.leadingMargin;
     CGFloat topBorderBorderX = self.topBorderLeadingMargin;
