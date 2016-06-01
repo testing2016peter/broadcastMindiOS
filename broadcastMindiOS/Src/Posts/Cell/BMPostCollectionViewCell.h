@@ -19,9 +19,9 @@ static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionV
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *backgroundUIView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidthConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
 
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @property (weak, nonatomic) IBOutlet BMInsetLabel *commentLabel;
@@ -30,6 +30,7 @@ static NSString * const BMPostCollectionViewCellIdentifier = @"BMPostCollectionV
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet BMInsetLabel *shareLabel;
 
-- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+- (CGSize)sizeForWidth:(CGFloat)width text:(NSString *)text hasImage:(BOOL)hasImage;
 
 @end

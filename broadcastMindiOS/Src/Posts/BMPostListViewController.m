@@ -22,9 +22,10 @@
 #import "BMMenuViewController.h"
 #import "BMCacheManager.h"
 #import "BMAccountManager.h"
+#import "BMStringParser.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-
-@interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate>
+@interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate, UITextViewDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
 @property (strong, nonatomic) TLYShyNavBarManager *shyManage;
@@ -73,15 +74,15 @@
 
 - (void)setupView
 {
-//    UIImage *image = [UIImage imageNamed:@"Img-test-image"];
-//    NSProgress *progress = [[NSProgress alloc] init];
-//    [[BMService sharedInstance] uploadImage:image progress:&progress success:^(AFHTTPRequestOperation *operation, id response) {
-//        NSLog(@"success:%@", response);
-//
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
-//        NSLog(@"err:%@", err);
-//    }];
-//    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
+    //    UIImage *image = [UIImage imageNamed:@"Img-test-image"];
+    //    NSProgress *progress = [[NSProgress alloc] init];
+    //    [[BMService sharedInstance] uploadImage:image progress:&progress success:^(AFHTTPRequestOperation *operation, id response) {
+    //        NSLog(@"success:%@", response);
+    //
+    //    } failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+    //        NSLog(@"err:%@", err);
+    //    }];
+    //    [progress addObserver:self forKeyPath:@"fractionCompleted" options:NSKeyValueObservingOptionNew context:NULL];
 
     self.bmMenuViewControllerViewWidth = 250.0f;
 
@@ -120,15 +121,6 @@
 
 }
 
-//- (void)observeValueForKeyPath:(NSString *)keyPath
-//                      ofObject:(id)object
-//                        change:(NSDictionary *)change
-//                       context:(void *)context
-//{
-//    if ([keyPath isEqualToString:@"fractionCompleted"]) {
-//        NSLog(@"change:%@", change);
-//    }
-//}
 
 - (void)setupCollectionView
 {
@@ -160,7 +152,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.bmArticles.count ? self.bmArticles.count : 10;
+    return self.bmArticles.count;
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
@@ -171,12 +163,31 @@
     if (indexPath.item < self.bmArticles.count) {
         BMPost *article = self.bmArticles[indexPath.item];
 
-        cell.titleLabel.text = article.text;
         cell.userNameLabel.text = @"匿名";//Translate
         cell.dateLabel.text = article.updatedAt;
+
+        NSString *string = article.text;
+
+        NSRange range = [BMStringParser nonImageURLStringRangeWithString:string];
+        NSString *subString = [string substringWithRange:range];
+
+        NSArray *imageUrls = [BMStringParser imageURLStringsRangeWithString:string];
+        if ([imageUrls count] > 0) {
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[imageUrls firstObject]]
+                              placeholderImage:[UIImage imageNamed:@"placeholder.png"]
+                                     completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                         if (image && !error) {
+                                             cell.imageView.image = image;
+                                             cell.imageViewHeightConstraint.constant = 100.0f;
+                                         }
+                                     }];
+        }
+        cell.contentTextView.text = subString;
+        cell.contentTextView.delegate = self;
+        cell.contentTextView.dataDetectorTypes = UIDataDetectorTypeLink;
     }
 
-    cell.contentTextView.text = @"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABBYYUUOO";
+
     return cell;
 }
 
@@ -187,7 +198,15 @@
     CGSize size =  [[APNibSizeCalculator sharedInstance] sizeForNibNamed:BMPostCollectionViewCellIdentifier withstyle:APNibFixedHeightScaling];
     BMPostCollectionViewCell  *cell = [[[NSBundle bundleForClass:self.class] loadNibNamed:BMPostCollectionViewCellIdentifier owner:self options:nil] lastObject];
     //size.width -= (2* 16.0f);
-    size = [cell sizeForWidth:size.width text:@"1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAA1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890AAABBYYUUOO"];
+    BMPost *article = self.bmArticles[indexPath.item];
+    NSString *string = article.text;
+    NSRange range = [BMStringParser nonImageURLStringRangeWithString:string];
+    NSString *subString = [string substringWithRange:range];
+    BOOL hasImage = NO;
+    if ([[BMStringParser imageURLStringsRangeWithString:string] count] > 0) {
+        hasImage = YES;
+    }
+    size = [cell sizeForWidth:size.width text:subString hasImage:hasImage];
     return size;
 
 }
@@ -277,4 +296,14 @@
         }];
     }
 }
+
+
+- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange
+{
+    NSString *urlString = [URL absoluteString];
+    return YES;
+    
+    //    return NO;
+}
+
 @end

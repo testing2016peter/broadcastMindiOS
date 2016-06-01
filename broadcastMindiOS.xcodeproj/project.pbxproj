@@ -61,6 +61,7 @@
 		F79E6C7B1CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79E6C791CDDCC5F00CC0B04 /* BMImageSelectImageCollectionViewCell.xib */; };
 		F79E6C7E1CDDCF4E00CC0B04 /* UIImage+BMImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C7D1CDDCF4E00CC0B04 /* UIImage+BMImage.m */; };
 		F79E6C821CDDD3A500CC0B04 /* BMCameraRollLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C811CDDD3A500CC0B04 /* BMCameraRollLib.m */; };
+		F79E6C8D1CDF418F00CC0B04 /* BMStringParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F79E6C8C1CDF418F00CC0B04 /* BMStringParser.m */; };
 		F7B15E731CD4A75600A00E5D /* BMSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */; };
 		F7B15E741CD4A75600A00E5D /* BMSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */; };
 		F7B15E791CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B15E771CD4A88500A00E5D /* BMInputFieldCollectionViewCell.m */; };
@@ -212,6 +213,8 @@
 		F79E6C7D1CDDCF4E00CC0B04 /* UIImage+BMImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BMImage.m"; sourceTree = "<group>"; };
 		F79E6C801CDDD3A500CC0B04 /* BMCameraRollLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCameraRollLib.h; sourceTree = "<group>"; };
 		F79E6C811CDDD3A500CC0B04 /* BMCameraRollLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCameraRollLib.m; sourceTree = "<group>"; };
+		F79E6C8B1CDF418F00CC0B04 /* BMStringParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMStringParser.h; sourceTree = "<group>"; };
+		F79E6C8C1CDF418F00CC0B04 /* BMStringParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMStringParser.m; sourceTree = "<group>"; };
 		F7B15E701CD4A75600A00E5D /* BMSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMSettingViewController.h; sourceTree = "<group>"; };
 		F7B15E711CD4A75600A00E5D /* BMSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMSettingViewController.m; sourceTree = "<group>"; };
 		F7B15E721CD4A75600A00E5D /* BMSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMSettingViewController.xib; sourceTree = "<group>"; };
@@ -468,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				F79602961CF1A34F003D7B83 /* Constraint */,
+				F79E6C871CDF415900CC0B04 /* String */,
 				F79E6C7F1CDDD3A500CC0B04 /* CameraRoll */,
 				F786B7431CD6340E00E79930 /* Cache */,
 				F786B73C1CD62D1500E79930 /* Account */,
@@ -612,6 +616,15 @@
 				F79E6C811CDDD3A500CC0B04 /* BMCameraRollLib.m */,
 			);
 			path = CameraRoll;
+			sourceTree = "<group>";
+		};
+		F79E6C871CDF415900CC0B04 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				F79E6C8B1CDF418F00CC0B04 /* BMStringParser.h */,
+				F79E6C8C1CDF418F00CC0B04 /* BMStringParser.m */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		F7B15E6F1CD4A75600A00E5D /* Setting */ = {
@@ -956,6 +969,7 @@
 				F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */,
 				F7BF4CDF1CD10CA6000BB5E5 /* BMInsertPostViewController.m in Sources */,
 				F79E6C821CDDD3A500CC0B04 /* BMCameraRollLib.m in Sources */,
+				F79E6C8D1CDF418F00CC0B04 /* BMStringParser.m in Sources */,
 				F793D31A1CC33EB7006CE8D4 /* BMArticleFunctionView.m in Sources */,
 				F793D2AF1CC15AC0006CE8D4 /* ViewController.m in Sources */,
 				F7C2DF841CCB8DB5000CBD61 /* BMPostCollectionViewCell.m in Sources */,
