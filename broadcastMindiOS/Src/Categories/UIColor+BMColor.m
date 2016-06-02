@@ -51,4 +51,8 @@
     return RGBX(0xB2B2B2);
 }
 
++ (UIColor *)BMTabbarSelectedColor
+{
+    return RGBX(0x5DADE2);
+}
 @end

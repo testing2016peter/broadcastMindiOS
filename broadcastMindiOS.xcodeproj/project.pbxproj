@@ -90,6 +90,7 @@
 		F7C2DF931CCD1470000CBD61 /* BMTrackConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2DF921CCD1470000CBD61 /* BMTrackConstants.m */; };
 		F7C8BDD11CC55684009F7906 /* BMImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD01CC55684009F7906 /* BMImageButton.m */; };
 		F7C8BDD41CC56EB7009F7906 /* BMCopyableLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */; };
+		F7EB13E71D007761006AC9CD /* BMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7EB13E61D007761006AC9CD /* BMTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +260,8 @@
 		F7C8BDD01CC55684009F7906 /* BMImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMImageButton.m; sourceTree = "<group>"; };
 		F7C8BDD21CC56EB7009F7906 /* BMCopyableLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCopyableLabel.h; sourceTree = "<group>"; };
 		F7C8BDD31CC56EB7009F7906 /* BMCopyableLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCopyableLabel.m; sourceTree = "<group>"; };
+		F7EB13E51D007761006AC9CD /* BMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTabBarController.h; sourceTree = "<group>"; };
+		F7EB13E61D007761006AC9CD /* BMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +380,7 @@
 		F793D2A61CC15AC0006CE8D4 /* broadcastMindiOS */ = {
 			isa = PBXGroup;
 			children = (
+				F7EB13E41D007720006AC9CD /* Tabbar */,
 				F79E6C701CDDCBD900CC0B04 /* Image */,
 				F786B72B1CD4CF4900E79930 /* Menu */,
 				F7B15E6F1CD4A75600A00E5D /* Setting */,
@@ -743,6 +747,16 @@
 			path = Track;
 			sourceTree = "<group>";
 		};
+		F7EB13E41D007720006AC9CD /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				F7EB13E51D007761006AC9CD /* BMTabBarController.h */,
+				F7EB13E61D007761006AC9CD /* BMTabBarController.m */,
+			);
+			name = Tabbar;
+			path = Src/Tabbar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1001,6 +1015,7 @@
 				F793D3471CC3BC2F006CE8D4 /* BMBaseJSONModel.m in Sources */,
 				F793D3061CC2AE37006CE8D4 /* BMBaseCollectionViewCell.m in Sources */,
 				F786B74F1CD6455C00E79930 /* BMCookieManager.m in Sources */,
+				F7EB13E71D007761006AC9CD /* BMTabBarController.m in Sources */,
 				F79E6C741CDDCBFA00CC0B04 /* BMImageSelectViewController.m in Sources */,
 				F79602991CF1A35B003D7B83 /* BMConstraintUtil.m in Sources */,
 				F793D34A1CC3BC5B006CE8D4 /* BMPost.m in Sources */,

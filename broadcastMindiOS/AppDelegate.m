@@ -16,8 +16,10 @@
 #import "BMTrackUtil.h"
 #import "BMAccountManager.h"
 #import "testViewController.h"
+#import "BMTabBarController.h"
+#import "UIImage+BMImage.h"
 @interface AppDelegate ()
-
+@property (strong, nonatomic) BMTabBarController *tabBarController;
 @end
 
 @implementation AppDelegate
@@ -31,16 +33,80 @@
     // TODO: Move this to where you establish a user session
     //    [self logUser];
     // Override point for customization after application launch.
-    BMPostListViewController *vc = [[BMPostListViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navigationController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
+    [self launchMainFlow];
     [self setupRequestRegisterNotificationWithApplication:application];
-//    testViewController *testVc = [[testViewController alloc] init];
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
+    //    testViewController *testVc = [[testViewController alloc] init];
+
     [BMAccountManager sharedInstance];
     return YES;
 }
+
+- (void)launchMainFlow
+{
+
+    // Shifting tab bar item image's position.
+    UIEdgeInsets tabBarImageEdgeInsets //= UIEdgeInsetsMake(9.0f, 10.0f, 9.0f, 10.0f);
+    = UIEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
+
+    // Generating main window for Auction project.
+    UIScreen *screen = [UIScreen mainScreen];
+    self.window = [[UIWindow alloc] initWithFrame:screen.bounds];
+    self.window.screen = screen;
+
+    // Implement UITabBarController.
+    self.tabBarController = [[BMTabBarController alloc] init];
+
+    BMPostListViewController *bmPostListViewController = [[BMPostListViewController alloc] init];
+
+
+    bmPostListViewController.tabBarItem.image = [UIImage image:[UIImage imageNamed:@"Icon-Feeds"] newsize:CGSizeMake(20.0f, 17.0f)];
+    bmPostListViewController.tabBarItem.imageInsets = tabBarImageEdgeInsets;
+    bmPostListViewController.tabBarItem.title = @"Feeds";
+
+    UINavigationController *navBMPostListViewController = [[UINavigationController alloc] initWithRootViewController:bmPostListViewController];
+    navBMPostListViewController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
+    [self.tabBarController addChildViewController:navBMPostListViewController];
+
+    testViewController *test = [[testViewController alloc] init];
+    test.tabBarItem.image
+    = [UIImage image:[UIImage imageNamed:@"Icon-Setting"] newsize:CGSizeMake(20.0f, 20.0f)];
+
+    test.tabBarItem.imageInsets = tabBarImageEdgeInsets;
+    test.tabBarItem.title = @"Setting";
+    [self.tabBarController addChildViewController:test];
+
+    testViewController *test2 = [[testViewController alloc] init];
+    test2.tabBarItem.image
+    = [UIImage image:[UIImage imageNamed:@"Icon-Setting"] newsize:CGSizeMake(20.0f, 20.0f)];
+
+    test2.tabBarItem.imageInsets = tabBarImageEdgeInsets;
+    test2.tabBarItem.title = @"Setting";
+    
+    [self.tabBarController addChildViewController:test2];
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+
+
+
+    //for tabbar background color
+    CGSize barBackgroundSize = self.tabBarController.tabBar.frame.size;
+    barBackgroundSize = CGSizeMake(barBackgroundSize.width/self.tabBarController.childViewControllers.count, barBackgroundSize.height);
+    UIGraphicsBeginImageContextWithOptions(barBackgroundSize, false, 0);
+    [[UIColor BMTabbarSelectedColor] setFill];
+    UIRectFill(CGRectMake(0, 0, barBackgroundSize.width, barBackgroundSize.height));
+    UIImage *backgroundImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+   [[UITabBar appearance] setSelectionIndicatorImage:backgroundImage];
+}
+
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize andOffSet:(CGPoint)offSet{
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+    [image drawInRect:CGRectMake(offSet.x, offSet.y, newSize.width-offSet.x, newSize.height-offSet.y)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 
 //- (void) logUser {
 //    // TODO: Use the current user's information

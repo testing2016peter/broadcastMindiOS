@@ -51,7 +51,7 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
     searchBar.barTintColor = [UIColor BMBackgroundColor];
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    searchBar.backgroundColor = [UIColor clearColor];
+    searchBar.backgroundColor = [UIColor whiteColor];
     self.navigationItem.titleView = searchBar;
 }
 

@@ -11,5 +11,5 @@
 @interface UIImage (BMImage)
 
 + (UIImage *)image:(UIImage *)image replaceColor:(UIColor *)color;
-
++ (UIImage *)image:(UIImage *)image newsize:(CGSize)newSize;
 @end
