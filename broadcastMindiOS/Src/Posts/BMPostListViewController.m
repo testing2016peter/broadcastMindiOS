@@ -13,7 +13,7 @@
 #import "BMCommonViewUtil.h"
 #import "BMInsertPostViewController.h"
 #import "BMPostListDataStore.h"
-#import "BMMainFilterView.h"
+
 #import "UIScrollView+SVPullToRefresh.h"
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "BMUserPostsViewController.h"
@@ -25,11 +25,10 @@
 #import "BMStringParser.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate, UITextViewDelegate>
+@interface BMPostListViewController () <UICollectionViewDelegate, UICollectionViewDataSource, BMPostArticleViewControllerDelegate, UITextViewDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) BMPostListDataStore *dataStore;
 @property (strong, nonatomic) NSMutableArray *bmArticles;
 @property (strong, nonatomic) TLYShyNavBarManager *shyManage;
-@property (strong, nonatomic) BMMainFilterView *bmMainFilterView;
 @property (strong, nonatomic) BMMenuViewController *bmMenuViewController;
 @property (assign, nonatomic) CGFloat bmMenuViewControllerViewWidth;
 @property (assign, nonatomic) BOOL isShowedMenu;
@@ -42,18 +41,34 @@
     [super viewDidAppear:animated];
     [self setupMenuFrameOnce];
 
-    UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
-    [self.view addSubview:button];
-    CGRect rect = self.view.bounds;
-    rect.size.height = 30.0f;
-    self.bmMainFilterView = [[BMMainFilterView alloc] initWithFrame:rect];
+//    UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
+//    [self.view addSubview:button];
 
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
+    searchBar.tintColor = [UIColor blackColor];
     searchBar.barTintColor = [UIColor BMBackgroundColor];
+    searchBar.backgroundColor = [UIColor clearColor];
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     searchBar.backgroundColor = [UIColor whiteColor];
+    searchBar.delegate = self;
     self.navigationItem.titleView = searchBar;
 }
+
+- (void) searchBarSearchButtonClicked:(UISearchBar*) theSearchBar
+{
+    [theSearchBar resignFirstResponder];
+    [theSearchBar setShowsCancelButton:NO animated:YES];
+}
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    [searchBar setShowsCancelButton:NO animated:YES];
+}
+
 
 - (void)setupMenuFrameOnce
 {

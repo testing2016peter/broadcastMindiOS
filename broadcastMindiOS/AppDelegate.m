@@ -58,13 +58,12 @@
 
     BMPostListViewController *bmPostListViewController = [[BMPostListViewController alloc] init];
 
-
     bmPostListViewController.tabBarItem.image = [UIImage image:[UIImage imageNamed:@"Icon-Feeds"] newsize:CGSizeMake(20.0f, 17.0f)];
     bmPostListViewController.tabBarItem.imageInsets = tabBarImageEdgeInsets;
     bmPostListViewController.tabBarItem.title = @"Feeds";
 
     UINavigationController *navBMPostListViewController = [[UINavigationController alloc] initWithRootViewController:bmPostListViewController];
-    navBMPostListViewController.navigationBar.barTintColor = [UIColor BMNavBackgroundColor];
+    navBMPostListViewController.navigationBar.barTintColor = [UIColor whiteColor];
     [self.tabBarController addChildViewController:navBMPostListViewController];
 
     testViewController *test = [[testViewController alloc] init];
@@ -76,8 +75,7 @@
     [self.tabBarController addChildViewController:test];
 
     testViewController *test2 = [[testViewController alloc] init];
-    test2.tabBarItem.image
-    = [UIImage image:[UIImage imageNamed:@"Icon-Setting"] newsize:CGSizeMake(20.0f, 20.0f)];
+    test2.tabBarItem.image = [UIImage image:[UIImage imageNamed:@"Icon-Setting"] newsize:CGSizeMake(20.0f, 20.0f)];
 
     test2.tabBarItem.imageInsets = tabBarImageEdgeInsets;
     test2.tabBarItem.title = @"Setting";
@@ -97,6 +95,7 @@
     UIImage *backgroundImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
    [[UITabBar appearance] setSelectionIndicatorImage:backgroundImage];
+    
 }
 
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize andOffSet:(CGPoint)offSet{
