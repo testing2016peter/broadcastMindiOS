@@ -17,4 +17,5 @@
 
 + (UIColor *)BMBorderColor;
 + (UIColor *)BMRoundLabelColor;
++ (UIColor *)BMTimeLabelColor;
 @end

@@ -45,4 +45,10 @@
 {
     return RGBX(0xF6F6F6);
 }
+
++ (UIColor *)BMTimeLabelColor
+{
+    return RGBX(0xB2B2B2);
+}
+
 @end

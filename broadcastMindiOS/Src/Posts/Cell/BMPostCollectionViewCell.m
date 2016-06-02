@@ -24,6 +24,7 @@
 
 
     self.borderLayer.hidden = NO;
+    self.dateLabel.textColor = [UIColor BMTimeLabelColor];
     [self prepareForReuse];
 }
 
@@ -49,8 +50,6 @@
     self.shareButton.selected = NO;
     self.likeButton.selected = NO;
     self.commentButton.selected = NO;
-
-
 }
 
 - (void)layoutSubviews
@@ -67,7 +66,7 @@
     } else {
         self.imageViewHeightConstraint.constant = 0.0f;
     }
-            self.imageViewHeightConstraint.constant = 0.0f;
+    self.imageViewHeightConstraint.constant = 0.0f;
     self.bounds = CGRectMake(0, 0, width,  self.bounds.size.height);
     self.cellWidthConstraint.constant = width;
     [self setNeedsLayout];
@@ -77,7 +76,6 @@
     self.contentTextHeightConstraint.constant = textViewSize.height;
     //    [self setNeedsLayout];
     //    [self layoutIfNeeded];
-
     return [self.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 }
 
