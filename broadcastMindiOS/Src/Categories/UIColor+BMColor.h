@@ -18,4 +18,5 @@
 + (UIColor *)BMBorderColor;
 + (UIColor *)BMRoundLabelColor;
 + (UIColor *)BMTimeLabelColor;
++ (UIColor *)BMTabbarSelectedColor;
 @end

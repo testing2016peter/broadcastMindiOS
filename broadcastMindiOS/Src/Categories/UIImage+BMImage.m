@@ -28,4 +28,15 @@
 
     return resultImage;
 }
+
++ (UIImage *)image:(UIImage *)image newsize:(CGSize)newSize
+{
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, [UIScreen mainScreen].scale);
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+
+}
+
 @end
