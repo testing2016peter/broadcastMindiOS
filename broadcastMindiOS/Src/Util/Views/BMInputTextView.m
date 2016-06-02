@@ -8,7 +8,7 @@
 
 #import "BMInputTextView.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-static NSString * const BMInputTextViewContentTextViewContentSize = @"BMInputTextViewContentTextViewContentSize";
+static const NSString *  BMInputTextViewContentTextViewContentSize = @"BMInputTextViewContentTextViewContentSize";
 
 @interface BMInputTextView  ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTextBottomConstraint;
