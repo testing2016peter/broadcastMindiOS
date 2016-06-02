@@ -41,8 +41,8 @@
     [super viewDidAppear:animated];
     [self setupMenuFrameOnce];
 
-//    UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
-//    [self.view addSubview:button];
+    //    UIButton *button = [BMCommonViewUtil floatingButtonWithView:self.view image:[UIImage imageNamed:@"Icon-Plus"] backgroundImage:[UIImage imageNamed:@"Icon-Plus"] alpha:1.0f target:self action:@selector(tapPostButton:)];
+    //    [self.view addSubview:button];
 
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 320.0, 44.0)];
     searchBar.tintColor = [UIColor blackColor];
@@ -51,6 +51,7 @@
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     searchBar.backgroundColor = [UIColor whiteColor];
     searchBar.delegate = self;
+    searchBar.placeholder = @"Search";
     self.navigationItem.titleView = searchBar;
 }
 
@@ -119,11 +120,11 @@
     closeButton.bounds = CGRectMake(0.0f, 0.0f, 30, 30);
     closeButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     [closeButton addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
 
-//    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
-//    self.shyNavBarManager = shyManager;
-//    self.shyNavBarManager.scrollView = self.collectionView;
+    //    TLYShyNavBarManager *shyManager = [[TLYShyNavBarManager alloc] init];
+    //    self.shyNavBarManager = shyManager;
+    //    self.shyNavBarManager.scrollView = self.collectionView;
 
     self.bmArticles = [NSMutableArray array];
     self.dataStore = [[BMPostListDataStore alloc] init];
